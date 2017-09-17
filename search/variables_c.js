@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['workerid',['workerId',['../structHexicord_1_1Snowflake_1_1Parts.html#a4ac73bc3cab65da82aa453668d0b7cab',1,'Hexicord::Snowflake::Parts']]]
+  ['value',['value',['../structHexicord_1_1Snowflake.html#a99438825084eaef0f92b5e6f8e8c0dfb',1,'Hexicord::Snowflake']]]
 ];

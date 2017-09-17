@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connectionerror',['ConnectionError',['../namespaceHexicord.html#a84d6c223a81559a728c918d88d9fef0b',1,'Hexicord']]]
+  ['eventhandler',['EventHandler',['../classHexicord_1_1EventDispatcher.html#aae848a7da5cf720a879ad589c8c398e1',1,'Hexicord::EventDispatcher']]]
 ];

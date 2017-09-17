@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['permissions',['Permissions',['../namespaceHexicord.html#a83f2278939cc1f31d38396af6de84662',1,'Hexicord']]]
+  ['unknowneventhandler',['UnknownEventHandler',['../classHexicord_1_1EventDispatcher.html#a74c231eb4a495f8a47de2e816bf51855',1,'Hexicord::EventDispatcher']]]
 ];

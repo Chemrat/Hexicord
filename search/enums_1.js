@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['entity',['Entity',['../classHexicord_1_1UnknownEntity.html#a7714fb6da16bfcc6eaca7eae8d2b0cde',1,'Hexicord::UnknownEntity']]],
-  ['event',['Event',['../namespaceHexicord.html#a841b29df0ee895cd9b18ea378c1aaad4',1,'Hexicord']]]
+  ['imageformat',['ImageFormat',['../namespaceHexicord.html#a14586255422969acc2fc20e8fd7a6bb6',1,'Hexicord']]],
+  ['imagetype',['ImageType',['../namespaceHexicord.html#a2ebed6a7fb300f5c0bdd5fa91d56d361',1,'Hexicord']]]
 ];

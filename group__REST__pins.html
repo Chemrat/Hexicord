@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -111,7 +111,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns JSON array of all pinned messages in channel specified by channelId. </p>
-<p>Throws RESTError if ID is invalid and boost::system::system_error if client can't connect to REST API server. </p>
 
 </div>
 </div>
@@ -142,8 +141,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pin message messageId in channel channelId. </p>
-<p>Requires MANAGE_MESSAGES permission.</p>
-<p>Throws RESTError if ID is invalid or you don't have MANAGE_MESSAGES permission. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<p>Requires MANAGE_MESSAGES permission. </p>
 
 </div>
 </div>
@@ -174,15 +172,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unpin message messageId in channel channelId. </p>
-<p>Requires MANAGE_MESSAGES permission.</p>
-<p>throwS RESTError if ID is invalid or you don't have MANAGE_MESSAGES permission. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<p>Requires MANAGE_MESSAGES permission. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

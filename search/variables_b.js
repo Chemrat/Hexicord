@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../structHexicord_1_1Snowflake.html#a99438825084eaef0f92b5e6f8e8c0dfb',1,'Hexicord::Snowflake']]]
+  ['userdiscriminator',['userDiscriminator',['../structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html#a350141da2d04b172db38836b3f6f8352',1,'Hexicord::ImageReference&lt; DefaultUserAvatar &gt;']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -131,7 +131,6 @@ Functions</h2></td></tr>
 
 <p>Add reaction to message. </p>
 <p>This method requires READ_MESSAGE_HISTORY permission and, additionally, ADD_REACTIONS permissions if nobody else reacted using this emoji.</p>
-<p>Throws RESTError if invalid IDs specified or current user don't have required permissions. Also may throw boost::system::system_error if client fails to connect to REST API server.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__REST__reactions.html#ga6fb0ac8c018a032fc9b8ab917a11f3f5">removeReaction</a> <a class="el" href="group__REST__reactions.html#gaea9cc5df44fa26aa321d44844a2aef4c">getReactions</a> </dd></dl>
 
 </div>
@@ -169,7 +168,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a list of users that reacted with this emoji. </p>
-<p>Throws RESTError if invalid IDs specified or current user don't have required permissions. Also may throw boost::system::system_error if client fails to connect to REST API server.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__REST__reactions.html#ga0b2f6e210e4decbd5e7cc4144d667015">addReaction</a> <a class="el" href="group__REST__reactions.html#ga6fb0ac8c018a032fc9b8ab917a11f3f5">removeReaction</a> </dd></dl>
 
 </div>
@@ -214,7 +212,6 @@ Functions</h2></td></tr>
 
 <p>Remove reaction from message. </p>
 <p>By default this method removes current user's reaction, pass userId to remove other user's reactions, however this requires MANAGE_MESSAGES permission.</p>
-<p>Throws RESTError if invalid IDs specified or current user don't have required permissions. Also may throw boost::system::system_error if client fails to connect to REST API server.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__REST__reactions.html#ga0b2f6e210e4decbd5e7cc4144d667015">addReaction</a> <a class="el" href="group__REST__reactions.html#gaea9cc5df44fa26aa321d44844a2aef4c">getReactions</a> </dd></dl>
 
 </div>
@@ -246,15 +243,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove all reactions from message. </p>
-<p>Requires MANAGE_MESSAGES permission.</p>
-<p>Throws RESTError if invalid IDs specified or current user don't have required permissions. Also may throw boost::system::system_error if client fails to connect to REST API server. </p>
+<p>Requires MANAGE_MESSAGES permission. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

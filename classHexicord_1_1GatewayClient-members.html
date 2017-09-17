@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a5e510d788d654c220710dcb696b50590">connect</a>(const std::string &amp;gatewayUrl, int shardId=NoSharding, int shardCount=NoSharding, const nlohmann::json &amp;initialPresense={{ &quot;game&quot;, nullptr }, { &quot;status&quot;, &quot;online&quot; }, { &quot;since&quot;, nullptr }, { &quot;afk&quot;, false }})</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a4c39e267120647e9fcba579da4c151b3">connect</a>(const std::string &amp;gatewayUrl, int shardId=NoSharding, int shardCount=NoSharding, const nlohmann::json &amp;initialPresence={{ &quot;game&quot;, nullptr }, { &quot;status&quot;, &quot;online&quot; }, { &quot;since&quot;, nullptr }, { &quot;afk&quot;, false }})</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a8e05ea927c6df711e76eca6b41e1cf0c">disconnect</a>(int code=2000) noexcept</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a6d99e2340ff9b3858df301e6c9c417c6">eventDispatcher</a></td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a15340cd80cff43726d2bf8bb1c6321a2">GatewayClient</a>(boost::asio::io_service &amp;ioService, const std::string &amp;token)</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
@@ -86,12 +86,13 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a79de5b827234fa1baeaf0501ff1c9c7e">resume</a>(const std::string &amp;gatewayUrl, std::string sessionId, int lastSequenceNumber, int shardId=NoSharding, int shardCount=NoSharding)</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#acbe5ad217fce611d2c9130f4ccf78e8d">sessionId</a>() const</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#ab233d33dc990d3b555d46e76dbfec100">token</a>() const</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#ade51c3caa5da504b9224cf8b95039c8f">waitForEvent</a>(Event type)</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a2c1486fb8951d70a9da66fe6b16005a3">~GatewayClient</a>()</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#af38efa57702f962971f56b1ea716636c">updatePresence</a>(const nlohmann::json &amp;newPresence)</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#ade51c3caa5da504b9224cf8b95039c8f">waitForEvent</a>(Event type)</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html#a2c1486fb8951d70a9da66fe6b16005a3">~GatewayClient</a>()</td><td class="entry"><a class="el" href="classHexicord_1_1GatewayClient.html">Hexicord::GatewayClient</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

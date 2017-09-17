@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -111,7 +111,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga3d661704e05523efda01c2f0460b68a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a channel permission overwrite for a user or role in a channel.  <a href="#ga3d661704e05523efda01c2f0460b68a9">More...</a><br /></td></tr>
 <tr class="separator:ga3d661704e05523efda01c2f0460b68a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2077ea3f82780fd67b89a94f0d393d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#ga2077ea3f82780fd67b89a94f0d393d06">Hexicord::RestClient::editChannelRolePermissions</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId, <a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> roleId, <a class="el" href="namespaceHexicord.html#a83f2278939cc1f31d38396af6de84662">Permissions</a> allow, <a class="el" href="namespaceHexicord.html#a83f2278939cc1f31d38396af6de84662">Permissions</a> deny)</td></tr>
-<tr class="memdesc:ga2077ea3f82780fd67b89a94f0d393d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change existing or add new channel permission override for a кщду.  <a href="#ga2077ea3f82780fd67b89a94f0d393d06">More...</a><br /></td></tr>
+<tr class="memdesc:ga2077ea3f82780fd67b89a94f0d393d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change existing or add new channel permission override for a role.  <a href="#ga2077ea3f82780fd67b89a94f0d393d06">More...</a><br /></td></tr>
 <tr class="separator:ga2077ea3f82780fd67b89a94f0d393d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf1cddac22be9fb353414cbeb2fb2c17e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gaf1cddac22be9fb353414cbeb2fb2c17e">Hexicord::RestClient::editChannelUserPermissions</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId, <a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> userId, <a class="el" href="namespaceHexicord.html#a83f2278939cc1f31d38396af6de84662">Permissions</a> allow, <a class="el" href="namespaceHexicord.html#a83f2278939cc1f31d38396af6de84662">Permissions</a> deny)</td></tr>
 <tr class="memdesc:gaf1cddac22be9fb353414cbeb2fb2c17e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change existing or add new channel permission override for a user.  <a href="#gaf1cddac22be9fb353414cbeb2fb2c17e">More...</a><br /></td></tr>
@@ -137,9 +137,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga25f15763060410f321bfc30a9f107b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#ga25f15763060410f321bfc30a9f107b49">Hexicord::RestClient::kickFromGroupDm</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> groupDmId, <a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> userId)</td></tr>
 <tr class="memdesc:ga25f15763060410f321bfc30a9f107b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove (kick) member from group DM.  <a href="#ga25f15763060410f321bfc30a9f107b49">More...</a><br /></td></tr>
 <tr class="separator:ga25f15763060410f321bfc30a9f107b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09653daebf91d86eb022d23e7a556aa2"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#ga09653daebf91d86eb022d23e7a556aa2">Hexicord::RestClient::modifyChannel</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId, boost::optional&lt; std::string &gt; name=boost::none, boost::optional&lt; int &gt; position=boost::none, boost::optional&lt; std::string &gt; topic=boost::none, boost::optional&lt; unsigned &gt; bitrate=boost::none, boost::optional&lt; unsigned short &gt; usersLimit=boost::none)</td></tr>
-<tr class="memdesc:ga09653daebf91d86eb022d23e7a556aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update a channels settings.  <a href="#ga09653daebf91d86eb022d23e7a556aa2">More...</a><br /></td></tr>
-<tr class="separator:ga09653daebf91d86eb022d23e7a556aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadca604f87a2857e21b5b055af2318937"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gadca604f87a2857e21b5b055af2318937">Hexicord::RestClient::modifyChannel</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId, boost::optional&lt; std::string &gt; name=boost::none, boost::optional&lt; int &gt; position=boost::none, boost::optional&lt; std::string &gt; topic=boost::none, boost::optional&lt; unsigned &gt; bitrate=boost::none, boost::optional&lt; uint16_t &gt; usersLimit=boost::none)</td></tr>
+<tr class="memdesc:gadca604f87a2857e21b5b055af2318937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update a channels settings.  <a href="#gadca604f87a2857e21b5b055af2318937">More...</a><br /></td></tr>
+<tr class="separator:gadca604f87a2857e21b5b055af2318937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacf54a7ac1c1ee0855284e6262dcfcfb6"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gacf54a7ac1c1ee0855284e6262dcfcfb6">Hexicord::RestClient::setChannelBitrate</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> voiceChannelId, unsigned newBitrate)</td></tr>
 <tr class="separator:gacf54a7ac1c1ee0855284e6262dcfcfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabeac198acc638d9ce56f05c1b26f6ff5"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gabeac198acc638d9ce56f05c1b26f6ff5">Hexicord::RestClient::setChannelName</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId, const std::string &amp;newName)</td></tr>
@@ -148,8 +148,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga86f59d85674dec38479a9bc2e2e76dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae13cd1fbda82a8cc8b1838523896926c"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gae13cd1fbda82a8cc8b1838523896926c">Hexicord::RestClient::setChannelTopic</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> textChannelId, const std::string &amp;newTopic)</td></tr>
 <tr class="separator:gae13cd1fbda82a8cc8b1838523896926c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1acbaa8f451cf67671693327d5dee226"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#ga1acbaa8f451cf67671693327d5dee226">Hexicord::RestClient::setChannelUsersLimit</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> voiceChannelId, unsigned short newLimit)</td></tr>
-<tr class="separator:ga1acbaa8f451cf67671693327d5dee226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad23ce7ab0dcbf110730caa4172f5e9a6"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#gad23ce7ab0dcbf110730caa4172f5e9a6">Hexicord::RestClient::setChannelUsersLimit</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> voiceChannelId, uint16_t newLimit)</td></tr>
+<tr class="separator:gad23ce7ab0dcbf110730caa4172f5e9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3fbd7dcc34870ae5e596791e4e658c00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__channels.html#ga3fbd7dcc34870ae5e596791e4e658c00">Hexicord::RestClient::triggerTypingIndicator</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> channelId)</td></tr>
 <tr class="separator:ga3fbd7dcc34870ae5e596791e4e658c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -197,7 +197,7 @@ Functions</h2></td></tr>
 
 <p>Add member to group DM. </p>
 <p>You should pass access token of a user that has granted your app the gdm.join scope and nickname in order to add him.</p>
-<p>Throws RESTError if parameters is invalid. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__REST__channels.html#ga25f15763060410f321bfc30a9f107b49">kickFromGroupDm</a> </dd></dl>
 
 </div>
 </div>
@@ -218,14 +218,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Delete a guild channel or close DM. </p>
-<p>Requires the MANAGE_CHANNELS permission for guild. Fires ChannelDelete event.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (invalid channel ID, missing permissions). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Requires the MANAGE_CHANNELS permission for guild.</p>
 <dl class="section return"><dt>Returns</dt><dd>Channel object. </dd></dl>
 
 </div>
@@ -258,8 +251,7 @@ Functions</h2></td></tr>
 
 <p>Delete a channel permission overwrite for a user or role in a channel. </p>
 <p>overrideId may be role ID or user ID, depending on override type.</p>
-<p>Only usable for guild channels. Requires the 'MANAGE_ROLES' permission.</p>
-<p>Throws RESTError if ID is invalid or you don't have MANAGE_MESSAGES permission. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<p>Only usable for guild channels. Requires the 'MANAGE_ROLES' permission. </p>
 
 </div>
 </div>
@@ -301,10 +293,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Change existing or add new channel permission override for a кщду. </p>
+<p>Change existing or add new channel permission override for a role. </p>
 <p>Only usable for guild channels. Requires the 'MANAGE_ROLES' permission.</p>
-<p>If you don't specify permission in either allow or deny parmeter it will inherit global value (no override). Adding permission to both allow and deny is not allowed and will throw RESTError.</p>
-<p>Throws RESTError if ID is invalid or you don't have MANAGE_MESSAGES permission. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<p>If you don't specify permission in either allow or deny parmeter it will inherit global value (no override). Adding permission to both allow and deny is not allowed and will throw RESTError. </p>
 
 </div>
 </div>
@@ -348,8 +339,7 @@ Functions</h2></td></tr>
 
 <p>Change existing or add new channel permission override for a user. </p>
 <p>Only usable for guild channels. Requires the 'MANAGE_ROLES' permission.</p>
-<p>If you don't specify permission in either allow or deny parmeter it will inherit global value (no override). Adding permission to both allow and deny is not allowed and will throw RESTError.</p>
-<p>Throws RESTError if ID is invalid or you don't have MANAGE_MESSAGES permission. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<p>If you don't specify permission in either allow or deny parmeter it will inherit global value (no override). Adding permission to both allow and deny is not allowed and will throw RESTError. </p>
 
 </div>
 </div>
@@ -370,14 +360,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a channel by ID. </p>
-<p>Returns a guild channel or dm channel object.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (invalid channel). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns a guild channel or dm channel object. </p>
 
 </div>
 </div>
@@ -408,7 +391,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get single message. </p>
-<p>Throws RESTError on API error and boost::system::system_error on connection problem. </p>
 
 </div>
 </div>
@@ -445,7 +427,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get messages after specified id. </p>
-<p>Limit can't be larger than 100, default is 50. Throws RESTError on API error and boost::system::system_error on connection problem. </p>
+<p>Limit can't be larger than 100, default is 50. </p>
 
 </div>
 </div>
@@ -482,7 +464,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get messages before specified id. </p>
-<p>Limit can't be larger than 100, default is 50. Throws RESTError on API error and boost::system::system_error on connection problem. </p>
+<p>Limit can't be larger than 100, default is 50. </p>
 
 </div>
 </div>
@@ -519,7 +501,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get messages around specified id. </p>
-<p>Limit can't be larger than 100 or smaller than 2, default is 50. Throws RESTError on API error and boost::system::system_error on connection problem. </p>
+<p>Limit can't be larger than 100 or smaller than 2, default is 50. </p>
 
 </div>
 </div>
@@ -559,7 +541,7 @@ Functions</h2></td></tr>
 
 <p>Same as <a class="el" href="group__REST__channels.html#gafd17e38061f77a154d87ff9c48ed0691">getMessage</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00243">243</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00222">222</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
@@ -590,12 +572,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove (kick) member from group DM. </p>
-<p>Throws RESTError if ID is invalid. Also can throw boost::system::system_error if client can't connect to REST API server. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__REST__channels.html#ga62b77805f13895f7d615a2df9b055776">addToGroupDm</a> </dd></dl>
 
 </div>
 </div>
-<a id="ga09653daebf91d86eb022d23e7a556aa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga09653daebf91d86eb022d23e7a556aa2">&#9670;&nbsp;</a></span>modifyChannel()</h2>
+<a id="gadca604f87a2857e21b5b055af2318937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadca604f87a2857e21b5b055af2318937">&#9670;&nbsp;</a></span>modifyChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -633,7 +615,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::optional&lt; unsigned short &gt;&#160;</td>
+          <td class="paramtype">boost::optional&lt; uint16_t &gt;&#160;</td>
           <td class="paramname"><em>usersLimit</em> = <code>boost::none</code>&#160;</td>
         </tr>
         <tr>
@@ -645,7 +627,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Update a channels settings. </p>
-<p>Requires the MANAGE_CHANNELS permission for the guild. Fires ChannelUpdate event.</p>
+<p>Requires the MANAGE_CHANNELS permission for the guild.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channelId</td><td>Snowflake ID of target channel. </td></tr>
@@ -654,15 +636,6 @@ Functions</h2></td></tr>
     <tr><td class="paramname">topic</td><td>0-1024 character channel topic (Text channel only). </td></tr>
     <tr><td class="paramname">bitrate</td><td>The bitrate (in bits) for voice channel; 8000 to 96000 (to 128000 for VIP servers). </td></tr>
     <tr><td class="paramname">usersLimit</td><td>The user limit for voice channels; 0-99, 0 means no limit.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (invalid channel ID, missing permissions). </td></tr>
-    <tr><td class="paramname">InvalidParameter</td><td>if no arguments other than channelId passed, also thrown when both bitrate and topic passed. </td></tr>
-    <tr><td class="paramname">InvalidParameter</td><td>if arguments out of range. </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
   </table>
   </dd>
 </dl>
@@ -704,7 +677,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00182">182</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00168">168</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
@@ -742,7 +715,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00170">170</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00156">156</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
@@ -780,7 +753,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00174">174</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00160">160</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
@@ -818,12 +791,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00178">178</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00164">164</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ga1acbaa8f451cf67671693327d5dee226"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1acbaa8f451cf67671693327d5dee226">&#9670;&nbsp;</a></span>setChannelUsersLimit()</h2>
+<a id="gad23ce7ab0dcbf110730caa4172f5e9a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad23ce7ab0dcbf110730caa4172f5e9a6">&#9670;&nbsp;</a></span>setChannelUsersLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -840,7 +813,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>newLimit</em>&#160;</td>
         </tr>
         <tr>
@@ -856,7 +829,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00186">186</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00172">172</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +854,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

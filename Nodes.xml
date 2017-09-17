@@ -134,7 +134,7 @@
              <Node>
               <Name>modifyChannel</Name>
               <Path>group__REST__channels.html</Path>
-              <Anchor>ga09653daebf91d86eb022d23e7a556aa2</Anchor>
+              <Anchor>gadca604f87a2857e21b5b055af2318937</Anchor>
              </Node>
              <Node>
               <Name>setChannelBitrate</Name>
@@ -159,7 +159,7 @@
              <Node>
               <Name>setChannelUsersLimit</Name>
               <Path>group__REST__channels.html</Path>
-              <Anchor>ga1acbaa8f451cf67671693327d5dee226</Anchor>
+              <Anchor>gad23ce7ab0dcbf110730caa4172f5e9a6</Anchor>
              </Node>
              <Node>
               <Name>triggerTypingIndicator</Name>
@@ -221,7 +221,7 @@
              <Node>
               <Name>sendImage</Name>
               <Path>group__REST__messages.html</Path>
-              <Anchor>gada8f95e23ff98bde3ad43a6cec9806f5</Anchor>
+              <Anchor>ga6c9b5a3a704e22a2bd27451cfbabd3b9</Anchor>
              </Node>
              <Node>
               <Name>sendTextMessage</Name>
@@ -235,9 +235,19 @@
             <Path>group__REST__guilds.html</Path>
             <Subnodes>
              <Node>
+              <Name>attachIntegration</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga51d27116ea2e80e9166e0fbe675e84c8</Anchor>
+             </Node>
+             <Node>
               <Name>banMember</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>ga977d9e759aef35c52e3b94b174829c39</Anchor>
+             </Node>
+             <Node>
+              <Name>beginGuildPrune</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga7614d87f8d37d05636f1cbfc76b5845a</Anchor>
              </Node>
              <Node>
               <Name>createChannel</Name>
@@ -255,9 +265,19 @@
               <Anchor>ga8e18fe13cf5fe19d9d1380de3b08c3e8</Anchor>
              </Node>
              <Node>
+              <Name>deafMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga1e16b6539a72867200547aea83a6b3a8</Anchor>
+             </Node>
+             <Node>
               <Name>deleteRole</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>gab712f870520cfeff036877db4bd7eff6</Anchor>
+             </Node>
+             <Node>
+              <Name>detachIntegration</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga99570df7b7ced935040a4f866591600e</Anchor>
              </Node>
              <Node>
               <Name>getBans</Name>
@@ -275,6 +295,31 @@
               <Anchor>gab0fd57365f3512fd36f4c5fcdaa3a669</Anchor>
              </Node>
              <Node>
+              <Name>getGuildEmbed</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gade8ad23425591e889506d2164f560501</Anchor>
+             </Node>
+             <Node>
+              <Name>getGuildIntegrations</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gaf635a607e8ddeb5bb42127a3fe6c0e7d</Anchor>
+             </Node>
+             <Node>
+              <Name>getGuildPruneCount</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga4c2008c5c352d72797eaa8894e38a36f</Anchor>
+             </Node>
+             <Node>
+              <Name>getMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gae482d8b5f167ad7ad826be69c49e8de7</Anchor>
+             </Node>
+             <Node>
+              <Name>getMembers</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gac13331c30d1701f2ba850936534f226b</Anchor>
+             </Node>
+             <Node>
               <Name>getRoles</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>ga41bce3e5623177c39fc60baf01296111</Anchor>
@@ -290,9 +335,19 @@
               <Anchor>gac2c35802a8d04d895df30a60b84738d1</Anchor>
              </Node>
              <Node>
+              <Name>modifyAttachedIntegration</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga6994c3202aa168dc00a5001e0d50219f</Anchor>
+             </Node>
+             <Node>
               <Name>modifyGuild</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>ga165f39ca54d1be6ea02742feaa5233ab</Anchor>
+             </Node>
+             <Node>
+              <Name>modifyGuildEmbed</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga7b3f4808727d4e7d71ec99e2f17a9ab0</Anchor>
              </Node>
              <Node>
               <Name>modifyRole</Name>
@@ -305,9 +360,19 @@
               <Anchor>ga183524adc0be7262dcfba07415eaa973</Anchor>
              </Node>
              <Node>
+              <Name>moveMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga19f5c78bfc0b32723fce5fb46005d23b</Anchor>
+             </Node>
+             <Node>
               <Name>moveRole</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>ga453b2408774c20f3fedc01272246cbff</Anchor>
+             </Node>
+             <Node>
+              <Name>muteMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gaa2ae8b490d80f95d8f584372a42847ea</Anchor>
              </Node>
              <Node>
               <Name>reorderChannels</Name>
@@ -320,6 +385,31 @@
               <Anchor>gacea871b45b01a97c1c0eb9b8f63e68d6</Anchor>
              </Node>
              <Node>
+              <Name>setMemberDeaf</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga65d08f232dd7c6e409720ad9e3fc8e9a</Anchor>
+             </Node>
+             <Node>
+              <Name>setMemberMute</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gab1302a08517cde09931a4d39c09551a2</Anchor>
+             </Node>
+             <Node>
+              <Name>setMemberNickname</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga62c1c1b255712ead4b2e6e439efc2ad9</Anchor>
+             </Node>
+             <Node>
+              <Name>setMemberRoles</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga156345c6e2044fcd9be29153fc10c46e</Anchor>
+             </Node>
+             <Node>
+              <Name>syncIntegration</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>gad06f6e34dbd4a039c2416fccf193045e</Anchor>
+             </Node>
+             <Node>
               <Name>takeRole</Name>
               <Path>group__REST__guilds.html</Path>
               <Anchor>gac06aa225b83bb67da5b958a8f67d88b3</Anchor>
@@ -329,39 +419,22 @@
               <Path>group__REST__guilds.html</Path>
               <Anchor>ga12e0ee88283bfecc8369abbed4fc866f</Anchor>
              </Node>
+             <Node>
+              <Name>undeafMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga7099c1299d1d3b86c06f3304a125e816</Anchor>
+             </Node>
+             <Node>
+              <Name>unmuteMember</Name>
+              <Path>group__REST__guilds.html</Path>
+              <Anchor>ga27a29ac5ed9f1b93712ecc5502719549</Anchor>
+             </Node>
             </Subnodes>
            </Node>
            <Node>
             <Name>Users methods</Name>
             <Path>group__REST__users.html</Path>
             <Subnodes>
-             <Node>
-              <Name>AvatarFormat</Name>
-              <Path>group__REST__users.html</Path>
-              <Anchor>gaca8d73d127da49fc6cb2e48b88b104e3</Anchor>
-              <Subnodes>
-               <Node>
-                <Name>Detect</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6</Anchor>
-               </Node>
-               <Node>
-                <Name>Png</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207</Anchor>
-               </Node>
-               <Node>
-                <Name>Gif</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6</Anchor>
-               </Node>
-               <Node>
-                <Name>Jpeg</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
              <Node>
               <Name>createDm</Name>
               <Path>group__REST__users.html</Path>
@@ -395,7 +468,7 @@
              <Node>
               <Name>getUserGuilds</Name>
               <Path>group__REST__users.html</Path>
-              <Anchor>ga69243643941ee7202c2f2b9d14ef4ae2</Anchor>
+              <Anchor>gabb6cede1ec4a0b3244dac13d4b2f5c7d</Anchor>
              </Node>
              <Node>
               <Name>leaveGuild</Name>
@@ -405,12 +478,7 @@
              <Node>
               <Name>setAvatar</Name>
               <Path>group__REST__users.html</Path>
-              <Anchor>gadfd3da1f4e93eb7e4c646f670362282d</Anchor>
-             </Node>
-             <Node>
-              <Name>setAvatar</Name>
-              <Path>group__REST__users.html</Path>
-              <Anchor>ga2d34510caadc689f74e19e0fa2006fa7</Anchor>
+              <Anchor>ga86595f526de7e6f17d0efcde388127fe</Anchor>
              </Node>
              <Node>
               <Name>setUsername</Name>
@@ -452,6 +520,47 @@
               <Name>revokeInvite</Name>
               <Path>group__REST__invites.html</Path>
               <Anchor>ga9e73656ca975e4357ae3b7a06ba4dfc7</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>Webhook operations</Name>
+            <Path>group__REST__webhooks.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>createWebhook</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>gacceff66d8f8805e50d80e6e81e51183c</Anchor>
+             </Node>
+             <Node>
+              <Name>deleteWebhook</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>gaea3357a7307373ceb6bf6f93cf68ef02</Anchor>
+             </Node>
+             <Node>
+              <Name>getChannelWebhooks</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>gae6d319e36dab6c2b8b6d563601a855e5</Anchor>
+             </Node>
+             <Node>
+              <Name>getGuildWebhooks</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>gaeea8f114e86d98e1e46bbaeb4519f5c1</Anchor>
+             </Node>
+             <Node>
+              <Name>getWebhook</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>ga773a92ce268e9ca59bd6af773d93d526</Anchor>
+             </Node>
+             <Node>
+              <Name>setWebhookAvatar</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>ga1292a0c1d9bdd57be0d3b7ee0a228e73</Anchor>
+             </Node>
+             <Node>
+              <Name>setWebhookName</Name>
+              <Path>group__REST__webhooks.html</Path>
+              <Anchor>gab0c23e14dc1b002f3df22dfd231e9b45</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -499,6 +608,12 @@
           <Path>annotated.html</Path>
           <Subnodes>
            <Node>
+            <Name>boost</Name>
+            <Path>namespaceboost.html</Path>
+            <Subnodes>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Hexicord</Name>
             <Path>namespaceHexicord.html</Path>
             <Subnodes>
@@ -519,7 +634,7 @@
                <Node>
                 <Name>addHandler</Name>
                 <Path>classHexicord_1_1EventDispatcher.html</Path>
-                <Anchor>a0a620fe0f304962b2d7827bec65dfe84</Anchor>
+                <Anchor>a5b9e79928f717cb735ae99be40a58f96</Anchor>
                </Node>
                <Node>
                 <Name>dispatchEvent</Name>
@@ -557,6 +672,11 @@
                 <Name>File</Name>
                 <Path>structHexicord_1_1File.html</Path>
                 <Anchor>a0911514c76238326dc7c179c3816fd2f</Anchor>
+               </Node>
+               <Node>
+                <Name>write</Name>
+                <Path>structHexicord_1_1File.html</Path>
+                <Anchor>a5d5ec7715581a3fd37960daf50b89024</Anchor>
                </Node>
                <Node>
                 <Name>bytes</Name>
@@ -708,7 +828,7 @@
                <Node>
                 <Name>connect</Name>
                 <Path>classHexicord_1_1GatewayClient.html</Path>
-                <Anchor>a5e510d788d654c220710dcb696b50590</Anchor>
+                <Anchor>a4c39e267120647e9fcba579da4c151b3</Anchor>
                </Node>
                <Node>
                 <Name>disconnect</Name>
@@ -751,6 +871,11 @@
                 <Anchor>ab233d33dc990d3b555d46e76dbfec100</Anchor>
                </Node>
                <Node>
+                <Name>updatePresence</Name>
+                <Path>classHexicord_1_1GatewayClient.html</Path>
+                <Anchor>af38efa57702f962971f56b1ea716636c</Anchor>
+               </Node>
+               <Node>
                 <Name>waitForEvent</Name>
                 <Path>classHexicord_1_1GatewayClient.html</Path>
                 <Anchor>ade51c3caa5da504b9224cf8b95039c8f</Anchor>
@@ -785,6 +910,130 @@
                 <Name>disconnectCode</Name>
                 <Path>structHexicord_1_1GatewayError.html</Path>
                 <Anchor>afcefecd42e2a483e7bf5e33dd09514a0</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>Image</Name>
+              <Path>structHexicord_1_1Image.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>Image</Name>
+                <Path>structHexicord_1_1Image.html</Path>
+                <Anchor>a6fef88df0b773127d0967eb85051d28d</Anchor>
+               </Node>
+               <Node>
+                <Name>toAvatarData</Name>
+                <Path>structHexicord_1_1Image.html</Path>
+                <Anchor>a6613b45b9573325a048bb40e4cd26aff</Anchor>
+               </Node>
+               <Node>
+                <Name>file</Name>
+                <Path>structHexicord_1_1Image.html</Path>
+                <Anchor>adf05fa09e24330cf3e25c09b39678723</Anchor>
+               </Node>
+               <Node>
+                <Name>format</Name>
+                <Path>structHexicord_1_1Image.html</Path>
+                <Anchor>a3ecd4cc831fd833df00e0f2ee34db9f0</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>ImageReference</Name>
+              <Path>structHexicord_1_1ImageReference.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ImageReference</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>a4595c16a7e74de2c048f72521f3755fd</Anchor>
+               </Node>
+               <Node>
+                <Name>download</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>a5a1adf92af74bf17367cc56af6cad4bf</Anchor>
+               </Node>
+               <Node>
+                <Name>isAnimated</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>ab92791f2c9bbf0fd317c1b583f2ea0cc</Anchor>
+               </Node>
+               <Node>
+                <Name>url</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>ab132be2d33c7da9de67941128663616f</Anchor>
+               </Node>
+               <Node>
+                <Name>hash</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>aee975ec54e4bb5fd10d2ad4237ee08a9</Anchor>
+               </Node>
+               <Node>
+                <Name>id</Name>
+                <Path>structHexicord_1_1ImageReference.html</Path>
+                <Anchor>a0b1dc239fc1a637b068bc6d8778a2560</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>ImageReference&lt; CustomEmoji &gt;</Name>
+              <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ImageReference</Name>
+                <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                <Anchor>a51c87d1cef3aa2c94856e31a38c25acb</Anchor>
+               </Node>
+               <Node>
+                <Name>download</Name>
+                <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                <Anchor>a4ba57190cdff5f6caccae57bccaa3044</Anchor>
+               </Node>
+               <Node>
+                <Name>isAnimated</Name>
+                <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                <Anchor>a7b9734272f6f299461a9d15eb49c8472</Anchor>
+               </Node>
+               <Node>
+                <Name>url</Name>
+                <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                <Anchor>ad5ce6f38462efb0b590d709523b4c744</Anchor>
+               </Node>
+               <Node>
+                <Name>hash</Name>
+                <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                <Anchor>aaf9093119c82089b6425e74e57548c4a</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>ImageReference&lt; DefaultUserAvatar &gt;</Name>
+              <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ImageReference</Name>
+                <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                <Anchor>a16cc5e85dcc0ac26f409c67335d54132</Anchor>
+               </Node>
+               <Node>
+                <Name>download</Name>
+                <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                <Anchor>ae710ff81875cf60906d919628d9f8436</Anchor>
+               </Node>
+               <Node>
+                <Name>isAnimated</Name>
+                <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                <Anchor>a07f30ac20d279675ddd6e0d427caf217</Anchor>
+               </Node>
+               <Node>
+                <Name>url</Name>
+                <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                <Anchor>a771fb861868dcb620c24c4f9596f1b6e</Anchor>
+               </Node>
+               <Node>
+                <Name>userDiscriminator</Name>
+                <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                <Anchor>a350141da2d04b172db38836b3f6f8352</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -925,33 +1174,6 @@
               <Path>classHexicord_1_1RestClient.html</Path>
               <Subnodes>
                <Node>
-                <Name>AvatarFormat</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>gaca8d73d127da49fc6cb2e48b88b104e3</Anchor>
-                <Subnodes>
-                 <Node>
-                  <Name>Detect</Name>
-                  <Path>group__REST__users.html</Path>
-                  <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>Png</Name>
-                  <Path>group__REST__users.html</Path>
-                  <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>Gif</Name>
-                  <Path>group__REST__users.html</Path>
-                  <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>Jpeg</Name>
-                  <Path>group__REST__users.html</Path>
-                  <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
                 <Name>RestClient</Name>
                 <Path>classHexicord_1_1RestClient.html</Path>
                 <Anchor>ae3d2edb5dc24c9a8e8c3496a93aeeb5a</Anchor>
@@ -982,9 +1204,19 @@
                 <Anchor>ga62b77805f13895f7d615a2df9b055776</Anchor>
                </Node>
                <Node>
+                <Name>attachIntegration</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga51d27116ea2e80e9166e0fbe675e84c8</Anchor>
+               </Node>
+               <Node>
                 <Name>banMember</Name>
                 <Path>group__REST__guilds.html</Path>
                 <Anchor>ga977d9e759aef35c52e3b94b174829c39</Anchor>
+               </Node>
+               <Node>
+                <Name>beginGuildPrune</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga7614d87f8d37d05636f1cbfc76b5845a</Anchor>
                </Node>
                <Node>
                 <Name>createChannel</Name>
@@ -1017,6 +1249,16 @@
                 <Anchor>ga8e18fe13cf5fe19d9d1380de3b08c3e8</Anchor>
                </Node>
                <Node>
+                <Name>createWebhook</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>gacceff66d8f8805e50d80e6e81e51183c</Anchor>
+               </Node>
+               <Node>
+                <Name>deafMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga1e16b6539a72867200547aea83a6b3a8</Anchor>
+               </Node>
+               <Node>
                 <Name>deleteChannel</Name>
                 <Path>group__REST__channels.html</Path>
                 <Anchor>ga9f02bba65c3d4aba6a61705484f50292</Anchor>
@@ -1040,6 +1282,16 @@
                 <Name>deleteRole</Name>
                 <Path>group__REST__guilds.html</Path>
                 <Anchor>gab712f870520cfeff036877db4bd7eff6</Anchor>
+               </Node>
+               <Node>
+                <Name>deleteWebhook</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>gaea3357a7307373ceb6bf6f93cf68ef02</Anchor>
+               </Node>
+               <Node>
+                <Name>detachIntegration</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga99570df7b7ced935040a4f866591600e</Anchor>
                </Node>
                <Node>
                 <Name>editChannelRolePermissions</Name>
@@ -1077,6 +1329,11 @@
                 <Anchor>gaddbb168851c0488e74032f52306d54a2</Anchor>
                </Node>
                <Node>
+                <Name>getChannelWebhooks</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>gae6d319e36dab6c2b8b6d563601a855e5</Anchor>
+               </Node>
+               <Node>
                 <Name>getConnections</Name>
                 <Path>group__REST__users.html</Path>
                 <Anchor>ga9dffd01ca42e09795d4b1a16c5a1869a</Anchor>
@@ -1097,6 +1354,26 @@
                 <Anchor>gab0fd57365f3512fd36f4c5fcdaa3a669</Anchor>
                </Node>
                <Node>
+                <Name>getGuildEmbed</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gade8ad23425591e889506d2164f560501</Anchor>
+               </Node>
+               <Node>
+                <Name>getGuildIntegrations</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gaf635a607e8ddeb5bb42127a3fe6c0e7d</Anchor>
+               </Node>
+               <Node>
+                <Name>getGuildPruneCount</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga4c2008c5c352d72797eaa8894e38a36f</Anchor>
+               </Node>
+               <Node>
+                <Name>getGuildWebhooks</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>gaeea8f114e86d98e1e46bbaeb4519f5c1</Anchor>
+               </Node>
+               <Node>
                 <Name>getInvite</Name>
                 <Path>group__REST__invites.html</Path>
                 <Anchor>ga09c753bdc5e56430a6922b4e8a47b2ec</Anchor>
@@ -1110,6 +1387,16 @@
                 <Name>getMe</Name>
                 <Path>group__REST__users.html</Path>
                 <Anchor>ga2700ff2dae717f169bf21b4e69f44d58</Anchor>
+               </Node>
+               <Node>
+                <Name>getMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gae482d8b5f167ad7ad826be69c49e8de7</Anchor>
+               </Node>
+               <Node>
+                <Name>getMembers</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gac13331c30d1701f2ba850936534f226b</Anchor>
                </Node>
                <Node>
                 <Name>getMessage</Name>
@@ -1164,7 +1451,12 @@
                <Node>
                 <Name>getUserGuilds</Name>
                 <Path>group__REST__users.html</Path>
-                <Anchor>ga69243643941ee7202c2f2b9d14ef4ae2</Anchor>
+                <Anchor>gabb6cede1ec4a0b3244dac13d4b2f5c7d</Anchor>
+               </Node>
+               <Node>
+                <Name>getWebhook</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>ga773a92ce268e9ca59bd6af773d93d526</Anchor>
                </Node>
                <Node>
                 <Name>giveRole</Name>
@@ -1187,14 +1479,24 @@
                 <Anchor>gaa8c75c82fd05239474bebe4b9f2805bd</Anchor>
                </Node>
                <Node>
+                <Name>modifyAttachedIntegration</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga6994c3202aa168dc00a5001e0d50219f</Anchor>
+               </Node>
+               <Node>
                 <Name>modifyChannel</Name>
                 <Path>group__REST__channels.html</Path>
-                <Anchor>ga09653daebf91d86eb022d23e7a556aa2</Anchor>
+                <Anchor>gadca604f87a2857e21b5b055af2318937</Anchor>
                </Node>
                <Node>
                 <Name>modifyGuild</Name>
                 <Path>group__REST__guilds.html</Path>
                 <Anchor>ga165f39ca54d1be6ea02742feaa5233ab</Anchor>
+               </Node>
+               <Node>
+                <Name>modifyGuildEmbed</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga7b3f4808727d4e7d71ec99e2f17a9ab0</Anchor>
                </Node>
                <Node>
                 <Name>modifyRole</Name>
@@ -1207,9 +1509,19 @@
                 <Anchor>ga183524adc0be7262dcfba07415eaa973</Anchor>
                </Node>
                <Node>
+                <Name>moveMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga19f5c78bfc0b32723fce5fb46005d23b</Anchor>
+               </Node>
+               <Node>
                 <Name>moveRole</Name>
                 <Path>group__REST__guilds.html</Path>
                 <Anchor>ga453b2408774c20f3fedc01272246cbff</Anchor>
+               </Node>
+               <Node>
+                <Name>muteMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gaa2ae8b490d80f95d8f584372a42847ea</Anchor>
                </Node>
                <Node>
                 <Name>operator=</Name>
@@ -1259,7 +1571,7 @@
                <Node>
                 <Name>sendImage</Name>
                 <Path>group__REST__messages.html</Path>
-                <Anchor>gada8f95e23ff98bde3ad43a6cec9806f5</Anchor>
+                <Anchor>ga6c9b5a3a704e22a2bd27451cfbabd3b9</Anchor>
                </Node>
                <Node>
                 <Name>sendRestRequest</Name>
@@ -1274,12 +1586,7 @@
                <Node>
                 <Name>setAvatar</Name>
                 <Path>group__REST__users.html</Path>
-                <Anchor>gadfd3da1f4e93eb7e4c646f670362282d</Anchor>
-               </Node>
-               <Node>
-                <Name>setAvatar</Name>
-                <Path>group__REST__users.html</Path>
-                <Anchor>ga2d34510caadc689f74e19e0fa2006fa7</Anchor>
+                <Anchor>ga86595f526de7e6f17d0efcde388127fe</Anchor>
                </Node>
                <Node>
                 <Name>setChannelBitrate</Name>
@@ -1304,12 +1611,47 @@
                <Node>
                 <Name>setChannelUsersLimit</Name>
                 <Path>group__REST__channels.html</Path>
-                <Anchor>ga1acbaa8f451cf67671693327d5dee226</Anchor>
+                <Anchor>gad23ce7ab0dcbf110730caa4172f5e9a6</Anchor>
+               </Node>
+               <Node>
+                <Name>setMemberDeaf</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga65d08f232dd7c6e409720ad9e3fc8e9a</Anchor>
+               </Node>
+               <Node>
+                <Name>setMemberMute</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gab1302a08517cde09931a4d39c09551a2</Anchor>
+               </Node>
+               <Node>
+                <Name>setMemberNickname</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga62c1c1b255712ead4b2e6e439efc2ad9</Anchor>
+               </Node>
+               <Node>
+                <Name>setMemberRoles</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga156345c6e2044fcd9be29153fc10c46e</Anchor>
                </Node>
                <Node>
                 <Name>setUsername</Name>
                 <Path>group__REST__users.html</Path>
                 <Anchor>ga9fa3986f94935622244b3a6afae8d62a</Anchor>
+               </Node>
+               <Node>
+                <Name>setWebhookAvatar</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>ga1292a0c1d9bdd57be0d3b7ee0a228e73</Anchor>
+               </Node>
+               <Node>
+                <Name>setWebhookName</Name>
+                <Path>group__REST__webhooks.html</Path>
+                <Anchor>gab0c23e14dc1b002f3df22dfd231e9b45</Anchor>
+               </Node>
+               <Node>
+                <Name>syncIntegration</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>gad06f6e34dbd4a039c2416fccf193045e</Anchor>
                </Node>
                <Node>
                 <Name>takeRole</Name>
@@ -1325,6 +1667,16 @@
                 <Name>unbanMember</Name>
                 <Path>group__REST__guilds.html</Path>
                 <Anchor>ga12e0ee88283bfecc8369abbed4fc866f</Anchor>
+               </Node>
+               <Node>
+                <Name>undeafMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga7099c1299d1d3b86c06f3304a125e816</Anchor>
+               </Node>
+               <Node>
+                <Name>unmuteMember</Name>
+                <Path>group__REST__guilds.html</Path>
+                <Anchor>ga27a29ac5ed9f1b93712ecc5502719549</Anchor>
                </Node>
                <Node>
                 <Name>unpinMessage</Name>
@@ -1408,12 +1760,12 @@
                <Node>
                 <Name>Snowflake</Name>
                 <Path>structHexicord_1_1Snowflake.html</Path>
-                <Anchor>ace586adae242cc74639c0fe4dd4b499a</Anchor>
+                <Anchor>afbdc318d883e5635a1c385a92c5c20a0</Anchor>
                </Node>
                <Node>
                 <Name>Snowflake</Name>
                 <Path>structHexicord_1_1Snowflake.html</Path>
-                <Anchor>ad9c7638c832b567efe625bc8fdb33335</Anchor>
+                <Anchor>aa562046bd2ddd7bbc1eeb5cddc926162</Anchor>
                </Node>
                <Node>
                 <Name>Snowflake</Name>
@@ -1428,17 +1780,17 @@
                <Node>
                 <Name>operator uint64_t</Name>
                 <Path>structHexicord_1_1Snowflake.html</Path>
-                <Anchor>a5690090819225bf3981c10ee5aa58bf8</Anchor>
+                <Anchor>a883a169cd2c40a77b11365ad1fa21c01</Anchor>
                </Node>
                <Node>
                 <Name>unixTimestamp</Name>
                 <Path>structHexicord_1_1Snowflake.html</Path>
-                <Anchor>a43d3407a0ea6a9b2ebdf963e1eca2cee</Anchor>
+                <Anchor>ace3cb58f18640cf0a78af9d37edd7b25</Anchor>
                </Node>
                <Node>
                 <Name>unixTimestampMs</Name>
                 <Path>structHexicord_1_1Snowflake.html</Path>
-                <Anchor>a770003fb13b4ff969fad60dc5c042725</Anchor>
+                <Anchor>ab3eb7357193a5d104ca879c8fccf794f</Anchor>
                </Node>
                <Node>
                 <Name>discordEpochMs</Name>
@@ -1563,7 +1915,7 @@
                <Node>
                 <Name>operator()</Name>
                 <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
-                <Anchor>ad1e708a33d8201a7dfc6ac6835f1acbb</Anchor>
+                <Anchor>a3adb074001f7051e4b2e1c19a085111b</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -1670,6 +2022,22 @@
             <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
            </Node>
            <Node>
+            <Name>Hexicord::Image</Name>
+            <Path>structHexicord_1_1Image.html</Path>
+           </Node>
+           <Node>
+            <Name>Hexicord::ImageReference&lt; Type &gt;</Name>
+            <Path>structHexicord_1_1ImageReference.html</Path>
+           </Node>
+           <Node>
+            <Name>Hexicord::ImageReference&lt; CustomEmoji &gt;</Name>
+            <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+           </Node>
+           <Node>
+            <Name>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Name>
+            <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+           </Node>
+           <Node>
             <Name>Hexicord::Snowflake::Parts</Name>
             <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
            </Node>
@@ -1694,6 +2062,96 @@
            <Node>
             <Name>All</Name>
             <Path>functions.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>a</Name>
+              <Path>functions.html</Path>
+             </Node>
+             <Node>
+              <Name>b</Name>
+              <Path>functions_b.html</Path>
+             </Node>
+             <Node>
+              <Name>c</Name>
+              <Path>functions_c.html</Path>
+             </Node>
+             <Node>
+              <Name>d</Name>
+              <Path>functions_d.html</Path>
+             </Node>
+             <Node>
+              <Name>e</Name>
+              <Path>functions_e.html</Path>
+             </Node>
+             <Node>
+              <Name>f</Name>
+              <Path>functions_f.html</Path>
+             </Node>
+             <Node>
+              <Name>g</Name>
+              <Path>functions_g.html</Path>
+             </Node>
+             <Node>
+              <Name>h</Name>
+              <Path>functions_h.html</Path>
+             </Node>
+             <Node>
+              <Name>i</Name>
+              <Path>functions_i.html</Path>
+             </Node>
+             <Node>
+              <Name>k</Name>
+              <Path>functions_k.html</Path>
+             </Node>
+             <Node>
+              <Name>l</Name>
+              <Path>functions_l.html</Path>
+             </Node>
+             <Node>
+              <Name>m</Name>
+              <Path>functions_m.html</Path>
+             </Node>
+             <Node>
+              <Name>n</Name>
+              <Path>functions_n.html</Path>
+             </Node>
+             <Node>
+              <Name>o</Name>
+              <Path>functions_o.html</Path>
+             </Node>
+             <Node>
+              <Name>p</Name>
+              <Path>functions_p.html</Path>
+             </Node>
+             <Node>
+              <Name>r</Name>
+              <Path>functions_r.html</Path>
+             </Node>
+             <Node>
+              <Name>s</Name>
+              <Path>functions_s.html</Path>
+             </Node>
+             <Node>
+              <Name>t</Name>
+              <Path>functions_t.html</Path>
+             </Node>
+             <Node>
+              <Name>u</Name>
+              <Path>functions_u.html</Path>
+             </Node>
+             <Node>
+              <Name>v</Name>
+              <Path>functions_v.html</Path>
+             </Node>
+             <Node>
+              <Name>w</Name>
+              <Path>functions_w.html</Path>
+             </Node>
+             <Node>
+              <Name>~</Name>
+              <Path>functions_0x7e.html</Path>
+             </Node>
+            </Subnodes>
            </Node>
            <Node>
             <Name>Functions</Name>
@@ -1736,6 +2194,463 @@
               <Path>dir_49938cc39bc426b55c58469fe1b39a81.html</Path>
               <Subnodes>
                <Node>
+                <Name>types</Name>
+                <Path>dir_87ad4de8f50198267972785abc69f0a9.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>file.hpp</Name>
+                  <Path>file_8hpp.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>File</Name>
+                    <Path>structHexicord_1_1File.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>File</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>adf9b6a20a05fc9d49d32f7490fabab0f</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>File</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>a541ba1a7c4a0efd24f2d001101ca7d34</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>File</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>a0911514c76238326dc7c179c3816fd2f</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>write</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>a5d5ec7715581a3fd37960daf50b89024</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>bytes</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>a1c99389e32675cbc055ef7c880f5c75a</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>filename</Name>
+                      <Path>structHexicord_1_1File.html</Path>
+                      <Anchor>a484ca193e4ec0de1afb70e33ad79a97c</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>image.hpp</Name>
+                  <Path>image_8hpp.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>Image</Name>
+                    <Path>structHexicord_1_1Image.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>Image</Name>
+                      <Path>structHexicord_1_1Image.html</Path>
+                      <Anchor>a6fef88df0b773127d0967eb85051d28d</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>toAvatarData</Name>
+                      <Path>structHexicord_1_1Image.html</Path>
+                      <Anchor>a6613b45b9573325a048bb40e4cd26aff</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>file</Name>
+                      <Path>structHexicord_1_1Image.html</Path>
+                      <Anchor>adf05fa09e24330cf3e25c09b39678723</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>format</Name>
+                      <Path>structHexicord_1_1Image.html</Path>
+                      <Anchor>a3ecd4cc831fd833df00e0f2ee34db9f0</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>ImageReference</Name>
+                    <Path>structHexicord_1_1ImageReference.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>ImageReference</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>a4595c16a7e74de2c048f72521f3755fd</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>download</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>a5a1adf92af74bf17367cc56af6cad4bf</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>isAnimated</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>ab92791f2c9bbf0fd317c1b583f2ea0cc</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>url</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>ab132be2d33c7da9de67941128663616f</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>hash</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>aee975ec54e4bb5fd10d2ad4237ee08a9</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>id</Name>
+                      <Path>structHexicord_1_1ImageReference.html</Path>
+                      <Anchor>a0b1dc239fc1a637b068bc6d8778a2560</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>ImageReference&lt; CustomEmoji &gt;</Name>
+                    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>ImageReference</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                      <Anchor>a51c87d1cef3aa2c94856e31a38c25acb</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>download</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                      <Anchor>a4ba57190cdff5f6caccae57bccaa3044</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>isAnimated</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                      <Anchor>a7b9734272f6f299461a9d15eb49c8472</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>url</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                      <Anchor>ad5ce6f38462efb0b590d709523b4c744</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>hash</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+                      <Anchor>aaf9093119c82089b6425e74e57548c4a</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>ImageReference&lt; DefaultUserAvatar &gt;</Name>
+                    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>ImageReference</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                      <Anchor>a16cc5e85dcc0ac26f409c67335d54132</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>download</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                      <Anchor>ae710ff81875cf60906d919628d9f8436</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>isAnimated</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                      <Anchor>a07f30ac20d279675ddd6e0d427caf217</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>url</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                      <Anchor>a771fb861868dcb620c24c4f9596f1b6e</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>userDiscriminator</Name>
+                      <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+                      <Anchor>a350141da2d04b172db38836b3f6f8352</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>ImageFormat</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a14586255422969acc2fc20e8fd7a6bb6</Anchor>
+                    <Subnodes>
+                     <Node>
+                      <Name>Detect</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a14586255422969acc2fc20e8fd7a6bb6a588a80dc48247a4a059df0927cd4d755</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Jpeg</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a14586255422969acc2fc20e8fd7a6bb6a2967da224957667bf39a1bb12a086f3e</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Png</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a14586255422969acc2fc20e8fd7a6bb6aa33de9d274ad4fd7766c5a0c9347b758</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Webp</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a14586255422969acc2fc20e8fd7a6bb6a2c2cd657a6eae90457c3ccae719d9c52</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Gif</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a14586255422969acc2fc20e8fd7a6bb6a4f6d459b8ef3b14e6dd692a083794ad5</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>ImageType</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361</Anchor>
+                    <Subnodes>
+                     <Node>
+                      <Name>CustomEmoji</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a105c82cc3d3b43d675bdb4f3fddabe2f</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>GuildIcon</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361ad43428b692789ff9d63ab5a1015fb3ce</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>GuildSplash</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361afdc0be83698962d99286e9f0eb7136eb</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>DefaultUserAvatar</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a71b08a670d472b33b81866c271ec2abd</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>UserAvatar</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a914905e51b31f2fba4ffd33fe7d7d78d</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>ApplicationIcon</Name>
+                      <Path>image_8hpp.html</Path>
+                      <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361ac5bb9061227377fb586beb0cef1bdbd0</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>basePath</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>ace9e00e5e43ec15fc945705ce50195b2</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; ApplicationIcon &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>affd14ed55a34eaeafd39a75e8b104f9e</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; CustomEmoji &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a114364e5357ebf3be32c667ea1697857</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; DefaultUserAvatar &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a2a680271ac8bac5b3bc7d87f16ce2da4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; GuildIcon &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>ad7b924a9723cd260258b22be4cd87380</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; GuildSplash &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>ae667dfba867a75422c5707608ec6ab81</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>basePath&lt; UserAvatar &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a64d084043a6be20785fda3142f2f4766</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>cdnDownload</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>ab95bb37edd63d834148bfe605784bc6c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>formatExtension</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>adea0b5059ca84511e658f6d9bc4f235b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>formatExtension&lt; Gif &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>afc94616ed5cd9ab353b3bc4c3a095603</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>formatExtension&lt; Jpeg &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a554222716f6de703c9644d7b4a79c776</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>formatExtension&lt; Png &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>aa3b53b9e06b25127a1f05bc24c2c6a5f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>formatExtension&lt; Webp &gt;</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>a00e406aa1b7ae0babb3c56bf81a68adc</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>isPowerOfTwo</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>ab40aea1eef598f63dc9c7b2259d0dbfd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>isSupportedFormat</Name>
+                    <Path>image_8hpp.html</Path>
+                    <Anchor>af98a6a8e7238ebb7bf9af3eb98066854</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>snowflake.hpp</Name>
+                  <Path>snowflake_8hpp.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>hash&lt; Hexicord::Snowflake &gt;</Name>
+                    <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>operator()</Name>
+                      <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
+                      <Anchor>a3adb074001f7051e4b2e1c19a085111b</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>Parts</Name>
+                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>counter</Name>
+                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                      <Anchor>a8bd69d9221fb203dc1e2ec2d98099c57</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>processId</Name>
+                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                      <Anchor>a78d5cb38c960035aac9bd46f1350198d</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>timestamp</Name>
+                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                      <Anchor>a6ca12e56c8290cda2abb0a22c74458da</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>workerId</Name>
+                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                      <Anchor>a4ac73bc3cab65da82aa453668d0b7cab</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>Snowflake</Name>
+                    <Path>structHexicord_1_1Snowflake.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>Parts</Name>
+                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                      <Subnodes>
+                       <Node>
+                        <Name>counter</Name>
+                        <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                        <Anchor>a8bd69d9221fb203dc1e2ec2d98099c57</Anchor>
+                       </Node>
+                       <Node>
+                        <Name>processId</Name>
+                        <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                        <Anchor>a78d5cb38c960035aac9bd46f1350198d</Anchor>
+                       </Node>
+                       <Node>
+                        <Name>timestamp</Name>
+                        <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                        <Anchor>a6ca12e56c8290cda2abb0a22c74458da</Anchor>
+                       </Node>
+                       <Node>
+                        <Name>workerId</Name>
+                        <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
+                        <Anchor>a4ac73bc3cab65da82aa453668d0b7cab</Anchor>
+                       </Node>
+                      </Subnodes>
+                     </Node>
+                     <Node>
+                      <Name>Snowflake</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>afbdc318d883e5635a1c385a92c5c20a0</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Snowflake</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>aa562046bd2ddd7bbc1eeb5cddc926162</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Snowflake</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>aaaa0a1a4dfcf7d5f5567a25c87efe99c</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>Snowflake</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>a68a18960f49bca7e7069309a2e2f0404</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>operator uint64_t</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>a883a169cd2c40a77b11365ad1fa21c01</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>unixTimestamp</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>ace3cb58f18640cf0a78af9d37edd7b25</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>unixTimestampMs</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>ab3eb7357193a5d104ca879c8fccf794f</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>discordEpochMs</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>a6a1d42d157b0186a7fd64d3c4aba0e9e</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>parts</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>a97790b34f2fda56c046baacf7acf7b3d</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>value</Name>
+                      <Path>structHexicord_1_1Snowflake.html</Path>
+                      <Anchor>a99438825084eaef0f92b5e6f8e8c0dfb</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>from_json</Name>
+                    <Path>snowflake_8hpp.html</Path>
+                    <Anchor>ab85dfbb3b10f9fe8964c6fc9bf8013f7</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>to_json</Name>
+                    <Path>snowflake_8hpp.html</Path>
+                    <Anchor>a8cf49ed90bb599b399b1fe5f7bc4ed56</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>event_dispatcher.hpp</Name>
                 <Path>event__dispatcher_8hpp.html</Path>
                 <Subnodes>
@@ -1756,7 +2671,7 @@
                    <Node>
                     <Name>addHandler</Name>
                     <Path>classHexicord_1_1EventDispatcher.html</Path>
-                    <Anchor>a0a620fe0f304962b2d7827bec65dfe84</Anchor>
+                    <Anchor>a5b9e79928f717cb735ae99be40a58f96</Anchor>
                    </Node>
                    <Node>
                     <Name>dispatchEvent</Name>
@@ -2180,11 +3095,6 @@
                    </Node>
                   </Subnodes>
                  </Node>
-                 <Node>
-                  <Name>ConnectionError</Name>
-                  <Path>exceptions_8hpp.html</Path>
-                  <Anchor>a84d6c223a81559a728c918d88d9fef0b</Anchor>
-                 </Node>
                 </Subnodes>
                </Node>
                <Node>
@@ -2345,7 +3255,7 @@
                    <Node>
                     <Name>connect</Name>
                     <Path>classHexicord_1_1GatewayClient.html</Path>
-                    <Anchor>a5e510d788d654c220710dcb696b50590</Anchor>
+                    <Anchor>a4c39e267120647e9fcba579da4c151b3</Anchor>
                    </Node>
                    <Node>
                     <Name>disconnect</Name>
@@ -2386,6 +3296,11 @@
                     <Name>token</Name>
                     <Path>classHexicord_1_1GatewayClient.html</Path>
                     <Anchor>ab233d33dc990d3b555d46e76dbfec100</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>updatePresence</Name>
+                    <Path>classHexicord_1_1GatewayClient.html</Path>
+                    <Anchor>af38efa57702f962971f56b1ea716636c</Anchor>
                    </Node>
                    <Node>
                     <Name>waitForEvent</Name>
@@ -2641,33 +3556,6 @@
                   <Path>classHexicord_1_1RestClient.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>AvatarFormat</Name>
-                    <Path>group__REST__users.html</Path>
-                    <Anchor>gaca8d73d127da49fc6cb2e48b88b104e3</Anchor>
-                    <Subnodes>
-                     <Node>
-                      <Name>Detect</Name>
-                      <Path>group__REST__users.html</Path>
-                      <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Png</Name>
-                      <Path>group__REST__users.html</Path>
-                      <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Gif</Name>
-                      <Path>group__REST__users.html</Path>
-                      <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>Jpeg</Name>
-                      <Path>group__REST__users.html</Path>
-                      <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
                     <Name>RestClient</Name>
                     <Path>classHexicord_1_1RestClient.html</Path>
                     <Anchor>ae3d2edb5dc24c9a8e8c3496a93aeeb5a</Anchor>
@@ -2698,9 +3586,19 @@
                     <Anchor>ga62b77805f13895f7d615a2df9b055776</Anchor>
                    </Node>
                    <Node>
+                    <Name>attachIntegration</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga51d27116ea2e80e9166e0fbe675e84c8</Anchor>
+                   </Node>
+                   <Node>
                     <Name>banMember</Name>
                     <Path>group__REST__guilds.html</Path>
                     <Anchor>ga977d9e759aef35c52e3b94b174829c39</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>beginGuildPrune</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga7614d87f8d37d05636f1cbfc76b5845a</Anchor>
                    </Node>
                    <Node>
                     <Name>createChannel</Name>
@@ -2733,6 +3631,16 @@
                     <Anchor>ga8e18fe13cf5fe19d9d1380de3b08c3e8</Anchor>
                    </Node>
                    <Node>
+                    <Name>createWebhook</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>gacceff66d8f8805e50d80e6e81e51183c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>deafMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga1e16b6539a72867200547aea83a6b3a8</Anchor>
+                   </Node>
+                   <Node>
                     <Name>deleteChannel</Name>
                     <Path>group__REST__channels.html</Path>
                     <Anchor>ga9f02bba65c3d4aba6a61705484f50292</Anchor>
@@ -2756,6 +3664,16 @@
                     <Name>deleteRole</Name>
                     <Path>group__REST__guilds.html</Path>
                     <Anchor>gab712f870520cfeff036877db4bd7eff6</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>deleteWebhook</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>gaea3357a7307373ceb6bf6f93cf68ef02</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>detachIntegration</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga99570df7b7ced935040a4f866591600e</Anchor>
                    </Node>
                    <Node>
                     <Name>editChannelRolePermissions</Name>
@@ -2793,6 +3711,11 @@
                     <Anchor>gaddbb168851c0488e74032f52306d54a2</Anchor>
                    </Node>
                    <Node>
+                    <Name>getChannelWebhooks</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>gae6d319e36dab6c2b8b6d563601a855e5</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getConnections</Name>
                     <Path>group__REST__users.html</Path>
                     <Anchor>ga9dffd01ca42e09795d4b1a16c5a1869a</Anchor>
@@ -2813,6 +3736,26 @@
                     <Anchor>gab0fd57365f3512fd36f4c5fcdaa3a669</Anchor>
                    </Node>
                    <Node>
+                    <Name>getGuildEmbed</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gade8ad23425591e889506d2164f560501</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getGuildIntegrations</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gaf635a607e8ddeb5bb42127a3fe6c0e7d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getGuildPruneCount</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga4c2008c5c352d72797eaa8894e38a36f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getGuildWebhooks</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>gaeea8f114e86d98e1e46bbaeb4519f5c1</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInvite</Name>
                     <Path>group__REST__invites.html</Path>
                     <Anchor>ga09c753bdc5e56430a6922b4e8a47b2ec</Anchor>
@@ -2826,6 +3769,16 @@
                     <Name>getMe</Name>
                     <Path>group__REST__users.html</Path>
                     <Anchor>ga2700ff2dae717f169bf21b4e69f44d58</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gae482d8b5f167ad7ad826be69c49e8de7</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getMembers</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gac13331c30d1701f2ba850936534f226b</Anchor>
                    </Node>
                    <Node>
                     <Name>getMessage</Name>
@@ -2880,7 +3833,12 @@
                    <Node>
                     <Name>getUserGuilds</Name>
                     <Path>group__REST__users.html</Path>
-                    <Anchor>ga69243643941ee7202c2f2b9d14ef4ae2</Anchor>
+                    <Anchor>gabb6cede1ec4a0b3244dac13d4b2f5c7d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getWebhook</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>ga773a92ce268e9ca59bd6af773d93d526</Anchor>
                    </Node>
                    <Node>
                     <Name>giveRole</Name>
@@ -2903,14 +3861,24 @@
                     <Anchor>gaa8c75c82fd05239474bebe4b9f2805bd</Anchor>
                    </Node>
                    <Node>
+                    <Name>modifyAttachedIntegration</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga6994c3202aa168dc00a5001e0d50219f</Anchor>
+                   </Node>
+                   <Node>
                     <Name>modifyChannel</Name>
                     <Path>group__REST__channels.html</Path>
-                    <Anchor>ga09653daebf91d86eb022d23e7a556aa2</Anchor>
+                    <Anchor>gadca604f87a2857e21b5b055af2318937</Anchor>
                    </Node>
                    <Node>
                     <Name>modifyGuild</Name>
                     <Path>group__REST__guilds.html</Path>
                     <Anchor>ga165f39ca54d1be6ea02742feaa5233ab</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>modifyGuildEmbed</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga7b3f4808727d4e7d71ec99e2f17a9ab0</Anchor>
                    </Node>
                    <Node>
                     <Name>modifyRole</Name>
@@ -2923,9 +3891,19 @@
                     <Anchor>ga183524adc0be7262dcfba07415eaa973</Anchor>
                    </Node>
                    <Node>
+                    <Name>moveMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga19f5c78bfc0b32723fce5fb46005d23b</Anchor>
+                   </Node>
+                   <Node>
                     <Name>moveRole</Name>
                     <Path>group__REST__guilds.html</Path>
                     <Anchor>ga453b2408774c20f3fedc01272246cbff</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>muteMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gaa2ae8b490d80f95d8f584372a42847ea</Anchor>
                    </Node>
                    <Node>
                     <Name>operator=</Name>
@@ -2975,7 +3953,7 @@
                    <Node>
                     <Name>sendImage</Name>
                     <Path>group__REST__messages.html</Path>
-                    <Anchor>gada8f95e23ff98bde3ad43a6cec9806f5</Anchor>
+                    <Anchor>ga6c9b5a3a704e22a2bd27451cfbabd3b9</Anchor>
                    </Node>
                    <Node>
                     <Name>sendRestRequest</Name>
@@ -2990,12 +3968,7 @@
                    <Node>
                     <Name>setAvatar</Name>
                     <Path>group__REST__users.html</Path>
-                    <Anchor>gadfd3da1f4e93eb7e4c646f670362282d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setAvatar</Name>
-                    <Path>group__REST__users.html</Path>
-                    <Anchor>ga2d34510caadc689f74e19e0fa2006fa7</Anchor>
+                    <Anchor>ga86595f526de7e6f17d0efcde388127fe</Anchor>
                    </Node>
                    <Node>
                     <Name>setChannelBitrate</Name>
@@ -3020,12 +3993,47 @@
                    <Node>
                     <Name>setChannelUsersLimit</Name>
                     <Path>group__REST__channels.html</Path>
-                    <Anchor>ga1acbaa8f451cf67671693327d5dee226</Anchor>
+                    <Anchor>gad23ce7ab0dcbf110730caa4172f5e9a6</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setMemberDeaf</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga65d08f232dd7c6e409720ad9e3fc8e9a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setMemberMute</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gab1302a08517cde09931a4d39c09551a2</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setMemberNickname</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga62c1c1b255712ead4b2e6e439efc2ad9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setMemberRoles</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga156345c6e2044fcd9be29153fc10c46e</Anchor>
                    </Node>
                    <Node>
                     <Name>setUsername</Name>
                     <Path>group__REST__users.html</Path>
                     <Anchor>ga9fa3986f94935622244b3a6afae8d62a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setWebhookAvatar</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>ga1292a0c1d9bdd57be0d3b7ee0a228e73</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setWebhookName</Name>
+                    <Path>group__REST__webhooks.html</Path>
+                    <Anchor>gab0c23e14dc1b002f3df22dfd231e9b45</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>syncIntegration</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>gad06f6e34dbd4a039c2416fccf193045e</Anchor>
                    </Node>
                    <Node>
                     <Name>takeRole</Name>
@@ -3041,6 +4049,16 @@
                     <Name>unbanMember</Name>
                     <Path>group__REST__guilds.html</Path>
                     <Anchor>ga12e0ee88283bfecc8369abbed4fc866f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>undeafMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga7099c1299d1d3b86c06f3304a125e816</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>unmuteMember</Name>
+                    <Path>group__REST__guilds.html</Path>
+                    <Anchor>ga27a29ac5ed9f1b93712ecc5502719549</Anchor>
                    </Node>
                    <Node>
                     <Name>unpinMessage</Name>
@@ -3059,168 +4077,6 @@
                <Node>
                 <Name>types.hpp</Name>
                 <Path>types_8hpp.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>File</Name>
-                  <Path>structHexicord_1_1File.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>File</Name>
-                    <Path>structHexicord_1_1File.html</Path>
-                    <Anchor>adf9b6a20a05fc9d49d32f7490fabab0f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>File</Name>
-                    <Path>structHexicord_1_1File.html</Path>
-                    <Anchor>a541ba1a7c4a0efd24f2d001101ca7d34</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>File</Name>
-                    <Path>structHexicord_1_1File.html</Path>
-                    <Anchor>a0911514c76238326dc7c179c3816fd2f</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>bytes</Name>
-                    <Path>structHexicord_1_1File.html</Path>
-                    <Anchor>a1c99389e32675cbc055ef7c880f5c75a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>filename</Name>
-                    <Path>structHexicord_1_1File.html</Path>
-                    <Anchor>a484ca193e4ec0de1afb70e33ad79a97c</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>hash&lt; Hexicord::Snowflake &gt;</Name>
-                  <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>operator()</Name>
-                    <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
-                    <Anchor>ad1e708a33d8201a7dfc6ac6835f1acbb</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>Parts</Name>
-                  <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>counter</Name>
-                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                    <Anchor>a8bd69d9221fb203dc1e2ec2d98099c57</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>processId</Name>
-                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                    <Anchor>a78d5cb38c960035aac9bd46f1350198d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>timestamp</Name>
-                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                    <Anchor>a6ca12e56c8290cda2abb0a22c74458da</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>workerId</Name>
-                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                    <Anchor>a4ac73bc3cab65da82aa453668d0b7cab</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>Snowflake</Name>
-                  <Path>structHexicord_1_1Snowflake.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>Parts</Name>
-                    <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                    <Subnodes>
-                     <Node>
-                      <Name>counter</Name>
-                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                      <Anchor>a8bd69d9221fb203dc1e2ec2d98099c57</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>processId</Name>
-                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                      <Anchor>a78d5cb38c960035aac9bd46f1350198d</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>timestamp</Name>
-                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                      <Anchor>a6ca12e56c8290cda2abb0a22c74458da</Anchor>
-                     </Node>
-                     <Node>
-                      <Name>workerId</Name>
-                      <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-                      <Anchor>a4ac73bc3cab65da82aa453668d0b7cab</Anchor>
-                     </Node>
-                    </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>Snowflake</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>ace586adae242cc74639c0fe4dd4b499a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Snowflake</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>ad9c7638c832b567efe625bc8fdb33335</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Snowflake</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>aaaa0a1a4dfcf7d5f5567a25c87efe99c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>Snowflake</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a68a18960f49bca7e7069309a2e2f0404</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>operator uint64_t</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a5690090819225bf3981c10ee5aa58bf8</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>unixTimestamp</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a43d3407a0ea6a9b2ebdf963e1eca2cee</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>unixTimestampMs</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a770003fb13b4ff969fad60dc5c042725</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>discordEpochMs</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a6a1d42d157b0186a7fd64d3c4aba0e9e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>parts</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a97790b34f2fda56c046baacf7acf7b3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>value</Name>
-                    <Path>structHexicord_1_1Snowflake.html</Path>
-                    <Anchor>a99438825084eaef0f92b5e6f8e8c0dfb</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>from_json</Name>
-                  <Path>types_8hpp.html</Path>
-                  <Anchor>ab85dfbb3b10f9fe8964c6fc9bf8013f7</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>to_json</Name>
-                  <Path>types_8hpp.html</Path>
-                  <Anchor>a8cf49ed90bb599b399b1fe5f7bc4ed56</Anchor>
-                 </Node>
-                </Subnodes>
                </Node>
               </Subnodes>
              </Node>

@@ -2,17 +2,6 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>ConnectionError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Hexicord</Scope>
-    </TokenIdentifier>
-    <Path>namespaceHexicord.html</Path>
-    <Anchor>a84d6c223a81559a728c918d88d9fef0b</Anchor>
-    <DeclaredIn>exceptions.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>DECLARE_FLAGS</Name>
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
@@ -66,6 +55,171 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>basePath</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ace9e00e5e43ec15fc945705ce50195b2</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; ApplicationIcon &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>affd14ed55a34eaeafd39a75e8b104f9e</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; CustomEmoji &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a114364e5357ebf3be32c667ea1697857</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; DefaultUserAvatar &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a2a680271ac8bac5b3bc7d87f16ce2da4</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; GuildIcon &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ad7b924a9723cd260258b22be4cd87380</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; GuildSplash &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ae667dfba867a75422c5707608ec6ab81</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; UserAvatar &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a64d084043a6be20785fda3142f2f4766</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>cdnDownload</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ab95bb37edd63d834148bfe605784bc6c</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>adea0b5059ca84511e658f6d9bc4f235b</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Gif &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>afc94616ed5cd9ab353b3bc4c3a095603</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Jpeg &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a554222716f6de703c9644d7b4a79c776</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Png &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>aa3b53b9e06b25127a1f05bc24c2c6a5f</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Webp &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a00e406aa1b7ae0babb3c56bf81a68adc</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isPowerOfTwo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ab40aea1eef598f63dc9c7b2259d0dbfd</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isSupportedFormat</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>af98a6a8e7238ebb7bf9af3eb98066854</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>from_json</Name>
       <APILanguage>cpp</APILanguage>
       <Type>func</Type>
@@ -73,7 +227,7 @@
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
     <Anchor>ab85dfbb3b10f9fe8964c6fc9bf8013f7</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -84,7 +238,7 @@
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
     <Anchor>a8cf49ed90bb599b399b1fe5f7bc4ed56</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -159,7 +313,7 @@
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
     <Anchor>ga2077ea3f82780fd67b89a94f0d393d06</Anchor>
-    <Abstract>Change existing or add new channel permission override for a кщду. </Abstract>
+    <Abstract>Change existing or add new channel permission override for a role. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -266,7 +420,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
-    <Anchor>ga09653daebf91d86eb022d23e7a556aa2</Anchor>
+    <Anchor>gadca604f87a2857e21b5b055af2318937</Anchor>
     <Abstract>Update a channels settings. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -322,7 +476,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
-    <Anchor>ga1acbaa8f451cf67671693327d5dee226</Anchor>
+    <Anchor>gad23ce7ab0dcbf110730caa4172f5e9a6</Anchor>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -444,7 +598,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__messages.html</Path>
-    <Anchor>gada8f95e23ff98bde3ad43a6cec9806f5</Anchor>
+    <Anchor>ga6c9b5a3a704e22a2bd27451cfbabd3b9</Anchor>
     <Abstract>Same as sendFile. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -526,6 +680,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>attachIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga51d27116ea2e80e9166e0fbe675e84c8</Anchor>
+    <Abstract>Attach an integration object from the current user to the guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>banMember</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -534,6 +700,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga977d9e759aef35c52e3b94b174829c39</Anchor>
     <Abstract>Ban member on guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>beginGuildPrune</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7614d87f8d37d05636f1cbfc76b5845a</Anchor>
+    <Abstract>Begin a prune operation. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -574,6 +752,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>deafMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga1e16b6539a72867200547aea83a6b3a8</Anchor>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>deleteRole</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -582,6 +771,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>gab712f870520cfeff036877db4bd7eff6</Anchor>
     <Abstract>Delete a role. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>detachIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga99570df7b7ced935040a4f866591600e</Anchor>
+    <Abstract>Delete the attached integration object for the guild. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -622,6 +823,66 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getGuildEmbed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gade8ad23425591e889506d2164f560501</Anchor>
+    <Abstract>Get guild embed object. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildIntegrations</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gaf635a607e8ddeb5bb42127a3fe6c0e7d</Anchor>
+    <Abstract>Returns a list of integration objects for the guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildPruneCount</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga4c2008c5c352d72797eaa8894e38a36f</Anchor>
+    <Abstract>Get number of members that would be removed in a prune operation. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gae482d8b5f167ad7ad826be69c49e8de7</Anchor>
+    <Abstract>Return guild member object as described at https://discordapp.com/developers/docs/resources/guild#GUI...</Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getMembers</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gac13331c30d1701f2ba850936534f226b</Anchor>
+    <Abstract>Get JSON array of guild members. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getRoles</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -658,6 +919,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>modifyAttachedIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga6994c3202aa168dc00a5001e0d50219f</Anchor>
+    <Abstract>See https://discordapp.com/developers/docs/resources/guild#modify-guild-integration There would be be...</Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>modifyGuild</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -666,6 +939,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga165f39ca54d1be6ea02742feaa5233ab</Anchor>
     <Abstract>Modify a guild&amp;#39;s settings. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>modifyGuildEmbed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7b3f4808727d4e7d71ec99e2f17a9ab0</Anchor>
+    <Abstract>Update embed object for the guild. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -694,6 +979,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>moveMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga19f5c78bfc0b32723fce5fb46005d23b</Anchor>
+    <Abstract>Move member to voice channel. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>moveRole</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -702,6 +999,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga453b2408774c20f3fedc01272246cbff</Anchor>
     <Abstract>Same as reorderRoles with one pair passed. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>muteMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gaa2ae8b490d80f95d8f584372a42847ea</Anchor>
+    <Abstract>Same as setMemberMute(guildId, userId, true);. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -730,6 +1039,66 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setMemberDeaf</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga65d08f232dd7c6e409720ad9e3fc8e9a</Anchor>
+    <Abstract>Deaf/undeaf member. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberMute</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gab1302a08517cde09931a4d39c09551a2</Anchor>
+    <Abstract>Mute/unmute member. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberNickname</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga62c1c1b255712ead4b2e6e439efc2ad9</Anchor>
+    <Abstract>Change user nickname for a guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberRoles</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga156345c6e2044fcd9be29153fc10c46e</Anchor>
+    <Abstract>Set guild member roles. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>syncIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gad06f6e34dbd4a039c2416fccf193045e</Anchor>
+    <Abstract>Sync an integration. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>takeRole</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -750,6 +1119,29 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga12e0ee88283bfecc8369abbed4fc866f</Anchor>
     <Abstract>Unban member on guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>undeafMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7099c1299d1d3b86c06f3304a125e816</Anchor>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>unmuteMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga27a29ac5ed9f1b93712ecc5502719549</Anchor>
+    <Abstract>Same as setMemberMute(guildId, userId, true);. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -840,7 +1232,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__users.html</Path>
-    <Anchor>ga69243643941ee7202c2f2b9d14ef4ae2</Anchor>
+    <Anchor>gabb6cede1ec4a0b3244dac13d4b2f5c7d</Anchor>
     <Abstract>Returns list of partial guild object the current user is member of. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -864,19 +1256,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__users.html</Path>
-    <Anchor>gadfd3da1f4e93eb7e4c646f670362282d</Anchor>
-    <Abstract>Change avatar. </Abstract>
-    <DeclaredIn>rest_client.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setAvatar</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ga2d34510caadc689f74e19e0fa2006fa7</Anchor>
+    <Anchor>ga86595f526de7e6f17d0efcde388127fe</Anchor>
     <Abstract>Change avatar. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -891,47 +1271,6 @@
     <Anchor>ga9fa3986f94935622244b3a6afae8d62a</Anchor>
     <Abstract>Change username. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Detect</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6</Anchor>
-    <Abstract>Try to detect avatar format. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Png</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Gif</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Jpeg</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>econst</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1015,23 +1354,121 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>REST_webhooks</Name>
+      <APILanguage>c</APILanguage>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gacceff66d8f8805e50d80e6e81e51183c</Anchor>
+    <Abstract>Create new webhook. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gaea3357a7307373ceb6bf6f93cf68ef02</Anchor>
+    <Abstract>Delete webhook by it&amp;#39;s id. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getChannelWebhooks</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gae6d319e36dab6c2b8b6d563601a855e5</Anchor>
+    <Abstract>Get webhhoks for specified channel. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildWebhooks</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gaeea8f114e86d98e1e46bbaeb4519f5c1</Anchor>
+    <Abstract>Get webhhoks for specified guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>ga773a92ce268e9ca59bd6af773d93d526</Anchor>
+    <Abstract>Get a webhook by it&amp;#39;s ID. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setWebhookAvatar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>ga1292a0c1d9bdd57be0d3b7ee0a228e73</Anchor>
+    <Abstract>Change webhook avatar, image must be 128x128. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setWebhookName</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gab0c23e14dc1b002f3df22dfd231e9b45</Anchor>
+    <Abstract>Change webhook name, name is limited to 2-3 characters. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>boost</Name>
+      <APILanguage>c</APILanguage>
+      <Type>ns</Type>
+      <Scope>boost</Scope>
+    </TokenIdentifier>
+    <Path>namespaceboost.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>boost::asio</Name>
+      <APILanguage>c</APILanguage>
+      <Type>ns</Type>
+      <Scope>boost::asio</Scope>
+    </TokenIdentifier>
+    <Path>namespaceboost_1_1asio.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Hexicord</Name>
       <APILanguage>c</APILanguage>
       <Type>ns</Type>
       <Scope>Hexicord</Scope>
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ConnectionError</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>tdef</Type>
-      <Scope>Hexicord</Scope>
-    </TokenIdentifier>
-    <Path>namespaceHexicord.html</Path>
-    <Anchor>a84d6c223a81559a728c918d88d9fef0b</Anchor>
-    <DeclaredIn>exceptions.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1053,7 +1490,7 @@
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
     <Anchor>ab85dfbb3b10f9fe8964c6fc9bf8013f7</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1086,7 +1523,7 @@
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
     <Anchor>a8cf49ed90bb599b399b1fe5f7bc4ed56</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1407,6 +1844,127 @@
     </TokenIdentifier>
     <Path>namespaceHexicord.html</Path>
     <Anchor>a841b29df0ee895cd9b18ea378c1aaad4ae40ba05d9849a6d2745021db434b4490</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Detect</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a14586255422969acc2fc20e8fd7a6bb6a588a80dc48247a4a059df0927cd4d755</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Jpeg</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a14586255422969acc2fc20e8fd7a6bb6a2967da224957667bf39a1bb12a086f3e</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Png</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a14586255422969acc2fc20e8fd7a6bb6aa33de9d274ad4fd7766c5a0c9347b758</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Webp</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a14586255422969acc2fc20e8fd7a6bb6a2c2cd657a6eae90457c3ccae719d9c52</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Gif</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a14586255422969acc2fc20e8fd7a6bb6a4f6d459b8ef3b14e6dd692a083794ad5</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>CustomEmoji</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a105c82cc3d3b43d675bdb4f3fddabe2f</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>GuildIcon</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361ad43428b692789ff9d63ab5a1015fb3ce</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>GuildSplash</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361afdc0be83698962d99286e9f0eb7136eb</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>DefaultUserAvatar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a71b08a670d472b33b81866c271ec2abd</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>UserAvatar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361a914905e51b31f2fba4ffd33fe7d7d78d</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ApplicationIcon</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>Hexicord</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord.html</Path>
+    <Anchor>a2ebed6a7fb300f5c0bdd5fa91d56d361ac5bb9061227377fb586beb0cef1bdbd0</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1781,7 +2339,7 @@
       <Scope>Hexicord::EventDispatcher</Scope>
     </TokenIdentifier>
     <Path>classHexicord_1_1EventDispatcher.html</Path>
-    <Anchor>a0a620fe0f304962b2d7827bec65dfe84</Anchor>
+    <Anchor>a5b9e79928f717cb735ae99be40a58f96</Anchor>
     <DeclaredIn>event_dispatcher.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1825,7 +2383,7 @@
     </TokenIdentifier>
     <Path>structHexicord_1_1File.html</Path>
     <Abstract>Struct for (filename, bytes) pair. </Abstract>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>file.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1837,7 +2395,7 @@
     <Path>structHexicord_1_1File.html</Path>
     <Anchor>adf9b6a20a05fc9d49d32f7490fabab0f</Anchor>
     <Abstract>Read file specified by path to bytes. </Abstract>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>file.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1849,7 +2407,7 @@
     <Path>structHexicord_1_1File.html</Path>
     <Anchor>a541ba1a7c4a0efd24f2d001101ca7d34</Anchor>
     <Abstract>Read stream until EOF to bytes. </Abstract>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>file.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1861,7 +2419,19 @@
     <Path>structHexicord_1_1File.html</Path>
     <Anchor>a0911514c76238326dc7c179c3816fd2f</Anchor>
     <Abstract>Use passed vector as file contents. </Abstract>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>file.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>write</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::File</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1File.html</Path>
+    <Anchor>a5d5ec7715581a3fd37960daf50b89024</Anchor>
+    <Abstract>Helper function, write file to std::ofstream(targetPath). </Abstract>
+    <DeclaredIn>file.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2189,7 +2759,7 @@
       <Scope>Hexicord::GatewayClient</Scope>
     </TokenIdentifier>
     <Path>classHexicord_1_1GatewayClient.html</Path>
-    <Anchor>a5e510d788d654c220710dcb696b50590</Anchor>
+    <Anchor>a4c39e267120647e9fcba579da4c151b3</Anchor>
     <Abstract>Connect and identify to gateway. </Abstract>
     <DeclaredIn>gateway_client.hpp</DeclaredIn>
   </Token>
@@ -2285,6 +2855,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>updatePresence</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::GatewayClient</Scope>
+    </TokenIdentifier>
+    <Path>classHexicord_1_1GatewayClient.html</Path>
+    <Anchor>af38efa57702f962971f56b1ea716636c</Anchor>
+    <Abstract>Update presence (user status). </Abstract>
+    <DeclaredIn>gateway_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>waitForEvent</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -2358,6 +2940,274 @@
     <Path>structHexicord_1_1GatewayError.html</Path>
     <Anchor>afcefecd42e2a483e7bf5e33dd09514a0</Anchor>
     <Abstract>Contains gateway disconnect code if error caused by disconnection, -1 otherwise. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Hexicord::Image</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>Hexicord::Image</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1Image.html</Path>
+    <Abstract>Container for (format, file) pair. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Image</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::Image</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1Image.html</Path>
+    <Anchor>a6fef88df0b773127d0967eb85051d28d</Anchor>
+    <Abstract>Construct new image instance. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toAvatarData</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::Image</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1Image.html</Path>
+    <Anchor>a6613b45b9573325a048bb40e4cd26aff</Anchor>
+    <Abstract>Convert string to form usable for sending in various REST methods. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>file</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::Image</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1Image.html</Path>
+    <Anchor>adf05fa09e24330cf3e25c09b39678723</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>format</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::Image</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1Image.html</Path>
+    <Anchor>a3ecd4cc831fd833df00e0f2ee34db9f0</Anchor>
+    <Abstract>Forced or detected (if Detect passed in c-tor) format. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Hexicord::ImageReference</Name>
+      <APILanguage>c</APILanguage>
+      <Type>tmplt</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Abstract>Reference to remote image stored on Discord CDN. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ImageReference</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>a4595c16a7e74de2c048f72521f3755fd</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>download</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>a5a1adf92af74bf17367cc56af6cad4bf</Anchor>
+    <Abstract>Download this image. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isAnimated</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>ab92791f2c9bbf0fd317c1b583f2ea0cc</Anchor>
+    <Abstract>Check whatever image is animated (GIF). </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>url</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>ab132be2d33c7da9de67941128663616f</Anchor>
+    <Abstract>Return remote URL for this image on cdn.discordapp.com. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hash</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>aee975ec54e4bb5fd10d2ad4237ee08a9</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>id</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::ImageReference</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference.html</Path>
+    <Anchor>a0b1dc239fc1a637b068bc6d8778a2560</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Hexicord::ImageReference&lt; CustomEmoji &gt;</Name>
+      <APILanguage>c</APILanguage>
+      <Type>tmplt</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ImageReference</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <Anchor>a51c87d1cef3aa2c94856e31a38c25acb</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>download</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <Anchor>a4ba57190cdff5f6caccae57bccaa3044</Anchor>
+    <Abstract>Download this image. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isAnimated</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <Anchor>a7b9734272f6f299461a9d15eb49c8472</Anchor>
+    <Abstract>Check whatever image is animated (GIF). </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>url</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <Anchor>ad5ce6f38462efb0b590d709523b4c744</Anchor>
+    <Abstract>Return remote URL for this image on cdn.discordapp.com. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hash</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::ImageReference&lt; CustomEmoji &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html</Path>
+    <Anchor>aaf9093119c82089b6425e74e57548c4a</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Name>
+      <APILanguage>c</APILanguage>
+      <Type>tmplt</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ImageReference</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <Anchor>a16cc5e85dcc0ac26f409c67335d54132</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>download</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <Anchor>ae710ff81875cf60906d919628d9f8436</Anchor>
+    <Abstract>Download this image. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isAnimated</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <Anchor>a07f30ac20d279675ddd6e0d427caf217</Anchor>
+    <Abstract>Check whatever image is animated (GIF). </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>url</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <Anchor>a771fb861868dcb620c24c4f9596f1b6e</Anchor>
+    <Abstract>Return remote URL for this image on cdn.discordapp.com. </Abstract>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>userDiscriminator</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</Scope>
+    </TokenIdentifier>
+    <Path>structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html</Path>
+    <Anchor>a350141da2d04b172db38836b3f6f8352</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2857,6 +3707,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>attachIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga51d27116ea2e80e9166e0fbe675e84c8</Anchor>
+    <Abstract>Attach an integration object from the current user to the guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>banMember</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -2865,6 +3727,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga977d9e759aef35c52e3b94b174829c39</Anchor>
     <Abstract>Ban member on guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>beginGuildPrune</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7614d87f8d37d05636f1cbfc76b5845a</Anchor>
+    <Abstract>Begin a prune operation. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -2941,6 +3815,29 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>createWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gacceff66d8f8805e50d80e6e81e51183c</Anchor>
+    <Abstract>Create new webhook. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deafMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga1e16b6539a72867200547aea83a6b3a8</Anchor>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>deleteChannel</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -3001,6 +3898,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>deleteWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gaea3357a7307373ceb6bf6f93cf68ef02</Anchor>
+    <Abstract>Delete webhook by it&amp;#39;s id. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>detachIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga99570df7b7ced935040a4f866591600e</Anchor>
+    <Abstract>Delete the attached integration object for the guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>editChannelRolePermissions</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -3008,7 +3929,7 @@
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
     <Anchor>ga2077ea3f82780fd67b89a94f0d393d06</Anchor>
-    <Abstract>Change existing or add new channel permission override for a кщду. </Abstract>
+    <Abstract>Change existing or add new channel permission override for a role. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3085,6 +4006,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getChannelWebhooks</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gae6d319e36dab6c2b8b6d563601a855e5</Anchor>
+    <Abstract>Get webhhoks for specified channel. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getConnections</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -3133,6 +4066,54 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getGuildEmbed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gade8ad23425591e889506d2164f560501</Anchor>
+    <Abstract>Get guild embed object. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildIntegrations</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gaf635a607e8ddeb5bb42127a3fe6c0e7d</Anchor>
+    <Abstract>Returns a list of integration objects for the guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildPruneCount</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga4c2008c5c352d72797eaa8894e38a36f</Anchor>
+    <Abstract>Get number of members that would be removed in a prune operation. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getGuildWebhooks</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gaeea8f114e86d98e1e46bbaeb4519f5c1</Anchor>
+    <Abstract>Get webhhoks for specified guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInvite</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -3165,6 +4146,30 @@
     <Path>group__REST__users.html</Path>
     <Anchor>ga2700ff2dae717f169bf21b4e69f44d58</Anchor>
     <Abstract>Returns the user object of the requester&amp;#39;s account. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gae482d8b5f167ad7ad826be69c49e8de7</Anchor>
+    <Abstract>Return guild member object as described at https://discordapp.com/developers/docs/resources/guild#GUI...</Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getMembers</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gac13331c30d1701f2ba850936534f226b</Anchor>
+    <Abstract>Get JSON array of guild members. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3295,8 +4300,20 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__users.html</Path>
-    <Anchor>ga69243643941ee7202c2f2b9d14ef4ae2</Anchor>
+    <Anchor>gabb6cede1ec4a0b3244dac13d4b2f5c7d</Anchor>
     <Abstract>Returns list of partial guild object the current user is member of. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getWebhook</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>ga773a92ce268e9ca59bd6af773d93d526</Anchor>
+    <Abstract>Get a webhook by it&amp;#39;s ID. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3349,13 +4366,25 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>modifyAttachedIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga6994c3202aa168dc00a5001e0d50219f</Anchor>
+    <Abstract>See https://discordapp.com/developers/docs/resources/guild#modify-guild-integration There would be be...</Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>modifyChannel</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
-    <Anchor>ga09653daebf91d86eb022d23e7a556aa2</Anchor>
+    <Anchor>gadca604f87a2857e21b5b055af2318937</Anchor>
     <Abstract>Update a channels settings. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -3369,6 +4398,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga165f39ca54d1be6ea02742feaa5233ab</Anchor>
     <Abstract>Modify a guild&amp;#39;s settings. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>modifyGuildEmbed</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7b3f4808727d4e7d71ec99e2f17a9ab0</Anchor>
+    <Abstract>Update embed object for the guild. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3397,6 +4438,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>moveMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga19f5c78bfc0b32723fce5fb46005d23b</Anchor>
+    <Abstract>Move member to voice channel. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>moveRole</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -3405,6 +4458,18 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga453b2408774c20f3fedc01272246cbff</Anchor>
     <Abstract>Same as reorderRoles with one pair passed. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>muteMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gaa2ae8b490d80f95d8f584372a42847ea</Anchor>
+    <Abstract>Same as setMemberMute(guildId, userId, true);. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3521,7 +4586,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__messages.html</Path>
-    <Anchor>gada8f95e23ff98bde3ad43a6cec9806f5</Anchor>
+    <Anchor>ga6c9b5a3a704e22a2bd27451cfbabd3b9</Anchor>
     <Abstract>Same as sendFile. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -3557,19 +4622,7 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__users.html</Path>
-    <Anchor>gadfd3da1f4e93eb7e4c646f670362282d</Anchor>
-    <Abstract>Change avatar. </Abstract>
-    <DeclaredIn>rest_client.hpp</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setAvatar</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Hexicord::RestClient</Scope>
-    </TokenIdentifier>
-    <Path>group__REST__users.html</Path>
-    <Anchor>ga2d34510caadc689f74e19e0fa2006fa7</Anchor>
+    <Anchor>ga86595f526de7e6f17d0efcde388127fe</Anchor>
     <Abstract>Change avatar. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
@@ -3625,7 +4678,55 @@
       <Scope>Hexicord::RestClient</Scope>
     </TokenIdentifier>
     <Path>group__REST__channels.html</Path>
-    <Anchor>ga1acbaa8f451cf67671693327d5dee226</Anchor>
+    <Anchor>gad23ce7ab0dcbf110730caa4172f5e9a6</Anchor>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberDeaf</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga65d08f232dd7c6e409720ad9e3fc8e9a</Anchor>
+    <Abstract>Deaf/undeaf member. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberMute</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gab1302a08517cde09931a4d39c09551a2</Anchor>
+    <Abstract>Mute/unmute member. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberNickname</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga62c1c1b255712ead4b2e6e439efc2ad9</Anchor>
+    <Abstract>Change user nickname for a guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setMemberRoles</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga156345c6e2044fcd9be29153fc10c46e</Anchor>
+    <Abstract>Set guild member roles. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3638,6 +4739,42 @@
     <Path>group__REST__users.html</Path>
     <Anchor>ga9fa3986f94935622244b3a6afae8d62a</Anchor>
     <Abstract>Change username. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setWebhookAvatar</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>ga1292a0c1d9bdd57be0d3b7ee0a228e73</Anchor>
+    <Abstract>Change webhook avatar, image must be 128x128. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setWebhookName</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__webhooks.html</Path>
+    <Anchor>gab0c23e14dc1b002f3df22dfd231e9b45</Anchor>
+    <Abstract>Change webhook name, name is limited to 2-3 characters. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>syncIntegration</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>gad06f6e34dbd4a039c2416fccf193045e</Anchor>
+    <Abstract>Sync an integration. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3673,6 +4810,29 @@
     <Path>group__REST__guilds.html</Path>
     <Anchor>ga12e0ee88283bfecc8369abbed4fc866f</Anchor>
     <Abstract>Unban member on guild. </Abstract>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>undeafMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga7099c1299d1d3b86c06f3304a125e816</Anchor>
+    <DeclaredIn>rest_client.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>unmuteMember</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Hexicord::RestClient</Scope>
+    </TokenIdentifier>
+    <Path>group__REST__guilds.html</Path>
+    <Anchor>ga27a29ac5ed9f1b93712ecc5502719549</Anchor>
+    <Abstract>Same as setMemberMute(guildId, userId, true);. </Abstract>
     <DeclaredIn>rest_client.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -3874,7 +5034,7 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3884,8 +5044,8 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <Anchor>ace586adae242cc74639c0fe4dd4b499a</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>afbdc318d883e5635a1c385a92c5c20a0</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3895,8 +5055,8 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <Anchor>ad9c7638c832b567efe625bc8fdb33335</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>aa562046bd2ddd7bbc1eeb5cddc926162</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3907,7 +5067,7 @@
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
     <Anchor>aaaa0a1a4dfcf7d5f5567a25c87efe99c</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3918,7 +5078,7 @@
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
     <Anchor>a68a18960f49bca7e7069309a2e2f0404</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3928,8 +5088,8 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <Anchor>a5690090819225bf3981c10ee5aa58bf8</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>a883a169cd2c40a77b11365ad1fa21c01</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3939,8 +5099,8 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <Anchor>a43d3407a0ea6a9b2ebdf963e1eca2cee</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>ace3cb58f18640cf0a78af9d37edd7b25</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3950,8 +5110,8 @@
       <Scope>Hexicord::Snowflake</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake.html</Path>
-    <Anchor>a770003fb13b4ff969fad60dc5c042725</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>ab3eb7357193a5d104ca879c8fccf794f</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3971,7 +5131,7 @@
       <Scope>Hexicord::Snowflake::Parts</Scope>
     </TokenIdentifier>
     <Path>structHexicord_1_1Snowflake_1_1Parts.html</Path>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4239,13 +5399,197 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Hexicord::_Detail</Name>
+      <APILanguage>c</APILanguage>
+      <Type>ns</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Abstract>Implementation details. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ace9e00e5e43ec15fc945705ce50195b2</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; ApplicationIcon &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>affd14ed55a34eaeafd39a75e8b104f9e</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; CustomEmoji &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a114364e5357ebf3be32c667ea1697857</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; DefaultUserAvatar &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a2a680271ac8bac5b3bc7d87f16ce2da4</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; GuildIcon &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ad7b924a9723cd260258b22be4cd87380</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; GuildSplash &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ae667dfba867a75422c5707608ec6ab81</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>basePath&lt; UserAvatar &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a64d084043a6be20785fda3142f2f4766</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>cdnDownload</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ab95bb37edd63d834148bfe605784bc6c</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>adea0b5059ca84511e658f6d9bc4f235b</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Gif &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>afc94616ed5cd9ab353b3bc4c3a095603</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Jpeg &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a554222716f6de703c9644d7b4a79c776</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Png &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>aa3b53b9e06b25127a1f05bc24c2c6a5f</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>formatExtension&lt; Webp &gt;</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>a00e406aa1b7ae0babb3c56bf81a68adc</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isPowerOfTwo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>ab40aea1eef598f63dc9c7b2259d0dbfd</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isSupportedFormat</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>func</Type>
+      <Scope>Hexicord::_Detail</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1__Detail.html</Path>
+    <Anchor>af98a6a8e7238ebb7bf9af3eb98066854</Anchor>
+    <DeclaredIn>image.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Hexicord::REST</Name>
+      <APILanguage>c</APILanguage>
+      <Type>ns</Type>
+      <Scope>Hexicord::REST</Scope>
+    </TokenIdentifier>
+    <Path>namespaceHexicord_1_1REST.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>std::hash&lt; Hexicord::Snowflake &gt;</Name>
       <APILanguage>c</APILanguage>
       <Type>tmplt</Type>
       <Scope>std::hash&lt; Hexicord::Snowflake &gt;</Scope>
     </TokenIdentifier>
     <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4255,7 +5599,7 @@
       <Scope>std::hash&lt; Hexicord::Snowflake &gt;</Scope>
     </TokenIdentifier>
     <Path>classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html</Path>
-    <Anchor>ad1e708a33d8201a7dfc6ac6835f1acbb</Anchor>
-    <DeclaredIn>types.hpp</DeclaredIn>
+    <Anchor>a3adb074001f7051e4b2e1c19a085111b</Anchor>
+    <DeclaredIn>snowflake.hpp</DeclaredIn>
   </Token>
 </Tokens>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -75,7 +75,7 @@ $(function() {
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<center><table><tr><td><div class="center"><iframe scrolling="no" frameborder="0" src="group__REST.svg" width="334" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<center><table><tr><td><div class="center"><iframe scrolling="no" frameborder="0" src="group__REST.svg" width="334" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </td></tr></table></center>
 </div>
@@ -97,6 +97,8 @@ Modules</h2></td></tr>
 <tr class="memitem:group__REST__invites"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__invites.html">Invites operations</a></td></tr>
 <tr class="memdesc:group__REST__invites"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methods related to invites. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__REST__webhooks"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__webhooks.html">Webhook operations</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -106,7 +108,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for performing requests to REST endpoints. </p>
-<p>All methods in this group is thread-safe and stateless if not stated otherwise. </p>
+<p>All methods in this group is thread-safe if not stated otherwise. All methods in this group may throw RESTError (or any subclass) and boost::system::system_error. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga0f06016d67a66dc7c41f1522e5e50ca3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0f06016d67a66dc7c41f1522e5e50ca3">&#9670;&nbsp;</a></span>sendRestRequest()</h2>
@@ -160,14 +162,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">endpoint</td><td>endpoint URL relative to base URL (including leading slash). </td></tr>
     <tr><td class="paramname">payload</td><td>JSON payload, pass empty object (default) if none. </td></tr>
     <tr><td class="paramname">query</td><td>GET request query. </td></tr>
-    <tr><td class="paramname">multipart</td><td>Pass one or more MultipartEntity to perform multipart request. If payload is also present, it will be first entity.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error. </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem. </td></tr>
+    <tr><td class="paramname">multipart</td><td>Pass one or more MultipartEntity to perform multipart request. If payload is also present, it will be first entity. </td></tr>
   </table>
   </dd>
 </dl>
@@ -177,7 +172,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

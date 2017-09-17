@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -61,7 +61,6 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Users methods<div class="ingroups"><a class="el" href="group__REST.html">REST methods</a></div></div>  </div>
@@ -80,15 +79,6 @@ $(function() {
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:gaca8d73d127da49fc6cb2e48b88b104e3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">Hexicord::RestClient::AvatarFormat</a> { <a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6">Hexicord::RestClient::Detect</a>, 
-<a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207">Hexicord::RestClient::Png</a>, 
-<a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6">Hexicord::RestClient::Gif</a>, 
-<a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93">Hexicord::RestClient::Jpeg</a>
- }</td></tr>
-<tr class="separator:gaca8d73d127da49fc6cb2e48b88b104e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae7c5e8fcfd34372d81cc4c9c47823b58"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gae7c5e8fcfd34372d81cc4c9c47823b58">Hexicord::RestClient::createDm</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> recipientId)</td></tr>
@@ -109,49 +99,21 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe8195bd067a92b57e49abb25dfb487b"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gabe8195bd067a92b57e49abb25dfb487b">Hexicord::RestClient::getUserDms</a> ()</td></tr>
 <tr class="memdesc:gabe8195bd067a92b57e49abb25dfb487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of DM channel objects.  <a href="#gabe8195bd067a92b57e49abb25dfb487b">More...</a><br /></td></tr>
 <tr class="separator:gabe8195bd067a92b57e49abb25dfb487b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga69243643941ee7202c2f2b9d14ef4ae2"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#ga69243643941ee7202c2f2b9d14ef4ae2">Hexicord::RestClient::getUserGuilds</a> (unsigned short limit=100, <a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> startId=0, bool before=false)</td></tr>
-<tr class="memdesc:ga69243643941ee7202c2f2b9d14ef4ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of partial guild object the current user is member of.  <a href="#ga69243643941ee7202c2f2b9d14ef4ae2">More...</a><br /></td></tr>
-<tr class="separator:ga69243643941ee7202c2f2b9d14ef4ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb6cede1ec4a0b3244dac13d4b2f5c7d"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gabb6cede1ec4a0b3244dac13d4b2f5c7d">Hexicord::RestClient::getUserGuilds</a> (uint16_t limit=100, <a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> startId=0, bool before=false)</td></tr>
+<tr class="memdesc:gabb6cede1ec4a0b3244dac13d4b2f5c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of partial guild object the current user is member of.  <a href="#gabb6cede1ec4a0b3244dac13d4b2f5c7d">More...</a><br /></td></tr>
+<tr class="separator:gabb6cede1ec4a0b3244dac13d4b2f5c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa8c75c82fd05239474bebe4b9f2805bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gaa8c75c82fd05239474bebe4b9f2805bd">Hexicord::RestClient::leaveGuild</a> (<a class="el" href="structHexicord_1_1Snowflake.html">Snowflake</a> guildId)</td></tr>
 <tr class="memdesc:gaa8c75c82fd05239474bebe4b9f2805bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leave a guild.  <a href="#gaa8c75c82fd05239474bebe4b9f2805bd">More...</a><br /></td></tr>
 <tr class="separator:gaa8c75c82fd05239474bebe4b9f2805bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadfd3da1f4e93eb7e4c646f670362282d"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#gadfd3da1f4e93eb7e4c646f670362282d">Hexicord::RestClient::setAvatar</a> (const std::vector&lt; uint8_t &gt; &amp;avatarBytes, <a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">AvatarFormat</a> format=<a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6">Detect</a>)</td></tr>
-<tr class="memdesc:gadfd3da1f4e93eb7e4c646f670362282d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change avatar.  <a href="#gadfd3da1f4e93eb7e4c646f670362282d">More...</a><br /></td></tr>
-<tr class="separator:gadfd3da1f4e93eb7e4c646f670362282d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d34510caadc689f74e19e0fa2006fa7"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#ga2d34510caadc689f74e19e0fa2006fa7">Hexicord::RestClient::setAvatar</a> (std::istream &amp;&amp;avatarStream, <a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">AvatarFormat</a> format=<a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6">Detect</a>)</td></tr>
-<tr class="memdesc:ga2d34510caadc689f74e19e0fa2006fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change avatar.  <a href="#ga2d34510caadc689f74e19e0fa2006fa7">More...</a><br /></td></tr>
-<tr class="separator:ga2d34510caadc689f74e19e0fa2006fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86595f526de7e6f17d0efcde388127fe"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#ga86595f526de7e6f17d0efcde388127fe">Hexicord::RestClient::setAvatar</a> (const <a class="el" href="structHexicord_1_1Image.html">Image</a> &amp;avatar)</td></tr>
+<tr class="memdesc:ga86595f526de7e6f17d0efcde388127fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change avatar.  <a href="#ga86595f526de7e6f17d0efcde388127fe">More...</a><br /></td></tr>
+<tr class="separator:ga86595f526de7e6f17d0efcde388127fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9fa3986f94935622244b3a6afae8d62a"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__REST__users.html#ga9fa3986f94935622244b3a6afae8d62a">Hexicord::RestClient::setUsername</a> (const std::string &amp;newUsername)</td></tr>
 <tr class="memdesc:ga9fa3986f94935622244b3a6afae8d62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change username.  <a href="#ga9fa3986f94935622244b3a6afae8d62a">More...</a><br /></td></tr>
 <tr class="separator:ga9fa3986f94935622244b3a6afae8d62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Methods related to users. </p>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="gaca8d73d127da49fc6cb2e48b88b104e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaca8d73d127da49fc6cb2e48b88b104e3">&#9670;&nbsp;</a></span>AvatarFormat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">Hexicord::RestClient::AvatarFormat</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6"></a>Detect&#160;</td><td class="fielddoc"><p>Try to detect avatar format. </p>
-<p>Always works for valid PNG/GIF/JPEG but may also "detect" image in arbitary data. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggaca8d73d127da49fc6cb2e48b88b104e3afd47aed292de244d9eed457dbc974207"></a>Png&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaca8d73d127da49fc6cb2e48b88b104e3af6317ab340f2297c043ff2f2673ea2c6"></a>Gif&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaca8d73d127da49fc6cb2e48b88b104e3aadcf8ff529e6e658a46fb6b5f1b59f93"></a>Jpeg&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="rest__client_8hpp_source.html#l00806">806</a> of file <a class="el" href="rest__client_8hpp_source.html">rest_client.hpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gae7c5e8fcfd34372d81cc4c9c47823b58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae7c5e8fcfd34372d81cc4c9c47823b58">&#9670;&nbsp;</a></span>createDm()</h2>
@@ -170,13 +132,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new DM channel with a user. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>Created DM channel object. </dd></dl>
 
 </div>
@@ -213,14 +168,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">accessTokens</td><td>Access tokens of users that have granted your app the gdm.join scope. </td></tr>
-    <tr><td class="paramname">nicks</td><td>A dictionary of user ids to their respective nicknames.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
+    <tr><td class="paramname">nicks</td><td>A dictionary of user ids to their respective nicknames. </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,14 +191,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a list of connection objects. </p>
-<p>Requires the connections OAuth2 scope.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Requires the connections OAuth2 scope. </p>
 
 </div>
 </div>
@@ -270,14 +211,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the user object of the requester's account. </p>
-<p>For OAuth2, this requires the identify scope, which will return the object without an email, and optionally the email scope, which returns the object with an email.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>For OAuth2, this requires the identify scope, which will return the object without an email, and optionally the email scope, which returns the object with an email. </p>
 
 </div>
 </div>
@@ -298,13 +232,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return a user object for gived user ID. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (???). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -324,18 +251,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a list of DM channel objects. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a id="ga69243643941ee7202c2f2b9d14ef4ae2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga69243643941ee7202c2f2b9d14ef4ae2">&#9670;&nbsp;</a></span>getUserGuilds()</h2>
+<a id="gabb6cede1ec4a0b3244dac13d4b2f5c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb6cede1ec4a0b3244dac13d4b2f5c7d">&#9670;&nbsp;</a></span>getUserGuilds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +263,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">nlohmann::json Hexicord::RestClient::getUserGuilds </td>
           <td>(</td>
-          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>limit</em> = <code>100</code>, </td>
         </tr>
         <tr>
@@ -374,14 +294,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">limit</td><td>Max number of guilds to return (1-100). </td></tr>
     <tr><td class="paramname">startId</td><td>Get guilds <b>after</b> this guild ID. </td></tr>
-    <tr><td class="paramname">before</td><td>Get guilds <b>before</b> startId, not after.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
+    <tr><td class="paramname">before</td><td>Get guilds <b>before</b> startId, not after. </td></tr>
   </table>
   </dd>
 </dl>
@@ -405,24 +318,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Leave a guild. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">guildId</td><td>Guild snowflake ID.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a id="gadfd3da1f4e93eb7e4c646f670362282d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadfd3da1f4e93eb7e4c646f670362282d">&#9670;&nbsp;</a></span>setAvatar() <span class="overload">[1/2]</span></h2>
+<a id="ga86595f526de7e6f17d0efcde388127fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86595f526de7e6f17d0efcde388127fe">&#9670;&nbsp;</a></span>setAvatar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,71 +330,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">nlohmann::json Hexicord::RestClient::setAvatar </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>avatarBytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="structHexicord_1_1Image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>avatar</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">AvatarFormat</a>&#160;</td>
-          <td class="paramname"><em>format</em> = <code><a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6">Detect</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Change avatar. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (???). </td></tr>
-    <tr><td class="paramname">InvalidParameter</td><td>if format is Detect and detection failed. </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>User object after change. </dd></dl>
-
-</div>
-</div>
-<a id="ga2d34510caadc689f74e19e0fa2006fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2d34510caadc689f74e19e0fa2006fa7">&#9670;&nbsp;</a></span>setAvatar() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">nlohmann::json Hexicord::RestClient::setAvatar </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&amp;&#160;</td>
-          <td class="paramname"><em>avatarStream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__REST__users.html#gaca8d73d127da49fc6cb2e48b88b104e3">AvatarFormat</a>&#160;</td>
-          <td class="paramname"><em>format</em> = <code><a class="el" href="group__REST__users.html#ggaca8d73d127da49fc6cb2e48b88b104e3a618c2eda55d38a687502c3b7faa6b4c6">Detect</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change avatar. </p>
-<p>Convenience overload. Reads stream into vector and passes to first overload.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (???). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>User object after change. </dd></dl>
 
 </div>
@@ -531,13 +374,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>There are other rules and restrictions not shared here for the sake of spam and abuse mitigation, but the majority of users won't encounter them. It's important to properly handle all error messages returned by Discord when editing or updating names.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (invalid name). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>User object after change. </dd></dl>
 
 </div>
@@ -545,7 +381,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

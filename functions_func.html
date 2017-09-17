@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -67,13 +67,16 @@ $(function() {
 : <a class="el" href="group__REST__invites.html#ga7067e7f235b6deed8a0c886a0f9b2919">Hexicord::RestClient</a>
 </li>
 <li>addHandler()
-: <a class="el" href="classHexicord_1_1EventDispatcher.html#a0a620fe0f304962b2d7827bec65dfe84">Hexicord::EventDispatcher</a>
+: <a class="el" href="classHexicord_1_1EventDispatcher.html#a5b9e79928f717cb735ae99be40a58f96">Hexicord::EventDispatcher</a>
 </li>
 <li>addReaction()
 : <a class="el" href="group__REST__reactions.html#ga0b2f6e210e4decbd5e7cc4144d667015">Hexicord::RestClient</a>
 </li>
 <li>addToGroupDm()
 : <a class="el" href="group__REST__channels.html#ga62b77805f13895f7d615a2df9b055776">Hexicord::RestClient</a>
+</li>
+<li>attachIntegration()
+: <a class="el" href="group__REST__guilds.html#ga51d27116ea2e80e9166e0fbe675e84c8">Hexicord::RestClient</a>
 </li>
 </ul>
 
@@ -82,12 +85,15 @@ $(function() {
 <li>banMember()
 : <a class="el" href="group__REST__guilds.html#ga977d9e759aef35c52e3b94b174829c39">Hexicord::RestClient</a>
 </li>
+<li>beginGuildPrune()
+: <a class="el" href="group__REST__guilds.html#ga7614d87f8d37d05636f1cbfc76b5845a">Hexicord::RestClient</a>
+</li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>connect()
-: <a class="el" href="classHexicord_1_1GatewayClient.html#a5e510d788d654c220710dcb696b50590">Hexicord::GatewayClient</a>
+: <a class="el" href="classHexicord_1_1GatewayClient.html#a4c39e267120647e9fcba579da4c151b3">Hexicord::GatewayClient</a>
 </li>
 <li>createChannel()
 : <a class="el" href="group__REST__guilds.html#gae3530dec76a2fc8dbcc64b4e5689a143">Hexicord::RestClient</a>
@@ -107,10 +113,16 @@ $(function() {
 <li>createRole()
 : <a class="el" href="group__REST__guilds.html#ga8e18fe13cf5fe19d9d1380de3b08c3e8">Hexicord::RestClient</a>
 </li>
+<li>createWebhook()
+: <a class="el" href="group__REST__webhooks.html#gacceff66d8f8805e50d80e6e81e51183c">Hexicord::RestClient</a>
+</li>
 </ul>
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>deafMember()
+: <a class="el" href="group__REST__guilds.html#ga1e16b6539a72867200547aea83a6b3a8">Hexicord::RestClient</a>
+</li>
 <li>deleteChannel()
 : <a class="el" href="group__REST__channels.html#ga9f02bba65c3d4aba6a61705484f50292">Hexicord::RestClient</a>
 </li>
@@ -126,6 +138,12 @@ $(function() {
 <li>deleteRole()
 : <a class="el" href="group__REST__guilds.html#gab712f870520cfeff036877db4bd7eff6">Hexicord::RestClient</a>
 </li>
+<li>deleteWebhook()
+: <a class="el" href="group__REST__webhooks.html#gaea3357a7307373ceb6bf6f93cf68ef02">Hexicord::RestClient</a>
+</li>
+<li>detachIntegration()
+: <a class="el" href="group__REST__guilds.html#ga99570df7b7ced935040a4f866591600e">Hexicord::RestClient</a>
+</li>
 <li>disconnect()
 : <a class="el" href="classHexicord_1_1GatewayClient.html#a8e05ea927c6df711e76eca6b41e1cf0c">Hexicord::GatewayClient</a>
 </li>
@@ -134,6 +152,11 @@ $(function() {
 </li>
 <li>down()
 : <a class="el" href="classHexicord_1_1RatelimitLock.html#ae9867a868d4de63a5db5ef67c2631172">Hexicord::RatelimitLock</a>
+</li>
+<li>download()
+: <a class="el" href="structHexicord_1_1ImageReference.html#a5a1adf92af74bf17367cc56af6cad4bf">Hexicord::ImageReference&lt; Type &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html#a4ba57190cdff5f6caccae57bccaa3044">Hexicord::ImageReference&lt; CustomEmoji &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html#ae710ff81875cf60906d919628d9f8436">Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</a>
 </li>
 </ul>
 
@@ -183,6 +206,9 @@ $(function() {
 <li>getChannels()
 : <a class="el" href="group__REST__guilds.html#gaddbb168851c0488e74032f52306d54a2">Hexicord::RestClient</a>
 </li>
+<li>getChannelWebhooks()
+: <a class="el" href="group__REST__webhooks.html#gae6d319e36dab6c2b8b6d563601a855e5">Hexicord::RestClient</a>
+</li>
 <li>getConnections()
 : <a class="el" href="group__REST__users.html#ga9dffd01ca42e09795d4b1a16c5a1869a">Hexicord::RestClient</a>
 </li>
@@ -195,6 +221,18 @@ $(function() {
 <li>getGuild()
 : <a class="el" href="group__REST__guilds.html#gab0fd57365f3512fd36f4c5fcdaa3a669">Hexicord::RestClient</a>
 </li>
+<li>getGuildEmbed()
+: <a class="el" href="group__REST__guilds.html#gade8ad23425591e889506d2164f560501">Hexicord::RestClient</a>
+</li>
+<li>getGuildIntegrations()
+: <a class="el" href="group__REST__guilds.html#gaf635a607e8ddeb5bb42127a3fe6c0e7d">Hexicord::RestClient</a>
+</li>
+<li>getGuildPruneCount()
+: <a class="el" href="group__REST__guilds.html#ga4c2008c5c352d72797eaa8894e38a36f">Hexicord::RestClient</a>
+</li>
+<li>getGuildWebhooks()
+: <a class="el" href="group__REST__webhooks.html#gaeea8f114e86d98e1e46bbaeb4519f5c1">Hexicord::RestClient</a>
+</li>
 <li>getInvite()
 : <a class="el" href="group__REST__invites.html#ga09c753bdc5e56430a6922b4e8a47b2ec">Hexicord::RestClient</a>
 </li>
@@ -203,6 +241,12 @@ $(function() {
 </li>
 <li>getMe()
 : <a class="el" href="group__REST__users.html#ga2700ff2dae717f169bf21b4e69f44d58">Hexicord::RestClient</a>
+</li>
+<li>getMember()
+: <a class="el" href="group__REST__guilds.html#gae482d8b5f167ad7ad826be69c49e8de7">Hexicord::RestClient</a>
+</li>
+<li>getMembers()
+: <a class="el" href="group__REST__guilds.html#gac13331c30d1701f2ba850936534f226b">Hexicord::RestClient</a>
 </li>
 <li>getMessage()
 : <a class="el" href="group__REST__channels.html#gafd17e38061f77a154d87ff9c48ed0691">Hexicord::RestClient</a>
@@ -226,7 +270,10 @@ $(function() {
 : <a class="el" href="group__REST__users.html#gabe8195bd067a92b57e49abb25dfb487b">Hexicord::RestClient</a>
 </li>
 <li>getUserGuilds()
-: <a class="el" href="group__REST__users.html#ga69243643941ee7202c2f2b9d14ef4ae2">Hexicord::RestClient</a>
+: <a class="el" href="group__REST__users.html#gabb6cede1ec4a0b3244dac13d4b2f5c7d">Hexicord::RestClient</a>
+</li>
+<li>getWebhook()
+: <a class="el" href="group__REST__webhooks.html#ga773a92ce268e9ca59bd6af773d93d526">Hexicord::RestClient</a>
 </li>
 <li>giveRole()
 : <a class="el" href="group__REST__guilds.html#ga69b61462dc7cb73d70586b7938fd89b3">Hexicord::RestClient</a>
@@ -235,8 +282,21 @@ $(function() {
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>Image()
+: <a class="el" href="structHexicord_1_1Image.html#a6fef88df0b773127d0967eb85051d28d">Hexicord::Image</a>
+</li>
+<li>ImageReference()
+: <a class="el" href="structHexicord_1_1ImageReference.html#a4595c16a7e74de2c048f72521f3755fd">Hexicord::ImageReference&lt; Type &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html#a51c87d1cef3aa2c94856e31a38c25acb">Hexicord::ImageReference&lt; CustomEmoji &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html#a16cc5e85dcc0ac26f409c67335d54132">Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</a>
+</li>
 <li>InvalidParameter()
 : <a class="el" href="classHexicord_1_1InvalidParameter.html#a1a7e6e76e01d67cf6b897490b336ff6c">Hexicord::InvalidParameter</a>
+</li>
+<li>isAnimated()
+: <a class="el" href="structHexicord_1_1ImageReference.html#ab92791f2c9bbf0fd317c1b583f2ea0cc">Hexicord::ImageReference&lt; Type &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html#a7b9734272f6f299461a9d15eb49c8472">Hexicord::ImageReference&lt; CustomEmoji &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html#a07f30ac20d279675ddd6e0d427caf217">Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</a>
 </li>
 </ul>
 
@@ -271,11 +331,17 @@ $(function() {
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>modifyAttachedIntegration()
+: <a class="el" href="group__REST__guilds.html#ga6994c3202aa168dc00a5001e0d50219f">Hexicord::RestClient</a>
+</li>
 <li>modifyChannel()
-: <a class="el" href="group__REST__channels.html#ga09653daebf91d86eb022d23e7a556aa2">Hexicord::RestClient</a>
+: <a class="el" href="group__REST__channels.html#gadca604f87a2857e21b5b055af2318937">Hexicord::RestClient</a>
 </li>
 <li>modifyGuild()
 : <a class="el" href="group__REST__guilds.html#ga165f39ca54d1be6ea02742feaa5233ab">Hexicord::RestClient</a>
+</li>
+<li>modifyGuildEmbed()
+: <a class="el" href="group__REST__guilds.html#ga7b3f4808727d4e7d71ec99e2f17a9ab0">Hexicord::RestClient</a>
 </li>
 <li>modifyRole()
 : <a class="el" href="group__REST__guilds.html#ga48c68f0986223fc001eaf9f88480f67b">Hexicord::RestClient</a>
@@ -283,8 +349,14 @@ $(function() {
 <li>moveChannel()
 : <a class="el" href="group__REST__guilds.html#ga183524adc0be7262dcfba07415eaa973">Hexicord::RestClient</a>
 </li>
+<li>moveMember()
+: <a class="el" href="group__REST__guilds.html#ga19f5c78bfc0b32723fce5fb46005d23b">Hexicord::RestClient</a>
+</li>
 <li>moveRole()
 : <a class="el" href="group__REST__guilds.html#ga453b2408774c20f3fedc01272246cbff">Hexicord::RestClient</a>
+</li>
+<li>muteMember()
+: <a class="el" href="group__REST__guilds.html#gaa2ae8b490d80f95d8f584372a42847ea">Hexicord::RestClient</a>
 </li>
 </ul>
 
@@ -300,14 +372,14 @@ $(function() {
 : <a class="el" href="classHexicord_1_1Flags.html#adf5c1c22d1a115163e8343cb8a57a768">Hexicord::Flags&lt; Flag, Storage &gt;</a>
 </li>
 <li>operator uint64_t()
-: <a class="el" href="structHexicord_1_1Snowflake.html#a5690090819225bf3981c10ee5aa58bf8">Hexicord::Snowflake</a>
+: <a class="el" href="structHexicord_1_1Snowflake.html#a883a169cd2c40a77b11365ad1fa21c01">Hexicord::Snowflake</a>
 </li>
 <li>operator!()
 : <a class="el" href="classHexicord_1_1Flags.html#a7682f600aa4f190f676f6a3abc503096">Hexicord::Flags&lt; Flag, Storage &gt;</a>
 </li>
 <li>operator()()
 : <a class="el" href="structHexicord_1_1EventHash.html#ac887e9e28511ae2ca43fd36047f85ca1">Hexicord::EventHash</a>
-, <a class="el" href="classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html#ad1e708a33d8201a7dfc6ac6835f1acbb">std::hash&lt; Hexicord::Snowflake &gt;</a>
+, <a class="el" href="classstd_1_1hash_3_01Hexicord_1_1Snowflake_01_4.html#a3adb074001f7051e4b2e1c19a085111b">std::hash&lt; Hexicord::Snowflake &gt;</a>
 </li>
 <li>operator=()
 : <a class="el" href="classHexicord_1_1GatewayClient.html#a85885b24c3d290954d240bc8394d49ad">Hexicord::GatewayClient</a>
@@ -386,7 +458,7 @@ $(function() {
 : <a class="el" href="group__REST__messages.html#ga5b36da1dd241334aefac0599eaf07b56">Hexicord::RestClient</a>
 </li>
 <li>sendImage()
-: <a class="el" href="group__REST__messages.html#gada8f95e23ff98bde3ad43a6cec9806f5">Hexicord::RestClient</a>
+: <a class="el" href="group__REST__messages.html#ga6c9b5a3a704e22a2bd27451cfbabd3b9">Hexicord::RestClient</a>
 </li>
 <li>sendRestRequest()
 : <a class="el" href="group__REST.html#ga0f06016d67a66dc7c41f1522e5e50ca3">Hexicord::RestClient</a>
@@ -401,7 +473,7 @@ $(function() {
 : <a class="el" href="classHexicord_1_1Flags.html#a7beaeaa15d42c2e95fb8d07e2dfb80e2">Hexicord::Flags&lt; Flag, Storage &gt;</a>
 </li>
 <li>setAvatar()
-: <a class="el" href="group__REST__users.html#ga2d34510caadc689f74e19e0fa2006fa7">Hexicord::RestClient</a>
+: <a class="el" href="group__REST__users.html#ga86595f526de7e6f17d0efcde388127fe">Hexicord::RestClient</a>
 </li>
 <li>setChannelBitrate()
 : <a class="el" href="group__REST__channels.html#gacf54a7ac1c1ee0855284e6262dcfcfb6">Hexicord::RestClient</a>
@@ -416,13 +488,34 @@ $(function() {
 : <a class="el" href="group__REST__channels.html#gae13cd1fbda82a8cc8b1838523896926c">Hexicord::RestClient</a>
 </li>
 <li>setChannelUsersLimit()
-: <a class="el" href="group__REST__channels.html#ga1acbaa8f451cf67671693327d5dee226">Hexicord::RestClient</a>
+: <a class="el" href="group__REST__channels.html#gad23ce7ab0dcbf110730caa4172f5e9a6">Hexicord::RestClient</a>
+</li>
+<li>setMemberDeaf()
+: <a class="el" href="group__REST__guilds.html#ga65d08f232dd7c6e409720ad9e3fc8e9a">Hexicord::RestClient</a>
+</li>
+<li>setMemberMute()
+: <a class="el" href="group__REST__guilds.html#gab1302a08517cde09931a4d39c09551a2">Hexicord::RestClient</a>
+</li>
+<li>setMemberNickname()
+: <a class="el" href="group__REST__guilds.html#ga62c1c1b255712ead4b2e6e439efc2ad9">Hexicord::RestClient</a>
+</li>
+<li>setMemberRoles()
+: <a class="el" href="group__REST__guilds.html#ga156345c6e2044fcd9be29153fc10c46e">Hexicord::RestClient</a>
 </li>
 <li>setUsername()
 : <a class="el" href="group__REST__users.html#ga9fa3986f94935622244b3a6afae8d62a">Hexicord::RestClient</a>
 </li>
+<li>setWebhookAvatar()
+: <a class="el" href="group__REST__webhooks.html#ga1292a0c1d9bdd57be0d3b7ee0a228e73">Hexicord::RestClient</a>
+</li>
+<li>setWebhookName()
+: <a class="el" href="group__REST__webhooks.html#gab0c23e14dc1b002f3df22dfd231e9b45">Hexicord::RestClient</a>
+</li>
 <li>Snowflake()
-: <a class="el" href="structHexicord_1_1Snowflake.html#ad9c7638c832b567efe625bc8fdb33335">Hexicord::Snowflake</a>
+: <a class="el" href="structHexicord_1_1Snowflake.html#a68a18960f49bca7e7069309a2e2f0404">Hexicord::Snowflake</a>
+</li>
+<li>syncIntegration()
+: <a class="el" href="group__REST__guilds.html#gad06f6e34dbd4a039c2416fccf193045e">Hexicord::RestClient</a>
 </li>
 </ul>
 
@@ -430,6 +523,9 @@ $(function() {
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>takeRole()
 : <a class="el" href="group__REST__guilds.html#gac06aa225b83bb67da5b958a8f67d88b3">Hexicord::RestClient</a>
+</li>
+<li>toAvatarData()
+: <a class="el" href="structHexicord_1_1Image.html#a6613b45b9573325a048bb40e4cd26aff">Hexicord::Image</a>
 </li>
 <li>token()
 : <a class="el" href="classHexicord_1_1GatewayClient.html#ab233d33dc990d3b555d46e76dbfec100">Hexicord::GatewayClient</a>
@@ -447,17 +543,31 @@ $(function() {
 <li>unbanMember()
 : <a class="el" href="group__REST__guilds.html#ga12e0ee88283bfecc8369abbed4fc866f">Hexicord::RestClient</a>
 </li>
+<li>undeafMember()
+: <a class="el" href="group__REST__guilds.html#ga7099c1299d1d3b86c06f3304a125e816">Hexicord::RestClient</a>
+</li>
 <li>unixTimestamp()
-: <a class="el" href="structHexicord_1_1Snowflake.html#a43d3407a0ea6a9b2ebdf963e1eca2cee">Hexicord::Snowflake</a>
+: <a class="el" href="structHexicord_1_1Snowflake.html#ace3cb58f18640cf0a78af9d37edd7b25">Hexicord::Snowflake</a>
 </li>
 <li>unixTimestampMs()
-: <a class="el" href="structHexicord_1_1Snowflake.html#a770003fb13b4ff969fad60dc5c042725">Hexicord::Snowflake</a>
+: <a class="el" href="structHexicord_1_1Snowflake.html#ab3eb7357193a5d104ca879c8fccf794f">Hexicord::Snowflake</a>
 </li>
 <li>UnknownEntity()
 : <a class="el" href="classHexicord_1_1UnknownEntity.html#ac972c00a64923eb730c4bcf472638496">Hexicord::UnknownEntity</a>
 </li>
+<li>unmuteMember()
+: <a class="el" href="group__REST__guilds.html#ga27a29ac5ed9f1b93712ecc5502719549">Hexicord::RestClient</a>
+</li>
 <li>unpinMessage()
 : <a class="el" href="group__REST__pins.html#ga925780b848aa6e85073055f9385e11c6">Hexicord::RestClient</a>
+</li>
+<li>updatePresence()
+: <a class="el" href="classHexicord_1_1GatewayClient.html#af38efa57702f962971f56b1ea716636c">Hexicord::GatewayClient</a>
+</li>
+<li>url()
+: <a class="el" href="structHexicord_1_1ImageReference.html#ab132be2d33c7da9de67941128663616f">Hexicord::ImageReference&lt; Type &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01CustomEmoji_01_4.html#ad5ce6f38462efb0b590d709523b4c744">Hexicord::ImageReference&lt; CustomEmoji &gt;</a>
+, <a class="el" href="structHexicord_1_1ImageReference_3_01DefaultUserAvatar_01_4.html#a771fb861868dcb620c24c4f9596f1b6e">Hexicord::ImageReference&lt; DefaultUserAvatar &gt;</a>
 </li>
 </ul>
 
@@ -465,6 +575,9 @@ $(function() {
 <h3><a id="index_w"></a>- w -</h3><ul>
 <li>waitForEvent()
 : <a class="el" href="classHexicord_1_1GatewayClient.html#ade51c3caa5da504b9224cf8b95039c8f">Hexicord::GatewayClient</a>
+</li>
+<li>write()
+: <a class="el" href="structHexicord_1_1File.html#a5d5ec7715581a3fd37960daf50b89024">Hexicord::File</a>
 </li>
 </ul>
 
@@ -477,7 +590,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

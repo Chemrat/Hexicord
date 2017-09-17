@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -84,14 +84,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0a620fe0f304962b2d7827bec65dfe84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHexicord_1_1EventDispatcher.html#a0a620fe0f304962b2d7827bec65dfe84">addHandler</a> (<a class="el" href="namespaceHexicord.html#a841b29df0ee895cd9b18ea378c1aaad4">Event</a> eventType, <a class="el" href="classHexicord_1_1EventDispatcher.html#aae848a7da5cf720a879ad589c8c398e1">EventHandler</a> handler)</td></tr>
-<tr class="separator:a0a620fe0f304962b2d7827bec65dfe84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9e79928f717cb735ae99be40a58f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHexicord_1_1EventDispatcher.html#a5b9e79928f717cb735ae99be40a58f96">addHandler</a> (<a class="el" href="namespaceHexicord.html#a841b29df0ee895cd9b18ea378c1aaad4">Event</a> eventType, const <a class="el" href="classHexicord_1_1EventDispatcher.html#aae848a7da5cf720a879ad589c8c398e1">EventHandler</a> &amp;handler)</td></tr>
+<tr class="separator:a5b9e79928f717cb735ae99be40a58f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9c8c81ba3cd72978456277e0d97f05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHexicord_1_1EventDispatcher.html#ab9c8c81ba3cd72978456277e0d97f05e">dispatchEvent</a> (<a class="el" href="namespaceHexicord.html#a841b29df0ee895cd9b18ea378c1aaad4">Event</a> type, const nlohmann::json &amp;payload) const</td></tr>
 <tr class="separator:ab9c8c81ba3cd72978456277e0d97f05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00070">70</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00074">74</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aae848a7da5cf720a879ad589c8c398e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae848a7da5cf720a879ad589c8c398e1">&#9670;&nbsp;</a></span>EventHandler</h2>
@@ -105,7 +105,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00072">72</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00076">76</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -121,13 +121,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00073">73</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__dispatcher_8hpp_source.html#l00077">77</a> of file <a class="el" href="event__dispatcher_8hpp_source.html">event_dispatcher.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0a620fe0f304962b2d7827bec65dfe84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a620fe0f304962b2d7827bec65dfe84">&#9670;&nbsp;</a></span>addHandler()</h2>
+<a id="a5b9e79928f717cb735ae99be40a58f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9e79928f717cb735ae99be40a58f96">&#9670;&nbsp;</a></span>addHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classHexicord_1_1EventDispatcher.html#aae848a7da5cf720a879ad589c8c398e1">EventHandler</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classHexicord_1_1EventDispatcher.html#aae848a7da5cf720a879ad589c8c398e1">EventHandler</a> &amp;&#160;</td>
           <td class="paramname"><em>handler</em>&#160;</td>
         </tr>
         <tr>
@@ -185,7 +185,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

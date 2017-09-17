@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HEXICORD
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Discord API implementation for C++ using boost.</div>
   </td>
@@ -121,13 +121,6 @@ Functions</h2></td></tr>
 
 <p>Accept an invite. </p>
 <p>This requires the guilds.join OAuth2 scope to be able to accept invites on behalf of normal users (via an OAuth2 Bearer token). Bot users are disallowed.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>An invite object. </dd></dl>
 
 </div>
@@ -180,8 +173,7 @@ Functions</h2></td></tr>
 <p>Requires the CREATE_INSTANT_INVITE permission.</p>
 <p>By default invite link is usable for 24 hours (86400 seconds), you can pass maxAgeSecs parameter to override this. Pass 0 to create invite with unlimited duration (it can be revoked using <a class="el" href="group__REST__invites.html#ga9e73656ca975e4357ae3b7a06ba4dfc7">revokeInvite</a>). You can also limit times invite can be used by passing maxUses parameter.</p>
 <p>You can also create invite link which give temporary membership. User will be removed from guild when he will go offline and don't got a role.</p>
-<p>By default this method tries to reuse similar invite if avaliable, you can override this by passing unique = true.</p>
-<p>This method throws RESTError on any API error (for this method it can be caused by invalid ID or missing permission). In addition this method throws boost::system::system_error if REST API server is not reachable. </p>
+<p>By default this method tries to reuse similar invite if avaliable, you can override this by passing unique = true. </p>
 
 </div>
 </div>
@@ -202,8 +194,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a list of invite objects (with invite metadata) for the channel. </p>
-<p>Requires the 'MANAGE_CHANNELS' permission.</p>
-<p>Throws RESTError if invalid IDs specified or current user don't have required permissions. Also may throw boost::system::system_error if client fails to connect to REST API server. </p>
+<p>Requires the 'MANAGE_CHANNELS' permission. </p>
 
 </div>
 </div>
@@ -224,13 +215,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an invite object for the given code. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -251,14 +235,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get array of invite objects (with invite metadata) for a specified guild. </p>
-<p>Requires Permission::ManageGuild permission.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare). </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Requires MANAGE_GUILD permission. </p>
 
 </div>
 </div>
@@ -280,13 +257,6 @@ Functions</h2></td></tr>
 
 <p>Delete (revoke) an invite. </p>
 <p>Requires the MANAGE_CHANNELS permission.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">RESTError</td><td>on API error (missing permissions, invalid ID). </td></tr>
-    <tr><td class="paramname">boost::system::system_error</td><td>on connection problem (rare).</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>An invite object. </dd></dl>
 
 </div>
@@ -294,7 +264,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 13 2017 03:32:43 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 17 2017 23:24:33 for HEXICORD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
