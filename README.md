@@ -32,7 +32,7 @@ Hexicord
 * OpenSSL 1.0.1+
 * boost.beast (submodule or system)
 * _(Optional)_ Doxygen, if you also want to build documentation
-* _(Optional)_ Zlib, if you want to use gateway message compression
+* _(Optional)_ Zlib, if you want to use gateway message compression. You may also want to try [zlib-ng](https://github.com/Dead2/zlib-ng)
 
 **Note:** Versions is approximate and can be actually lower or higher, please report any problems with versions in 
 specified range.
