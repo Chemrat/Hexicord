@@ -68,6 +68,9 @@ namespace Hexicord { namespace REST {
         std::vector<uint8_t> body;
     };
 
+#ifdef __GNUC__
+    __attribute__ ((hot))
+#endif
     HTTPRequest buildMultipartRequest(const std::vector<MultipartEntity>& elements);
 
 }} // namespace Hexicord::REST

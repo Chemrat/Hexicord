@@ -30,7 +30,13 @@
 
 namespace Hexicord {
     namespace Zlib {
+#ifdef __GNUC__
+        __attribute__ ((hot))
+#endif
         std::vector<uint8_t> decompress(const std::vector<uint8_t>& input);
+#ifdef __GNUC__
+        __attribute__ ((hot))
+#endif
         std::vector<uint8_t> compress(const std::vector<uint8_t>& output);
     }
 }

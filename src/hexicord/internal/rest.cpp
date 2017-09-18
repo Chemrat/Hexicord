@@ -138,6 +138,9 @@ HTTPResponse HTTPSConnection::request(const HTTPRequest& request) {
     return responseStruct;
 }
 
+#ifdef __GNUC__
+__attribute__ ((hot))
+#endif
 HTTPRequest buildMultipartRequest(const std::vector<MultipartEntity>& elements) {
     HTTPRequest request;
     std::ostringstream oss;

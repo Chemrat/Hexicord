@@ -32,7 +32,10 @@ constexpr size_t ZlibBufferSize = 16 * 1024;
 
 namespace Hexicord {
 namespace Zlib {
-
+    
+#ifdef __GNUC__
+    __attribute__ ((hot))
+#endif
     std::vector<uint8_t> decompress(const std::vector<uint8_t>& input) {
         z_stream stream;
         uint8_t in[ZlibBufferSize], out[ZlibBufferSize];
@@ -72,6 +75,9 @@ namespace Zlib {
         return result;
     }
 
+#ifdef __GNUC__
+    __attribute__ ((hot))
+#endif
     std::vector<uint8_t> compress(const std::vector<uint8_t>& input) {
         z_stream stream;
         char in[ZlibBufferSize], out[ZlibBufferSize];
