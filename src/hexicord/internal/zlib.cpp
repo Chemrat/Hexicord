@@ -71,6 +71,44 @@ namespace Zlib {
         inflateEnd(&stream);
         return result;
     }
+
+    std::vector<uint8_t> compress(const std::vector<uint8_t>& input) {
+        z_stream stream;
+        char in[ZlibBufferSize], out[ZlibBufferSize];
+
+        int status;
+        stream.zalloc = nullptr;
+        stream.zfree = nullptr;
+        stream.opaque = nullptr;
+        const int level = 9; // Compression level
+        const int memLevel = 9;
+        status = deflateInit2(&stream, level, Z_DEFLATED, 15, memLevel, Z_DEFAULT_STRATEGY);
+        assert(status == Z_OK);
+
+        std::vector<uint8_t> result;
+        for (uint8_t i = 0; i < input.size(); i += ZlibBufferSize) {
+            int left = input.size() - i;
+            bool isLast = (left <= ZlibBufferSize);
+            int wanted = !isLast ? ZlibBufferSize : left;
+            std::memcpy(in, input.data()+i, wanted);
+
+            stream.avail_in = wanted;
+            stream.next_in = (Bytef*) in;
+            do {
+                int have;
+                stream.avail_out = ZlibBufferSize;
+                stream.next_out = (Bytef*) out;
+                
+                status = deflate(&stream, isLast ? Z_SYNC_FLUSH : Z_NO_FLUSH);
+                assert(status != Z_STREAM_ERROR);
+
+                have = ZlibBufferSize - stream.avail_out;
+                result.insert(result.end(), out, out + have);
+            } while (stream.avail_out == 0);
+        }
+        return result;
+    }
+
 }} // namespace Zlib
 
 #endif

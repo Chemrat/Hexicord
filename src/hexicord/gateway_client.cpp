@@ -380,6 +380,13 @@ void GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::js
     }
 
     std::string messageString = message.dump();
+#ifdef HEXICORD_ZLIB
+    if (!(opCode == OpCode::Identify || opCode == OpCode::Resume)) {
+        std::vector<uint8_t> messageBytes(messageString.begin(), messageString.end());
+        gatewayConnection->sendMessage(Zlib::compress(messageBytes));
+        return;
+    }
+#endif // HEXICORD_ZLIB
     gatewayConnection->sendMessage(std::vector<uint8_t>(messageString.begin(), messageString.end()));
 }
 
