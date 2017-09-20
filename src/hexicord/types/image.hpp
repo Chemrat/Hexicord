@@ -57,6 +57,7 @@ namespace Hexicord {
         DefaultUserAvatar = (1<<8 ) | ImageFormat::Png,
         UserAvatar        = (1<<9 ) | ImageFormat::Png | ImageFormat::Jpeg | ImageFormat::Webp | ImageFormat::Gif,
         ApplicationIcon   = (1<<10) | ImageFormat::Png | ImageFormat::Jpeg | ImageFormat::Webp,
+        GroupDmIcon       = (1<<11) | ImageFormat::Png | ImageFormat::Jpeg | ImageFormat::Webp,
     };
     // ^ enum values contain bitmask of supported formats, first element added
     // to make sure enum don't have same value.
@@ -84,6 +85,7 @@ namespace Hexicord {
         template<> inline std::string basePath<DefaultUserAvatar>() { return "/embed/avatars";  }
         template<> inline std::string basePath<UserAvatar>()        { return "/avatars";        }
         template<> inline std::string basePath<ApplicationIcon>()   { return "/app-icons";      }
+        template<> inline std::string basePath<GroupDmIcon>()       { return "/channel-icons";  }
 
         template<ImageFormat>
         inline std::string formatExtension() {}
