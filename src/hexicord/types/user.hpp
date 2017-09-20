@@ -40,9 +40,12 @@ namespace Hexicord {
 
         /// Whether the email on this account has been verified.
         /// Always false if API user don't have OAuth 'email' scope.
+        /// If User object came from gateway Ready event, then this fields
+        /// applies to owner's account.
         bool emailVerified;
 
         /// The user's email. Empty if API user don't have OAuth 'email' scope.
+        /// Also always empty for bot accounts.
         std::string email;
     };
 
