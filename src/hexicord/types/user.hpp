@@ -9,8 +9,9 @@
 
 namespace Hexicord {
     struct User {
-        /// User objects is not expected to be constructed from user code.
-        User() = delete;
+        /// User objects is not expected to be constructed from user code,
+        /// but it's nlohmann/json library's requirement.
+        User() = default;
 
         /// Construct from JSON. For internal use only.
         User(const nlohmann::json& json);
@@ -49,6 +50,7 @@ namespace Hexicord {
         std::string email;
     };
 
+    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(User)
 } // namespace Hexicord
 
 #endif // HEXICORD_TYPES_USER_HPP

@@ -11,6 +11,9 @@ namespace Hexicord {
      * Struct for (filename, bytes) pair.
      */
     struct File {
+        /// Construct empty file.
+        File() = default;
+
         /**
          * Read file specified by `path` to \ref bytes.
          * Last component of path used as filename.
@@ -32,8 +35,8 @@ namespace Hexicord {
          */
         void write(const std::string& targetPath) const;
 
-        const std::string filename;
-        const std::vector<uint8_t> bytes;
+        std::string filename;
+        std::vector<uint8_t> bytes;
     };
 } // namespace Hexicord
 

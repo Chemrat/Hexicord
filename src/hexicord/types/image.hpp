@@ -38,8 +38,9 @@ namespace Hexicord {
         /**
          * Forced or detected (if Detect passed in c-tor) format.
          */
-        const ImageFormat format;
-        const File file;
+        ImageFormat format;
+
+        File file;
 
         /**
          * Convert string to form usable for sending in various REST methods.
@@ -101,6 +102,10 @@ namespace Hexicord {
      */
     template<ImageType Type>
     struct ImageReference {
+        /// Construct null ImageReference, calling url() on such instance
+        /// will return invalid URL, calling download() will throw LogicError.
+        ImageReference() = default;
+
         inline ImageReference(Snowflake id, const std::string& hash)
             : id(id)
             , hash(hash) {}
@@ -153,12 +158,16 @@ namespace Hexicord {
                          Format);
         }
 
-        const Snowflake id;
-        const std::string hash;
+        Snowflake id;
+        std::string hash;
     };
 
     template<>
     struct ImageReference<CustomEmoji> {
+        /// Construct null ImageReference, calling url() on such instance
+        /// will return invalid URL, calling download() will throw LogicError.
+        ImageReference() = default;
+
         inline ImageReference(const std::string& hash)
             : hash(hash) {}
 
@@ -210,11 +219,15 @@ namespace Hexicord {
                          Format);
         }
 
-        const std::string hash;
+        std::string hash;
     };
    
     template<>
     struct ImageReference<DefaultUserAvatar> {
+        /// Construct null ImageReference, calling url() on such instance
+        /// will return invalid URL, calling download() will throw LogicError.
+        ImageReference() = default;
+
         inline ImageReference(const int userDiscriminator)
             : userDiscriminator(userDiscriminator) {}
 
@@ -265,7 +278,7 @@ namespace Hexicord {
                          Format);
         }
 
-        const int userDiscriminator;
+        int userDiscriminator;
     };
 
 } // namespace Hexicord
