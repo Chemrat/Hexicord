@@ -33,8 +33,6 @@ namespace Hexicord {
         /// Whether this emoji is managed.
         bool managed;
     };
-
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(Emoji)
 } // namespace Hexicord
 
 #endif // HEXICORD_TYPES_EMOJI_HPP

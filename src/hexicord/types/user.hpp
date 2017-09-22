@@ -50,7 +50,6 @@ namespace Hexicord {
         std::string email;
     };
 
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(User)
 } // namespace Hexicord
 
 #endif // HEXICORD_TYPES_USER_HPP

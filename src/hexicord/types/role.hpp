@@ -65,9 +65,6 @@ namespace Hexicord {
         /// Permissions set to deny.
         Permissions deny;
     };
-
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(Role)
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(PermissionsOverwrite)
 } // namespace Hexicord
 
 #endif // HEXICORD_TYPES_ROLE_HPP

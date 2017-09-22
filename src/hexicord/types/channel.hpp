@@ -145,11 +145,6 @@ namespace Hexicord {
 
     void from_json(const nlohmann::json& json, Channel& channel);
     void to_json(nlohmann::json& json, const Channel& channel);
-
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(TextChannel)
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(VoiceChannel)
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(DmChannel)
-    HEXICORD_ENABLE_IMPLICIT_JSON_CONVERSIONS(GroupDmChannel)
 } // namespace Hexicord
 
 #endif // HEXICORD_TYPES_CHANNEL_HPP
