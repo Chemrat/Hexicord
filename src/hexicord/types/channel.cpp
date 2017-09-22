@@ -27,13 +27,16 @@ nlohmann::json BaseGuildChannel::dump() const {
 TextChannel::TextChannel(const nlohmann::json& json)
     : BaseGuildChannel(json)
     , topic         (json["topic"] != nullptr ? json.at("topic").get<std::string>() : "")
-    , lastMessageId (json["last_message_id"].is_null() ? "0" : json.at("last_message_id").get<std::string>()) {}
+    , lastMessageId (json["last_message_id"].is_null() ? "0" : json.at("last_message_id").get<std::string>())
+    , nsfw          (json.value("nsfw", false)) {}
 
 nlohmann::json TextChannel::dump() const {
     nlohmann::json json = BaseGuildChannel::dump();
 
     json["topic"]           = topic.empty() ? nlohmann::json(nullptr) : nlohmann::json(topic);
     json["last_message_id"] = lastMessageId != 0 ? nlohmann::json(std::to_string(lastMessageId)) : nlohmann::json(nullptr);
+
+    if (nsfw) json["nsfw"] = true;
 
     return json;
 }

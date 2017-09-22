@@ -46,6 +46,8 @@ namespace Hexicord {
 
         /// The id of the last message sent in this channel (may not point to an existing or valid message).
         Snowflake lastMessageId;
+
+        bool nsfw;
     };
 
     struct VoiceChannel : BaseGuildChannel {
