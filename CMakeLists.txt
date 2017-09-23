@@ -26,7 +26,7 @@ else()
                              INCLUDE_HASH ON)
 
             set(HEXICORD_DETECTED_VERSION ${VERSION})
-            set(HEXICORD_SEMVER  "${SEMVER}")
+            set(HEXICORD_FULL_VERSION    "${SEMVER}")
         else()
             message(WARNING "Setting version to default string, because building outside of Git repository, please specify version by setting HEXICORD_VERSION CMake variable.")
         endif()
@@ -37,7 +37,7 @@ endif()
 
 project(HEXICORD VERSION ${HEXICORD_DETECTED_VERSION})
 
-message(STATUS "Configuring Hexicord ${HEXICORD_VERSION}")
+message(STATUS "Configuring Hexicord ${HEXICORD_FULL_VERSION}")
 
 #------------------------------------------------------------------------------
 # Global building configuration (C++ standard, defines, warning flags).
