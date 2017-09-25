@@ -37,9 +37,9 @@ namespace Hexicord {
 
     Embed::Image::Image(const nlohmann::json& json)
         : url       (json.at("url").get<std::string>())
-        , proxyUrl  (json.value("proxy_url", "")
-        , height    (json.value("height", 0)
-        , width     (json.value("width", 0) {}
+        , proxyUrl  (json.value("proxy_url", ""))
+        , height    (json.value("height", 0))
+        , width     (json.value("width", 0)) {}
 
     nlohmann::json Embed::Image::dump() const {
         nlohmann::json result = {
@@ -76,7 +76,7 @@ namespace Hexicord {
         };
 
         if (!url.empty())          result["url"] = url;
-        if (!iconUrl.empty())      result["icon_url"]
+        if (!iconUrl.empty())      result["icon_url"] = iconUrl;
         if (!proxyIconUrl.empty()) result["proxy_url"] = proxyIconUrl;
 
         return result;
