@@ -40,20 +40,29 @@ namespace Hexicord { namespace REST { class HTTPSConnection; class MultipartEnti
 #endif
 
 namespace Hexicord {
-
     class RestClient {
     public:
+        enum TokenType {
+            /// Bot token from My Applications page.
+            Bot,
+            /// Bearer token acquired using OAuth flow.
+            Bearer,
+            /// User token acquired either from official client's localStorage or from login endpoint.
+            /// \warning Automating user accounts is REALLY not recommended, you may get banned. Use
+            //           this only for custom clients.
+            User
+        };
+
         /**
          * Construct RestClient, does nothing network-related to make RestClient's cheap
          * to construct.
          *
          * \param ioService ASIO I/O service. Should not be destroyed while
          *                  RestClient exists.
-         * \param token     token string, will be interpreted as OAuth or Bot token
-         *                  depending on future calls, don't add "Bearer " or
-         *                  "Bot " prefix.
+         * \param token     token string, interpreted depending on tokenType parameter.
+         *
          */
-        RestClient(boost::asio::io_service& ioService, const std::string& token);
+        RestClient(boost::asio::io_service& ioService, const std::string& token, TokenType tokenType = Bot);
 
         RestClient(const RestClient&) = delete;
         RestClient(RestClient&&) = default;

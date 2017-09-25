@@ -37,26 +37,33 @@
 #endif
 
 namespace Hexicord {
-    RestClient::RestClient(boost::asio::io_service& ioService, const std::string& token) 
+    RestClient::RestClient(boost::asio::io_service& ioService, const std::string& token, TokenType tokenType)
         : restConnection(new REST::HTTPSConnection(ioService, "discordapp.com"))
         , token(token)
         , ioService(ioService) {
 
         // It's strange but Discord API requires "DiscordBot" user-agent for any connections
         // including non-bots. Referring to https://discordapp.com/developers/docs/reference#user-agent
-        restConnection->connectionHeaders.insert({ "User-Agent", "DiscordBot (" HEXICORD_GITHUB ", " HEXICORD_VERSION ")" });
+        restConnection->connectionHeaders.emplace("User-Agent", "DiscordBot (" HEXICORD_GITHUB ", " HEXICORD_VERSION ")");
+
+        switch (tokenType) {
+        case Bot:
+            restConnection->connectionHeaders.emplace("Authorization", std::string("Bot ") + token);
+            break;
+        case Bearer:
+            restConnection->connectionHeaders.emplace("Authorization", std::string("Bearer ") + token);
+            break;
+        case User:
+            restConnection->connectionHeaders.emplace("Authorization", token);
+        }
     }
 
     std::string RestClient::getGatewayUrl() {
-        restConnection->connectionHeaders.insert({ "Authorization", std::string("Bearer ") + token });
-
         nlohmann::json response = sendRestRequest("GET", "/gateway");
         return response["url"];
     }
 
     std::pair<std::string, int> RestClient::getGatewayUrlBot() {
-        restConnection->connectionHeaders.insert({ "Authorization", std::string("Bot ") + token });
-
         nlohmann::json response = sendRestRequest("GET", "/gateway/bot");
         return { response["url"].get<std::string>(), response["shards"].get<unsigned>() };
     }
