@@ -21,7 +21,10 @@ int main(int argc, char** argv) {
     Hexicord::GatewayClient gclient(ioService, botToken);
     Hexicord::RestClient    rclient(ioService, botToken);
 
-    std::map<Hexicord::Snowflake, bool> switchFlags;;
+    /// Stores off/on state for each channel.
+    std::unordered_map<Hexicord::Snowflake, bool> switchFlags;
+
+    /// me user object for id comparsion.
     nlohmann::json me;
 
     gclient.eventDispatcher.addHandler(Hexicord::Event::Ready, [&me](const nlohmann::json& json) {
@@ -40,30 +43,36 @@ int main(int argc, char** argv) {
         if (senderId == Hexicord::Snowflake(me["id"].get<std::string>())) return;
 
         std::string text = json["content"];
-        
-        std::string messageInfo = 
-            std::string("Message ID: `") + std::to_string(messageId) + 
+
+        // Construct response message.
+        std::string messageInfo =
+            std::string("Message ID: `") + std::to_string(messageId) +
                       "`\nChannel ID: `"  + std::to_string(channelId) +
                       "`\nSender ID: `"   + std::to_string(senderId)  + "`\n" +
                       "\n" + text + "\n\n";
 
+        // Log response message to stdout.
         std::cout << messageInfo;
 
         auto it = switchFlags.find(channelId);
-        if (it == switchFlags.end()) { 
+        if (it == switchFlags.end()) {
             switchFlags.emplace(channelId, false);
+
+            // Emplace doesn't returns iterator to inserted item, we have to use find again.
             it = switchFlags.find(channelId);
         }
         bool& switchFlag = it->second;
+
+        // We don't have command handling for bots in Hexicord yet, just comparing strings now.
 
         if (text == "echo-bot turn-on") {
             if (switchFlag) {
                 rclient.sendTextMessage(channelId, "Already turned on.");
                 return;
             }
-            
+
             std::cerr << "Turning on for channel " << channelId << '\n';
-            switchFlag = true;
+            switchFlag = true; // This will update switchFlag in std::unordered_map, because it's a reference.
             rclient.sendTextMessage(channelId, "Turned on. Use `echo-bot turn-off` to turn off.");
             return;
         }
@@ -74,7 +83,7 @@ int main(int argc, char** argv) {
                 return;
             }
             std::cerr << "Turning off for channel " << channelId << '\n';
-            switchFlag = false;
+            switchFlag = false; // This will update switchFlag in std::unordered_map, because it's a reference.
             rclient.sendTextMessage(channelId, "Turned off. Use `echo-bot turn-on` to turn on.");
             return;
         }
@@ -83,12 +92,13 @@ int main(int argc, char** argv) {
             if (senderId == ownerId) {
                 rclient.sendTextMessage(channelId, "Goodbye!");
                 gclient.disconnect();
-                std::exit(1);
+                std::exit(1); // std::exit doesn't calls destuctors of local variables, thus explicit disconnect is required.
             } else {
                 rclient.sendTextMessage(channelId, "Only my owner can use this command.");
             }
         }
 
+        // Finally, if we have echo turned on for this channel and message is not a commmand...
         if (switchFlag) {
             rclient.sendTextMessage(channelId, messageInfo);
         }
