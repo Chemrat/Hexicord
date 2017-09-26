@@ -129,7 +129,7 @@ namespace Hexicord {
         }
 
         /**
-         * Check whatever image is animated (GIF).
+         * Check whether image is animated (GIF).
          *
          * Animated avatars can be \ref download()'ed as PNG or other regular format, but
          * attempt to download regular avatar as GIF will throw LogicError.
@@ -193,7 +193,7 @@ namespace Hexicord {
         }
 
         /**
-         * Check whatever image is animated (GIF).
+         * Check whether image is animated (GIF).
          *
          * Animated avatars can be \ref download()'ed as PNG or other regular format, but
          * attempt to download regular avatar as GIF will throw LogicError.
@@ -250,7 +250,7 @@ namespace Hexicord {
         }
 
         /**
-         * Check whatever image is animated (GIF).
+         * Check whether image is animated (GIF).
          *
          * Animated avatars can be \ref download()'ed as PNG or other regular format, but
          * attempt to download regular avatar as GIF will throw LogicError.
