@@ -25,10 +25,7 @@ int main(int argc, char** argv) {
     gclient.eventDispatcher.addHandler(Hexicord::Event::MessageCreate, [&](const nlohmann::json& json) {
         Hexicord::Snowflake messageId(json["id"].get<std::string>());
         Hexicord::Snowflake channelId(json["channel_id"].get<std::string>());
-
-        // Sender can be webhook. For such we need to use "webhook_id" instead of "id".
-        Hexicord::Snowflake senderId(json["author"].count("id") ? json["author"]["id"].get<std::string>()
-                                                                : json["author"]["webhook_id"].get<std::string>());
+        Hexicord::Snowflake senderId(json["author"]["id"].get<std::string>());
 
         // Avoid responing to messages of bot.
         if (senderId == Hexicord::Snowflake(me["id"].get<std::string>())) return;
