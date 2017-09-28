@@ -35,7 +35,9 @@ else()
     endif()
 endif()
 
-project(HEXICORD VERSION ${HEXICORD_DETECTED_VERSION})
+project(HEXICORD
+        VERSION   ${HEXICORD_DETECTED_VERSION}
+        LANGUAGES CXX)
 
 message(STATUS "Configuring Hexicord ${HEXICORD_FULL_VERSION}")
 
