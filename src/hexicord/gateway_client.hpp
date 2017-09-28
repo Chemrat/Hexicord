@@ -86,6 +86,9 @@ namespace Hexicord {
          * But it's unlikely to happen because most ASIO operations have really
          * long timeout.
          *
+         * This method will throw LogicError if \ref largeThreshold is no in
+         * valid range.
+         *
          * \sa \ref GatewayClient::resume
          *     \ref RestClient::getGatewayUrl
          *     \ref RestClient::getGatewayUrlBot
@@ -186,6 +189,12 @@ namespace Hexicord {
          * payload contains message.
          */
         EventDispatcher eventDispatcher;
+
+        /**
+         * Value between 50 and 250, total number of members where the gateway
+         * will stop sending offline members in the guild member list.
+         */
+        int largeThreshold = 100;
 
         inline const std::string& token() const {
             return token_;

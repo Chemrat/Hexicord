@@ -28,6 +28,8 @@
 #include <boost/asio/io_service.hpp>       // boost::asio::io_service
 #include <boost/beast/websocket/error.hpp> // boost::beast::websocket::error
 #include "hexicord/config.hpp"             // HEXICORD_ZLIB HEXICORD_DEBUG_LOG
+#include "hexicord/exceptions.hpp"         // Hexicord::LogicError
+#include "hexicord/internal/assert.hpp"    // ASSERT_MSG
 #include "hexicord/internal/wss.hpp"       // Hexicord::TLSWebSocket
 #include "hexicord/internal/utils.hpp"     // Hexicord::Utils::domainFromUrl
 
@@ -80,6 +82,9 @@ nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& ms
 void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shardCount,
                             const nlohmann::json& initialPresence) {
 
+    ASSERT_MSG(!gatewayUrl.empty(),      "Empty gatewayUrl passed to GatewayClient::connect.");
+    ASSERT_MSG(!initialPresence.empty(), "Empty presence passed to GatewayClient::connect. Leave default value to set reagular online status.");
+
     if (activeSession) disconnect(2000);
     activeSession = false;
 
@@ -94,6 +99,10 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
     heartbeatIntervalMs = gatewayHello["d"]["heartbeat_interval"];
     DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
 
+    if (largeThreshold < 50 || largeThreshold > 250) {
+        throw LogicError("largeThreshold must have value between 50 and 250", -1);
+    }
+
     nlohmann::json message = {
         { "token" , token_ },
         { "properties", {
@@ -106,7 +115,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
 #else
         { "compress", false },
 #endif
-        { "large_threshold", 250 }, // should be changeble
+        { "large_threshold", largeThreshold },
         { "presence", initialPresence }
     };
 
@@ -145,6 +154,9 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
 void GatewayClient::resume(const std::string& gatewayUrl,
                            std::string sessionId, int lastSequenceNumber,
                            int shardId, int shardCount) {
+
+    ASSERT_MSG(!gatewayUrl.empty(), "Empty gatewayUrl passed to GatewayClient::resume.");
+    ASSERT_MSG(!sessionId.empty(),  "Empty session ID passed to GatewayClient::resume.");
 
     DEBUG_MSG(std::string("Resuming interrupted gateway session. sessionId=") + sessionId +
               " lastSeq=" + std::to_string(lastSequenceNumber));
@@ -215,10 +227,7 @@ nlohmann::json GatewayClient::waitForEvent(Event type) {
 
         if (poll) {
             DEBUG_MSG("Running ASIO event loop iteration...");
-            assert(activeSession);
-            // ^ We assert here instead of beginning of method
-            // because waitForEvent used before assigning
-            // activeSession = true in connect.
+            if (!activeSession) throw LogicError("GatewayClient is not connected.", -1);
 
             ioService.run_one();
         } else {
@@ -261,7 +270,7 @@ void GatewayClient::recoverConnection() {
 }
 
 void GatewayClient::asyncPoll() {
-    assert(activeSession);
+    ASSERT_MSG(activeSession, "GatewayClient::asyncPoll called when not connected.");
 
     DEBUG_MSG("Polling gateway messages...");
     gatewayConnection->asyncReadMessage([this](TLSWebSocket&, const std::vector<uint8_t>& body,
@@ -327,7 +336,7 @@ Event GatewayClient::eventEnumFromString(const std::string& str) {
     };
 
     auto it = stringToEnum.find(str);
-    assert(it != stringToEnum.end());
+    ASSERT_MSG_WITH_INFO(it != stringToEnum.end(), "Unknown event type", str);
 
     return it->second;
 }
@@ -341,18 +350,15 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         eventDispatcher.dispatchEvent(eventEnumFromString(message["t"]), message["d"]);
         break;
     case OpCode::HeartbeatAck:
-        assert(activeSession);
         DEBUG_MSG("Gateway heartbeat answered.");
         --unansweredHeartbeats;
         break;
     case OpCode::Heartbeat:
-        assert(activeSession);
         DEBUG_MSG("Received heartbeat request.");
         sendMessage(OpCode::Heartbeat, nlohmann::json(lastSequenceNumber_));
         ++unansweredHeartbeats;
         break;
     case OpCode::Reconnect:
-        assert(activeSession);
         DEBUG_MSG("Gateway asked us to reconnect...");
         // It's not recoverConnection duplicate, here Invalid Session error during
         // resume is real error, not just 'start new session instead'.
@@ -370,12 +376,15 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
 }
 
 void GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::json& payload, const std::string& t) {
+    ASSERT_MSG(gatewayConnection->isSocketOpen(), "Not connected.");
+
     nlohmann::json message = {
         { "op", opCode  },
         { "d",  payload },
     };
 
     if (!t.empty()) {
+        ASSERT_MSG_WITH_INFO(opCode == EventDispatch, "Attempt to send t for not event dispatch. OP code below.", std::to_string(opCode));
         message["t"] = t;
     }
 

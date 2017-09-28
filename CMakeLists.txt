@@ -163,7 +163,9 @@ endmacro()
 
 hexicord_config(STRING HEXICORD_GITHUB "URL to send in UA." "https://github.com/foxcpp/Hexicord")
 
-hexicord_config(BOOL HEXICORD_DEBUG_LOG "Write debug messages to stderr. Warning: VERY VERBOSE."  OFF)
+# Debug options
+hexicord_config(BOOL HEXICORD_DEBUG_LOG     "Write debug messages to stderr. Warning: VERY VERBOSE."            OFF)
+hexicord_config(BOOL HEXICORD_NO_ASSERTIONS "Disable assert checks. Will not warn you if something went wrong." OFF)
 
 # Ratelimits handling
 hexicord_config(BOOL HEXICORD_RATELIMIT_PREDICTION   "Attempt to predict and avoid ratelimit hit. Experimental."    OFF)
