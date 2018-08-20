@@ -28,7 +28,7 @@ namespace Hexicord {
 
     void EventDispatcher::dispatchEvent(Event type, const nlohmann::json& payload) const {
         if (type == Event::Unknown) {
-            for (const auto& handler : unknownEventHandlers.at(type)) {
+            for (const auto& handler : unknownEventHandlers) {
                 // TODO: actually pass event type
                 handler("unknown", payload);
             }
