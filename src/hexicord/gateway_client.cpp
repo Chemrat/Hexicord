@@ -89,9 +89,9 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
                                                                          gatewayPathSuffix, 443);
 
     DEBUG_MSG("Reading Hello message...");
-    nlohmann::json gatewayHello = parseGatewayMessage(gatewayConnection->readMessage());
+    const nlohmann::json gatewayHello = parseGatewayMessage(gatewayConnection->readMessage());
 
-    heartbeatIntervalMs = gatewayHello["d"]["heartbeat_interval"];
+    heartbeatIntervalMs = gatewayHello.at("d").at("heartbeat_interval");
     DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
 
     heartbeat = true;
@@ -123,8 +123,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
     activeSession = true;
 
     DEBUG_MSG("Waiting for Ready event...");
-    nlohmann::json readyPayload;
-    readyPayload = waitForEvent(Event::Ready);
+    const nlohmann::json readyPayload = waitForEvent(Event::Ready);
 
     DEBUG_MSG("Got Ready event. Starting heartbeat and polling...");
 
@@ -132,7 +131,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
     // information probably useful for users.
     eventDispatcher.dispatchEvent(Event::Ready, readyPayload);
 
-    sessionId_          = readyPayload["session_id"];
+    sessionId_          = readyPayload.at("session_id");
     lastGatewayUrl_     = gatewayUrl;
     shardId_            = shardId;
     shardCount_         = shardCount;
@@ -160,9 +159,9 @@ void GatewayClient::resume(const std::string& gatewayUrl,
     gatewayConnection->handshake(Utils::domainFromUrl(gatewayUrl), gatewayPathSuffix, 443);
 
     DEBUG_MSG("Reading Hello message.");
-    nlohmann::json gatewayHello = parseGatewayMessage(gatewayConnection->readMessage());
+    const nlohmann::json gatewayHello = parseGatewayMessage(gatewayConnection->readMessage());
 
-    heartbeatIntervalMs = gatewayHello["d"]["heartbeat_interval"];
+    heartbeatIntervalMs = gatewayHello.at("d").at("heartbeat_interval");
     DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
 
     heartbeat = true;
@@ -232,8 +231,8 @@ nlohmann::json GatewayClient::waitForEvent(Event type) {
 
         if (lastMessage.is_null() || lastMessage.empty()) continue;
 
-        if (lastMessage["op"] == OpCode::EventDispatch &&
-            eventEnumFromString(lastMessage["t"]) == type) {
+        if (lastMessage.at("op") == OpCode::EventDispatch &&
+            eventEnumFromString(lastMessage.at("t")) == type) {
 
             break;
         }
@@ -243,7 +242,7 @@ nlohmann::json GatewayClient::waitForEvent(Event type) {
 
     skipMessages = false;
 
-    return lastMessage["d"];
+    return lastMessage.at("d");
 }
 
 void GatewayClient::updatePresence(const nlohmann::json& newPresence) {
@@ -336,13 +335,18 @@ Event GatewayClient::eventEnumFromString(const std::string& str) {
 }
 
 void GatewayClient::processMessage(const nlohmann::json& message) {
-    switch (message["op"].get<int>()) {
+    switch (message.at("op").get<int>()) {
     case OpCode::EventDispatch:
-        DEBUG_MSG(std::string("Gateway Event: t=") + message["t"].get<std::string>() +
-                  " s=" + std::to_string(message["s"].get<int>()));
-        lastSequenceNumber_ = message["s"];
-        eventDispatcher.dispatchEvent(eventEnumFromString(message["t"]), message["d"]);
+    {
+        const auto &t = message.at("t");
+        const auto &s = message.at("s");
+        const auto &d = message.at("d");
+        DEBUG_MSG(std::string("Gateway Event: t=") + t.get<std::string>() +
+                  " s=" + std::to_string(s.get<int>()));
+        lastSequenceNumber_ = s.get<int>();
+        eventDispatcher.dispatchEvent(eventEnumFromString(t), d);
         break;
+    }
     case OpCode::HeartbeatAck:
         assert(activeSession);
         DEBUG_MSG("Gateway heartbeat answered.");
