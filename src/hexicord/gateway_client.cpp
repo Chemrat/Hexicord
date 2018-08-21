@@ -67,8 +67,13 @@ GatewayClient::~GatewayClient() {
 }
 
 nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& msg) {
+    if (msg.size() == 0) {
+        DEBUG_MSG("Got an empty gateway message!")
+        return nlohmann::json{};
+    }
+
 #ifdef HEXICORD_ZLIB
-    if (msg[0] == '{') {
+    if (msg.at(0) == '{') {
         return nlohmann::json::parse(msg);
     }
     return nlohmann::json::parse(Zlib::decompress(msg));
@@ -273,7 +278,7 @@ void GatewayClient::asyncPoll() {
             ec == boost::beast::websocket::error::closed) recoverConnection();
 
         try {
-            nlohmann::json message = parseGatewayMessage(body);
+            const nlohmann::json message = parseGatewayMessage(body);
 
             lastMessage = message;
             if (!skipMessages) processMessage(message);
