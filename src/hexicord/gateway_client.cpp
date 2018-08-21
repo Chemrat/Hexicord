@@ -273,15 +273,27 @@ void GatewayClient::asyncPoll() {
     gatewayConnection->asyncReadMessage([this](TLSWebSocket&, const std::vector<uint8_t>& body,
                                                boost::system::error_code ec) {
         if (!poll) return;
-        if (ec == boost::asio::error::broken_pipe ||
-            ec == boost::asio::error::connection_reset ||
-            ec == boost::beast::websocket::error::closed) recoverConnection();
+
+        if (ec != boost::system::errc::success) {
+            DEBUG_MSG("asyncReadMessage body length: " + std::to_string(body.size()))
+            DEBUG_MSG("asyncReadMessage error: " + ec.message());
+
+            if (ec == boost::asio::error::broken_pipe ||
+                ec == boost::asio::error::connection_reset ||
+                ec == boost::beast::websocket::error::closed) recoverConnection();
+
+            if (poll) asyncPoll();
+            return;
+        }
 
         try {
             const nlohmann::json message = parseGatewayMessage(body);
 
             lastMessage = message;
-            if (!skipMessages) processMessage(message);
+            if (!skipMessages
+                    && !message.is_null()
+                    && !message.empty())
+                processMessage(message);
         } catch (nlohmann::json::parse_error& excp) {
             DEBUG_MSG("Corrupted message, assuming connection error, reconnecting...");
             DEBUG_MSG(excp.what());
