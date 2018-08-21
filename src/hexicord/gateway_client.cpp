@@ -37,7 +37,7 @@
 
 #ifdef HEXICORD_DEBUG_LOG
     #include <iostream> //
-    #define DEBUG_MSG(msg) do { std::cerr <<  "gateway_client.cpp:" << __LINE__ << " " << (msg) << '\n'; } while (false)
+    #define DEBUG_MSG(msg) do { std::cerr <<  "gateway_client.cpp:" << __LINE__ << " " << (msg) << '\n'; } while (false);
 #else
     #define DEBUG_MSG(msg)
 #endif
@@ -275,7 +275,7 @@ void GatewayClient::asyncPoll() {
         if (!poll) return;
 
         if (ec != boost::system::errc::success) {
-            DEBUG_MSG("asyncReadMessage body length: " + std::to_string(body.size()))
+            DEBUG_MSG("asyncReadMessage body length: " + std::to_string(body.size()));
             DEBUG_MSG("asyncReadMessage error: " + ec.message());
 
             if (ec == boost::asio::error::broken_pipe ||
