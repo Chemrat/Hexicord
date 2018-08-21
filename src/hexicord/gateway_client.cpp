@@ -68,8 +68,8 @@ GatewayClient::~GatewayClient() {
 
 nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& msg) {
     if (msg.size() == 0) {
-        DEBUG_MSG("Got an empty gateway message!")
-        return nlohmann::json();
+        DEBUG_MSG("Got an empty gateway message!");
+        return nlohmann::json{};
     }
 
 #ifdef HEXICORD_ZLIB
