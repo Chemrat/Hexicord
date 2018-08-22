@@ -278,10 +278,14 @@ void GatewayClient::asyncPoll() {
             DEBUG_MSG("asyncReadMessage body length: " + std::to_string(body.size()));
             DEBUG_MSG("asyncReadMessage error: " + ec.message());
 
+            // Just reconnect always for now
+            // seems like SSL socket can be closed with a short_read error too
+            recoverConnection();
+/*
             if (ec == boost::asio::error::broken_pipe ||
                 ec == boost::asio::error::connection_reset ||
                 ec == boost::beast::websocket::error::closed) recoverConnection();
-
+*/
             if (poll) asyncPoll();
             return;
         }
