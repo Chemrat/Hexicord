@@ -36,6 +36,7 @@
 .idea/
 ## CMake and Make things
 CMakeCache.txt
+CMakeLists.txt.*
 CMakeFiles
 CMakeScripts
 Testing

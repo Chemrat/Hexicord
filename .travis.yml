@@ -1,0 +1,30 @@
+language: cpp
+sudo: required
+dist: trusty
+
+compiler:
+  - gcc
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-7
+    - cmake
+    - libz-dev
+    - libboost-dev
+    - libboost-system-dev
+    - libssl-dev
+
+before_install:
+  - export CXX="g++-7"
+
+script:
+  - mkdir build
+  - cd build
+  - cmake .. 
+  - make
+
+os:
+  - linux
