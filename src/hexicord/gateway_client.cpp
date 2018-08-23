@@ -21,6 +21,7 @@
 
 #include "hexicord/gateway_client.hpp"
 
+#include <thread>
 #include <cassert>                         // assert
 #include <chrono>                          // std::chrono::steady_clock
 #include <unordered_map>                   // std::unordered_map
@@ -86,10 +87,20 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
                             const nlohmann::json& initialPresence) {
 
     client.set_message_handler([&](web::websockets::client::websocket_incoming_message msg){
-        const auto body = msg.extract_string().get();
-        std::cout << "Message: " << body << std::endl;
-        const nlohmann::json message = nlohmann::json::parse(body);
-        processMessage(message);
+        if (msg.message_type() == web::websockets::client::websocket_message_type::text_message) {
+            const auto body = msg.extract_string().get();
+            std::cout << "Message: " << body << std::endl;
+            const nlohmann::json message = nlohmann::json::parse(body);
+            processMessage(message);
+        } else if (msg.message_type() == web::websockets::client::websocket_message_type::binary_message) {
+            concurrency::streams::container_buffer<std::vector<uint8_t>> ret_data;
+            msg.body().read_to_end(ret_data).wait();
+            std::cout << "Compressed message" << std::endl;
+            const nlohmann::json message = nlohmann::json::parse(Zlib::decompress(ret_data.collection()));
+            processMessage(message);
+        }
+
+
     });
 
     client.connect("wss://gateway.discord.gg/?v=6&encoding=json").wait();
@@ -149,8 +160,8 @@ void GatewayClient::resume(const std::string& gatewayUrl,
 
     if (activeSession) disconnect(2000);
    
-    if (!gatewayConnection) gatewayConnection.reset(new TLSWebSocket(ioService));
-    if (!gatewayConnection->isSocketOpen()) gatewayConnection->handshake(Utils::domainFromUrl(gatewayUrl), gatewayPathSuffix, 443);
+//    if (!gatewayConnection) gatewayConnection.reset(new TLSWebSocket(ioService));
+//    if (!gatewayConnection->isSocketOpen()) gatewayConnection->handshake(Utils::domainFromUrl(gatewayUrl), gatewayPathSuffix, 443);
 
     // FIXME: erroneous double handshake? seems to fail with "unexpected record"
 //    DEBUG_MSG("Performing WebSocket handshake...");
@@ -178,7 +189,7 @@ void GatewayClient::resume(const std::string& gatewayUrl,
     // GatewayError can be thrown here, why?
     //  waitForEvent calls processMessage for other messages (including OP Invalid Session),
     //  processMessage throws GatewayError if receives Invalid Session.
-    nlohmann::json resumedPayload = waitForEvent(Event::Resumed);
+    nlohmann::json resumedPayload;// = waitForEvent(Event::Resumed);
     DEBUG_MSG("Got Resumed event, starting heartbeat and polling...");
     eventDispatcher.dispatchEvent(Event::Resumed, resumedPayload);
 
@@ -203,7 +214,7 @@ void GatewayClient::disconnect(int code) noexcept {
 
     activeSession = false;
 }
-
+/*
 nlohmann::json GatewayClient::waitForEvent(Event type) {
     DEBUG_MSG(std::string("Waiting for event, type=") + std::to_string(unsigned(type)));
     skipMessages = true;
@@ -236,7 +247,7 @@ nlohmann::json GatewayClient::waitForEvent(Event type) {
     skipMessages = false;
 
     return lastMessage.at("d");
-}
+}*/
 
 void GatewayClient::updatePresence(const nlohmann::json& newPresence) {
     sendMessage(OpCode::StatusUpdate, newPresence);
@@ -257,7 +268,12 @@ void GatewayClient::sendHello()
         { "compress", false },
 #endif
         { "large_threshold", 250 }, // should be changeble
-        { "presence", "" }//initialPresence }
+        { "presence", {
+              { "since", nullptr   },
+              { "status", "online" },
+              { "game", {{ "name", "LEMONGRAB"}, { "type", 0 }}},
+              { "afk", false }
+          } }//initialPresence }
     };
 /*
     if (shardId != NoSharding && shardCount != NoSharding) {
@@ -461,20 +477,28 @@ void GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::js
 }
 
 void GatewayClient::asyncHeartbeat() {
-    heartbeatTimer.cancel();
-    heartbeatTimer.expires_from_now(std::chrono::milliseconds(heartbeatIntervalMs));
-    heartbeatTimer.async_wait([this](const boost::system::error_code& ec){
-        if (ec == boost::asio::error::operation_aborted) return;
-        if (!heartbeat) return;
+    m_heartbeat_thread = std::thread([&]() {
+        // FIXME: make a properly stoppable thread
+        while (true)
+        {
+            DEBUG_MSG("Sending heartbeat.");
+            try
+            {
+                sendHeartbeat();
+                std::this_thread::sleep_for(std::chrono::milliseconds(heartbeatIntervalMs));
+            }
+            catch (const std::exception& e)
+            {
+                DEBUG_MSG("Could not send a heartbeat: " + std::string(e.what()));
+            }
+        }
 
-        sendHeartbeat();
-
-        asyncHeartbeat();
+        DEBUG_MSG("Disconnected, stopping heartbeats.");
     });
 }
 
 void GatewayClient::sendHeartbeat() {
-    assert(activeSession);
+    //assert(activeSession);
     if (unansweredHeartbeats >= 2) {
         DEBUG_MSG("Missing gateway heartbeat answer. Reconnecting...");
         recoverConnection();

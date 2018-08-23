@@ -24,6 +24,7 @@
 
 #include <cpprest/ws_client.h>
 
+#include <thread>
 #include <cstdint>                       // uint8_t
 #include <memory>                        // std::unique_ptr
 #include <stdexcept>                     // std::runtime_error
@@ -166,7 +167,7 @@ namespace Hexicord {
          * It's better to use async handlers, since behavior of this method is
          * not well defined in all cases.
          */
-        nlohmann::json waitForEvent(Event type);
+        //nlohmann::json waitForEvent(Event type);
 
         /**
          * Update presence (user status).
@@ -269,6 +270,8 @@ private:
         static constexpr const char* gatewayPathSuffix = "/?v=6&encoding=json";
 
         web::websockets::client::websocket_callback_client client;
+
+        std::thread m_heartbeat_thread;
     };
 }
 
