@@ -22,6 +22,8 @@
 #ifndef HEXICORD_GATEWAY_CLIENT_HPP
 #define HEXICORD_GATEWAY_CLIENT_HPP
 
+#include <cpprest/ws_client.h>
+
 #include <cstdint>                       // uint8_t
 #include <memory>                        // std::unique_ptr
 #include <stdexcept>                     // std::runtime_error
@@ -171,6 +173,8 @@ namespace Hexicord {
          */
         void updatePresence(const nlohmann::json& newPresence);
 
+        void sendHello();
+
         /**
          * Event dispatcher instance used for gateway
          * event dispatching.
@@ -263,6 +267,8 @@ private:
         boost::asio::io_service& ioService; // non-owning reference to I/O service.
 
         static constexpr const char* gatewayPathSuffix = "/?v=6&encoding=json";
+
+        web::websockets::client::websocket_callback_client client;
     };
 }
 

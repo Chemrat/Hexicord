@@ -188,8 +188,8 @@ endif()
 #------------------------------------------------------------------------------
 # Library
 
-option(HEXICORD_STATIC "Build static library." ON )
-option(HEXICORD_SHARED "Build shared library." OFF)
+option(HEXICORD_STATIC "Build static library." OFF)
+option(HEXICORD_SHARED "Build shared library." ON)
 
 file(GLOB_RECURSE HEXICORD_HEADERS ${PROJECT_SOURCE_DIR}/src/*.hpp)
 file(GLOB_RECURSE HEXICORD_SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)

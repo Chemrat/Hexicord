@@ -63,7 +63,7 @@ GatewayClient::GatewayClient(boost::asio::io_service& ioService, const std::stri
     : ioService(ioService), token_(token), heartbeatTimer(ioService) {}
 
 GatewayClient::~GatewayClient() {
-    if (gatewayConnection && activeSession && gatewayConnection->isSocketOpen()) disconnect(2000);
+    //if (gatewayConnection && activeSession && gatewayConnection->isSocketOpen()) disconnect(2000);
 }
 
 nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& msg) {
@@ -85,22 +85,17 @@ nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& ms
 void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shardCount,
                             const nlohmann::json& initialPresence) {
 
-    if (activeSession) disconnect(2000);
-    activeSession = false;
+    client.set_message_handler([&](web::websockets::client::websocket_incoming_message msg){
+        const auto body = msg.extract_string().get();
+        std::cout << "Message: " << body << std::endl;
+        const nlohmann::json message = nlohmann::json::parse(body);
+        processMessage(message);
+    });
 
-    DEBUG_MSG("Connecting...");
-    if (!gatewayConnection)                 gatewayConnection.reset(new TLSWebSocket(ioService));
-    if (!gatewayConnection->isSocketOpen()) gatewayConnection->handshake(Utils::domainFromUrl(gatewayUrl),
-                                                                         gatewayPathSuffix, 443);
+    client.connect("wss://gateway.discord.gg/?v=6&encoding=json").wait();
 
-    DEBUG_MSG("Reading Hello message...");
-    const nlohmann::json gatewayHello = parseGatewayMessage(gatewayConnection->readMessage());
+/*
 
-    heartbeatIntervalMs = gatewayHello.at("d").at("heartbeat_interval");
-    DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
-
-    heartbeat = true;
-    asyncHeartbeat();
 
     nlohmann::json message = {
         { "token" , token_ },
@@ -142,10 +137,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
     shardCount_         = shardCount;
     lastSequenceNumber_ = 0;
     lastPresence        = initialPresence;
-
-    // Already started by waitForEvent.
-    // poll = true;
-    // asyncPoll();
+*/
 }
 
 void GatewayClient::resume(const std::string& gatewayUrl,
@@ -250,6 +242,50 @@ void GatewayClient::updatePresence(const nlohmann::json& newPresence) {
     sendMessage(OpCode::StatusUpdate, newPresence);
 }
 
+void GatewayClient::sendHello()
+{
+    nlohmann::json message = {
+        { "token" , token_ },
+        { "properties", {
+            { "$os", OS_STR },
+            { "$browser", "hexicord" },
+            { "$device", "hexicord" }
+        }},
+#ifdef HEXICORD_ZLIB
+        { "compress", true },
+#else
+        { "compress", false },
+#endif
+        { "large_threshold", 250 }, // should be changeble
+        { "presence", "" }//initialPresence }
+    };
+/*
+    if (shardId != NoSharding && shardCount != NoSharding) {
+        message.push_back({ "shard", { shardId, shardCount }});
+    }*/
+
+    DEBUG_MSG("Sending Identify message...");
+    sendMessage(OpCode::Identify, message);
+
+    activeSession = true;
+/*
+    DEBUG_MSG("Waiting for Ready event...");
+    //const nlohmann::json readyPayload = waitForEvent(Event::Ready);
+
+    DEBUG_MSG("Got Ready event. Starting heartbeat and polling...");
+
+    // We must dispatch this event too, because it contain
+    // information probably useful for users.
+    eventDispatcher.dispatchEvent(Event::Ready, readyPayload);
+
+    sessionId_          = readyPayload.at("session_id");
+    lastGatewayUrl_     = gatewayUrl;
+    shardId_            = shardId;
+    shardCount_         = shardCount;
+    lastSequenceNumber_ = 0;
+    lastPresence        = initialPresence;*/
+}
+
 void GatewayClient::recoverConnection() {
     DEBUG_MSG("Lost gateway connection, recovering...");
     disconnect(NoCloseEvent);
@@ -352,6 +388,7 @@ Event GatewayClient::eventEnumFromString(const std::string& str) {
 }
 
 void GatewayClient::processMessage(const nlohmann::json& message) {
+    std::cout << "Processing message OP: " << message.at("op").get<int>() << std::endl;
     switch (message.at("op").get<int>()) {
     case OpCode::EventDispatch:
     {
@@ -387,6 +424,15 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         DEBUG_MSG("Invalid session error.");
         throw GatewayError("Invalid session.");
         break;
+    case OpCode::Hello:
+        heartbeatIntervalMs = message.at("d").at("heartbeat_interval");
+        DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
+
+        heartbeat = true;
+        asyncHeartbeat();
+
+        sendHello();
+        break;
     default:
         DEBUG_MSG("Unexpected gateway message.");
         DEBUG_MSG(message);
@@ -406,7 +452,11 @@ void GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::js
     std::string messageString = message.dump();
 
     activeSendMessage = true;
-    gatewayConnection->sendMessage(std::vector<uint8_t>(messageString.begin(), messageString.end()));
+
+    std::cout << "Sending message: " << messageString << std::endl;
+    web::websockets::client::websocket_outgoing_message msg;
+    msg.set_utf8_message(messageString);
+    client.send(msg).wait();
     activeSendMessage = false;
 }
 
