@@ -22,6 +22,7 @@
 #ifndef HEXICORD_GATEWAY_CLIENT_HPP
 #define HEXICORD_GATEWAY_CLIENT_HPP
 
+#define _TURN_OFF_PLATFORM_STRING
 #include <cpprest/ws_client.h>
 
 #include <future>
