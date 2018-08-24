@@ -24,6 +24,7 @@
 
 #include <cpprest/ws_client.h>
 
+#include <future>
 #include <thread>
 #include <cstdint>                       // uint8_t
 #include <memory>                        // std::unique_ptr
@@ -175,6 +176,7 @@ namespace Hexicord {
         void updatePresence(const nlohmann::json& newPresence);
 
         void sendHello();
+        void sendResume();
 
         /**
          * Event dispatcher instance used for gateway
@@ -234,11 +236,11 @@ private:
         bool poll = false, skipMessages = false;
         nlohmann::json lastMessage;
 
-        Event eventEnumFromString(const std::string& str);
-
         nlohmann::json parseGatewayMessage(const std::vector<uint8_t>& msg);
         void processMessage(const nlohmann::json& message);
         void sendMessage(OpCode opCode, const nlohmann::json& payload = {}, const std::string& t = "");
+
+        void processReady(const nlohmann::json& message);
 
         // Set if sendMessage entered.
         bool activeSendMessage = false;
@@ -247,8 +249,11 @@ private:
         // heartbeatTimer while heartbeat = true.
         void asyncHeartbeat();
 
+        std::promise<void> stop_heartbeat;
+        void heartbeat(std::future<void> &&stop);
+
         // Heartbeat information, used by asyncHeartbeat and sendHeartbeat.
-        bool heartbeat = true;
+        //bool heartbeat = true;
         unsigned heartbeatIntervalMs;
         unsigned unansweredHeartbeats = 0;
         boost::asio::steady_timer heartbeatTimer;

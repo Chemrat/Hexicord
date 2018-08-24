@@ -72,6 +72,8 @@ namespace Hexicord {
         }
     };
 
+    Event eventEnumFromString(const std::string& str);
+
     class EventDispatcher {
     public:
         using EventHandler        = std::function<void(const nlohmann::json&)>;
