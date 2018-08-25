@@ -32,7 +32,6 @@
 #include <stdexcept>                     // std::runtime_error
 #include <string>                        // std::string
 #include <vector>                        // std::vector
-#include <boost/asio/steady_timer.hpp>   // boost::asio::steady_timer
 #include <hexicord/event_dispatcher.hpp> // Hexicord::Event, Hexicord::EventDispatcher
 #include <hexicord/json.hpp>             // nlohmann::json
 namespace Hexicord { class TLSWebSocket; }
@@ -60,7 +59,7 @@ namespace Hexicord {
         static constexpr int NoSharding = -1;
         static constexpr int NoCloseEvent = -1;
 
-        GatewayClient(boost::asio::io_service& ioService, const std::string& token);
+        GatewayClient(const std::string& token);
         ~GatewayClient();
 
         GatewayClient(const GatewayClient&) = delete;
@@ -233,11 +232,9 @@ private:
         // Poll gateway connection using async read while poll = true, calls
         // processMessage for each message if skipMessages is not set.
         // Saves last received message in lastMessage.
-        void asyncPoll();
-        bool poll = false, skipMessages = false;
+
         nlohmann::json lastMessage;
 
-        nlohmann::json parseGatewayMessage(const std::vector<uint8_t>& msg);
         void processMessage(const nlohmann::json& message);
         void sendMessage(OpCode opCode, const nlohmann::json& payload = {}, const std::string& t = "");
 
@@ -246,38 +243,30 @@ private:
         // Set if sendMessage entered.
         bool activeSendMessage = false;
 
-        // Calls sendHeartbeat every heartbeatIntervalMs milliseconds using
-        // heartbeatTimer while heartbeat = true.
-        void asyncHeartbeat();
-
         std::promise<void> stop_heartbeat;
         void heartbeat(std::future<void> &&stop);
 
         // Heartbeat information, used by asyncHeartbeat and sendHeartbeat.
         //bool heartbeat = true;
-        unsigned heartbeatIntervalMs;
+        unsigned heartbeatIntervalMs = 0;
         unsigned unansweredHeartbeats = 0;
-        boost::asio::steady_timer heartbeatTimer;
 
         // Send heartbeat, if we don't have answer for two heartbeats - reconnect and return.
         void sendHeartbeat();
 
         // Session information.
         bool activeSession = false; // true if we connected and everything is working.
-        std::string sessionId_, lastGatewayUrl_, token_;
-        int shardId_ = NoSharding, shardCount_ = NoSharding;
+        std::string sessionId_;
+        std::string lastGatewayUrl_;
+        std::string token_;
+        int shardId_ = NoSharding;
+        int shardCount_ = NoSharding;
         int lastSequenceNumber_ = 0;
         nlohmann::json lastPresence;
 
-
-        std::unique_ptr<TLSWebSocket> gatewayConnection;
-        boost::asio::io_service& ioService; // non-owning reference to I/O service.
-
-        static constexpr const char* gatewayPathSuffix = "/?v=6&encoding=json";
+        constexpr static char gatewayPathSuffix[] = "/?v=6&encoding=json";
 
         web::websockets::client::websocket_callback_client client;
-
-        std::thread m_heartbeat_thread;
     };
 }
 

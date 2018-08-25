@@ -25,11 +25,8 @@
 #include <cassert>                         // assert
 #include <chrono>                          // std::chrono::steady_clock
 #include <unordered_map>                   // std::unordered_map
-#include <boost/asio/error.hpp>            // boost::asio::error
-#include <boost/asio/io_service.hpp>       // boost::asio::io_service
-#include <boost/beast/websocket/error.hpp> // boost::beast::websocket::error
+
 #include "hexicord/config.hpp"             // HEXICORD_ZLIB HEXICORD_DEBUG_LOG
-#include "hexicord/internal/wss.hpp"       // Hexicord::TLSWebSocket
 #include "hexicord/internal/utils.hpp"     // Hexicord::Utils::domainFromUrl
 
 #ifdef HEXICORD_ZLIB
@@ -60,27 +57,11 @@
 
 namespace Hexicord {
 
-GatewayClient::GatewayClient(boost::asio::io_service& ioService, const std::string& token)
-    : ioService(ioService), token_(token), heartbeatTimer(ioService) {}
+GatewayClient::GatewayClient(const std::string& token)
+    : token_(token) {}
 
 GatewayClient::~GatewayClient() {
-    //if (gatewayConnection && activeSession && gatewayConnection->isSocketOpen()) disconnect(2000);
-}
-
-nlohmann::json GatewayClient::parseGatewayMessage(const std::vector<uint8_t>& msg) {
-    if (msg.size() == 0) {
-        DEBUG_MSG("Got an empty gateway message!");
-        return nlohmann::json{};
-    }
-
-#ifdef HEXICORD_ZLIB
-    if (msg.at(0) == '{') {
-        return nlohmann::json::parse(msg);
-    }
-    return nlohmann::json::parse(Zlib::decompress(msg));
-#else
-    return nlohmann::json::parse(msg);
-#endif
+    disconnect(2000);
 }
 
 void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shardCount,
@@ -119,7 +100,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
         }
     });
 
-    client.connect(gatewayUrl + "/?v=6&encoding=json").wait();
+    client.connect(gatewayUrl + gatewayPathSuffix).wait();
 }
 
 void GatewayClient::resume(const std::string& gatewayUrl,
