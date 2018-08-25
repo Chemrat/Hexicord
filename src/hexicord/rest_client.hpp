@@ -22,6 +22,8 @@
 #ifndef HEXICORD_REST_CLIENT_HPP
 #define HEXICORD_REST_CLIENT_HPP
 
+#include <cpprest/http_client.h>
+
 #include <cstdint>                      // uint8_t
 #include <utility>                      // std::pair
 #include <string>                       // std::string
@@ -992,6 +994,8 @@ private:
         // latter requires complete type but we forward-declare REST::HTTPSConnection.
         std::shared_ptr<REST::HTTPSConnection> restConnection;
         boost::asio::io_service& ioService; // non-owning reference to I/O service.
+
+        web::http::client::http_client client{"https://discordapp.com/"};
     };
 } // namespace Hexicord
 

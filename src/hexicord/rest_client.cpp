@@ -66,8 +66,7 @@ namespace Hexicord {
                                            const std::unordered_map<std::string, std::string>& query,
                                            const std::vector<REST::MultipartEntity>& multipart) {
 
-        if (!restConnection->isOpen()) restConnection->open();
-
+        //if (!restConnection->isOpen()) restConnection->open();
         REST::HTTPRequest request;
 
         request.method  = method;
@@ -83,36 +82,45 @@ namespace Hexicord {
         ratelimitLock.down(Utils::getRatelimitDomain(endpoint));
 #endif
 
-        REST::HTTPResponse response;
-        try {
-            DEBUG_MSG(std::string("Sending REST request: ") + method + " " + request.path + " " + payload.dump());
-            response = restConnection->request(request);
-        } catch (boost::system::system_error& excp) {
-            if (excp.code() != boost::beast::http::error::end_of_stream &&
-                excp.code() != boost::asio::error::broken_pipe &&
-                excp.code() != boost::asio::error::connection_reset) throw;
+        //REST::HTTPResponse response;
 
-            DEBUG_MSG("HTTP Connection closed by remote. Reopenning and retrying.");
-            {
-                REST::HeadersMap prevHeaders = std::move(restConnection->connectionHeaders);
-                restConnection.reset(new REST::HTTPSConnection(ioService, "discordapp.com"));
-                restConnection->connectionHeaders = std::move(prevHeaders);
-                restConnection->open();
+        DEBUG_MSG(std::string("Sending REST request: ") + method + " " + request.path + " " + payload.dump());
+
+            web::http::http_request msg;
+            msg.set_method(method);
+            msg.set_request_uri(request.path);
+            msg.headers().add( "Authorization", std::string("Bot ") + token );
+            //msg.headers().add("Accept", "application/json");
+
+            if (!payload.empty()) {
+                msg.set_body(payload.dump(), "application/json");
             }
-            
-            return sendRestRequest(method, endpoint, payload, query, multipart);
-        }
 
+            nlohmann::json jsonResp;
+            client.request(msg).then([&](web::http::http_response response)
+            {
+               if (response.status_code() == web::http::status_codes::OK)
+               {
+                   jsonResp = nlohmann::json::parse(response.extract_json().get().serialize());
+               } else {
+                   DEBUG_MSG("Got non-2xx HTTP status code.");
+                   DEBUG_MSG("Response: " + response.extract_string(true).get());
+               }
+            }).wait();
+
+            //response = restConnection->request(request);
+
+/*
         if (response.body.empty()) {
             return {};
         }
-
-        nlohmann::json jsonResp = nlohmann::json::parse(response.body);
+*/
+        //nlohmann::json jsonResp = nlohmann::json::parse(response.body);
 
 #ifdef HEXICORD_RATELIMIT_PREDICTION
         updateRatelimitsIfPresent(endpoint, { response.headers.begin(), response.headers.end() });
 #endif
-
+/*
         if (response.statusCode / 100 != 2) {
             if (response.statusCode == 429) {
 #ifdef HEXICORD_RATELIMIT_HIT_AS_ERROR
@@ -126,7 +134,7 @@ namespace Hexicord {
             DEBUG_MSG("Got non-2xx HTTP status code.");
             DEBUG_MSG(jsonResp.dump(4));
             throwRestError(response, jsonResp);
-        }
+        }*/
 
         return jsonResp;
     }

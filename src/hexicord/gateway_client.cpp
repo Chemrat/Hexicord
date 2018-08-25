@@ -119,7 +119,7 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
         }
     });
 
-    client.connect("wss://gateway.discord.gg/?v=6&encoding=json").wait();
+    client.connect(gatewayUrl + "/?v=6&encoding=json").wait();
 }
 
 void GatewayClient::resume(const std::string& gatewayUrl,
