@@ -23,8 +23,7 @@
 
 #include <thread>                                     // std::this_thread::sleep_for
 #include <chrono>                                     // std::chrono::seconds, std::chrono::milliseconds
-#include <boost/asio/io_service.hpp>                  // boost::asio::io_service
-#include <boost/beast/http/error.hpp>                 // boost::beast::http::error::end_of_stream
+
 #include "hexicord/exceptions.hpp"
 #include "hexicord/internal/utils.hpp"                // Utils::getRatelimitDomain, Utils::domainFromUrl
 #include "hexicord/internal/rest.hpp"                 // Hexicord::REST
@@ -37,26 +36,20 @@
 #endif
 
 namespace Hexicord {
-    RestClient::RestClient(boost::asio::io_service& ioService, const std::string& token) 
-        : restConnection(new REST::HTTPSConnection(ioService, "discordapp.com"))
-        , token(token)
-        , ioService(ioService) {
+    RestClient::RestClient(const std::string& token)
+        : token(token)
+    {
 
-        // It's strange but Discord API requires "DiscordBot" user-agent for any connections
-        // including non-bots. Referring to https://discordapp.com/developers/docs/reference#user-agent
-        restConnection->connectionHeaders.insert({ "User-Agent", "DiscordBot (" HEXICORD_GITHUB ", " HEXICORD_VERSION ")" });
     }
 
     std::string RestClient::getGatewayUrl() {
-        restConnection->connectionHeaders.insert({ "Authorization", std::string("Bearer ") + token });
+//        restConnection->connectionHeaders.insert({ "Authorization", std::string("Bearer ") + token });
 
         nlohmann::json response = sendRestRequest("GET", "/gateway");
         return response["url"];
     }
 
     std::pair<std::string, int> RestClient::getGatewayUrlBot() {
-        restConnection->connectionHeaders.insert({ "Authorization", std::string("Bot ") + token });
-
         nlohmann::json response = sendRestRequest("GET", "/gateway/bot");
         return { response["url"].get<std::string>(), response["shards"].get<unsigned>() };
     }
@@ -64,9 +57,8 @@ namespace Hexicord {
     nlohmann::json RestClient::sendRestRequest(const std::string& method, const std::string& endpoint,
                                            const nlohmann::json& payload,
                                            const std::unordered_map<std::string, std::string>& query,
-                                           const std::vector<REST::MultipartEntity>& multipart) {
-
-        //if (!restConnection->isOpen()) restConnection->open();
+                                           const std::vector<REST::MultipartEntity>& multipart)
+    {
         REST::HTTPRequest request;
 
         request.method  = method;
@@ -82,14 +74,13 @@ namespace Hexicord {
         ratelimitLock.down(Utils::getRatelimitDomain(endpoint));
 #endif
 
-        //REST::HTTPResponse response;
-
         DEBUG_MSG(std::string("Sending REST request: ") + method + " " + request.path + " " + payload.dump());
 
             web::http::http_request msg;
             msg.set_method(method);
             msg.set_request_uri(request.path);
             msg.headers().add( "Authorization", std::string("Bot ") + token );
+            msg.headers().add( "User-Agent", "DiscordBot (" HEXICORD_GITHUB ", " HEXICORD_VERSION ")" );
             //msg.headers().add("Accept", "application/json");
 
             if (!payload.empty()) {
@@ -144,11 +135,11 @@ namespace Hexicord {
     }
 
     nlohmann::json RestClient::modifyChannel(Snowflake channelId,
-                                         boost::optional<std::string> name,
-                                         boost::optional<int> position,
-                                         boost::optional<std::string> topic,
-                                         boost::optional<unsigned> bitrate,
-                                         boost::optional<uint16_t> usersLimit) {
+                                         std::optional<std::string> name,
+                                         std::optional<int> position,
+                                         std::optional<std::string> topic,
+                                         std::optional<unsigned> bitrate,
+                                         std::optional<uint16_t> usersLimit) {
         nlohmann::json payload;
         if (name) {
             if (name->size() > 100 || name->size() < 2) {
@@ -651,7 +642,7 @@ namespace Hexicord {
                                                   "/webhooks");
     }
 
-    nlohmann::json RestClient::createWebhook(Snowflake channelId, const std::string& name, const boost::optional<Image>& avatar) {
+    nlohmann::json RestClient::createWebhook(Snowflake channelId, const std::string& name, const std::optional<Image>& avatar) {
         nlohmann::json payload;
         if (name.size() == 1 || name.size() > 32) {
             throw InvalidParameter("name", "size out of range (should be 2-32)");

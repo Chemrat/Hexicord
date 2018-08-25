@@ -30,7 +30,8 @@
 #include <vector>                       // std::vector
 #include <unordered_map>                // std::unordered_map
 #include <memory>                       // std::shared_ptr
-#include <boost/optional.hpp>           // boost::optional
+#include <optional>
+
 #include "hexicord/json.hpp"            // nlohamnn::json
 #include "hexicord/permission.hpp"      // Hexicord::Permissions
 #include "hexicord/config.hpp"          // HEXICORD_RATELIMIT_PREDICTION
@@ -55,7 +56,7 @@ namespace Hexicord {
          *                  depending on future calls, don't add "Bearer " or
          *                  "Bot " prefix.
          */
-        RestClient(boost::asio::io_service& ioService, const std::string& token);
+        RestClient(const std::string& token);
 
         RestClient(const RestClient&) = delete;
         RestClient(RestClient&&) = default;
@@ -148,11 +149,11 @@ namespace Hexicord {
          * \returns Guild channel object after modification.
          */
         nlohmann::json modifyChannel(Snowflake channelId,
-                                     boost::optional<std::string> name = boost::none,
-                                     boost::optional<int> position = boost::none,
-                                     boost::optional<std::string> topic = boost::none,
-                                     boost::optional<unsigned> bitrate = boost::none,
-                                     boost::optional<uint16_t> usersLimit = boost::none);
+                                     std::optional<std::string> name = {},
+                                     std::optional<int> position = {},
+                                     std::optional<std::string> topic = {},
+                                     std::optional<unsigned> bitrate = {},
+                                     std::optional<uint16_t> usersLimit = {});
 
         /// Same as \def modifyChannel, but changes only name.
         inline nlohmann::json setChannelName(Snowflake channelId, const std::string& newName) {
@@ -160,19 +161,19 @@ namespace Hexicord {
         }
         /// Same as \def modifyChannel, but changes only position.
         inline nlohmann::json setChannelPosition(Snowflake channelId, int newPosition) {
-            return modifyChannel(channelId, boost::none, newPosition);
+            return modifyChannel(channelId, {}, newPosition);
         }
         /// Same as \def modifyChannel, but changes only topic.
         inline nlohmann::json setChannelTopic(Snowflake textChannelId, const std::string& newTopic) {
-            return modifyChannel(textChannelId, boost::none, boost::none, newTopic);
+            return modifyChannel(textChannelId, {}, {}, newTopic);
         }
         /// Same as \def modifyChannel, but changes only bitrate.
         inline nlohmann::json setChannelBitrate(Snowflake voiceChannelId, unsigned newBitrate) {
-            return modifyChannel(voiceChannelId, boost::none, boost::none, boost::none, newBitrate);
+            return modifyChannel(voiceChannelId, {}, {}, {}, newBitrate);
         }
         /// Same as \def modifyChannel, but changes only users limit.
         inline nlohmann::json setChannelUsersLimit(Snowflake voiceChannelId, uint16_t newLimit) {
-            return modifyChannel(voiceChannelId, boost::none, boost::none, boost::none, boost::none, newLimit);
+            return modifyChannel(voiceChannelId, {}, {}, {}, {}, newLimit);
         }
 
         /**
@@ -927,7 +928,7 @@ namespace Hexicord {
          * name is limited to 2-32 characters.
          * avatar must be 128x128.
          */
-        nlohmann::json createWebhook(Snowflake channelId, const std::string& name, const boost::optional<Image>& avatar);
+        nlohmann::json createWebhook(Snowflake channelId, const std::string& name, const std::optional<Image>& avatar);
 
         /**
          * Get a webhook by it's ID.
@@ -989,11 +990,6 @@ private:
 #endif
 
         static inline REST::MultipartEntity fileToMultipartEntity(const File& file);
-
-        // We have to use std::shared_ptr instead of std::unique_ptr because
-        // latter requires complete type but we forward-declare REST::HTTPSConnection.
-        std::shared_ptr<REST::HTTPSConnection> restConnection;
-        boost::asio::io_service& ioService; // non-owning reference to I/O service.
 
         web::http::client::http_client client{"https://discordapp.com/"};
     };
