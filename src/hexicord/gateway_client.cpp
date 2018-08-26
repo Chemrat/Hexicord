@@ -113,13 +113,6 @@ void GatewayClient::resume(const std::string& gatewayUrl,
     if (activeSession) disconnect(2000);
 
     client.connect(gatewayUrl).wait();
-
-    DEBUG_MSG("Sending Resume message...");
-    sendMessage(OpCode::Resume, {
-        { "token",      token_             },
-        { "session_id", sessionId          },
-        { "seq",        lastSequenceNumber }
-    });
 }
 
 void GatewayClient::disconnect(int code) noexcept {
@@ -182,10 +175,11 @@ void GatewayClient::recoverConnection() {
     DEBUG_MSG("Lost gateway connection, recovering...");
     disconnect(NoCloseEvent);
 
-    try {
+    if (!sessionId_.empty()) {
+        DEBUG_MSG("Recoveging session");
         resume(lastGatewayUrl_, sessionId_, lastSequenceNumber_, shardId_, shardCount_);
-    } catch (GatewayError& excp) {
-        DEBUG_MSG("Resume failed, starting new session...");
+    } else {
+        DEBUG_MSG("Starting new session");
         connect(lastGatewayUrl_, shardId_, shardCount_, lastPresence);
     }
 }
@@ -230,7 +224,10 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         break;
     case OpCode::InvalidSession:
         DEBUG_MSG("Invalid session error.");
-        throw GatewayError("Invalid session.");
+        sessionId_ = "";
+        lastSequenceNumber_ = 0;
+        //throw GatewayError("Invalid session.");
+        recoverConnection();
         break;
     case OpCode::Hello:
     {
@@ -277,7 +274,16 @@ void GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::js
     std::cout << "Sending message: " << messageString << std::endl;
     web::websockets::client::websocket_outgoing_message msg;
     msg.set_utf8_message(messageString);
-    client.send(msg).wait();
+
+    try {
+        client.send(msg).wait();
+    } catch (std::exception &e) {
+        DEBUG_MSG("client.send failed: " + std::string(e.what()));
+        client.close().wait();
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        connect(lastGatewayUrl_, shardId_, shardCount_, lastPresence);
+    }
+
     activeSendMessage = false;
 }
 
