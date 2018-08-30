@@ -66,7 +66,7 @@ GatewayClient::~GatewayClient() {
 
 void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shardCount,
                             const nlohmann::json& initialPresence) {
-    lastGatewayUrl_ = gatewayUrl;
+    lastGatewayUrl_ = gatewayUrl + gatewayPathSuffix;
     lastPresence = initialPresence;
     lastSequenceNumber_ = 0;
     sessionId_ = "";
@@ -94,13 +94,18 @@ void GatewayClient::connect(const std::string& gatewayUrl, int shardId, int shar
         }
         case web::websockets::client::websocket_message_type::close:
         {
+            DEBUG_MSG("Websocket closed");
             recoverConnection();
             break;
         }
         }
     });
 
-    client.connect(gatewayUrl + gatewayPathSuffix).wait();
+    try {
+        client.connect(lastGatewayUrl_).wait();
+    } catch (std::exception &e) {
+        DEBUG_MSG("Failed to connect: " + std::string(e.what()));
+    }
 }
 
 void GatewayClient::resume(const std::string& gatewayUrl,
@@ -110,7 +115,7 @@ void GatewayClient::resume(const std::string& gatewayUrl,
     DEBUG_MSG(std::string("Resuming interrupted gateway session. sessionId=") + sessionId +
               " lastSeq=" + std::to_string(lastSequenceNumber));
 
-    if (activeSession) disconnect(2000);
+    disconnect(2000);
 
     client.connect(gatewayUrl).wait();
 }
@@ -123,8 +128,6 @@ void GatewayClient::disconnect(int code) noexcept {
         if (code != NoCloseEvent && !activeSendMessage) sendMessage(OpCode::EventDispatch, nlohmann::json(code), "CLOSE");
     } catch (...) { // whatever happened - we don't care.
     }
-
-    activeSession = false;
 
     client.close().wait();
 }
@@ -157,8 +160,6 @@ void GatewayClient::sendHello()
 
     DEBUG_MSG("Sending Identify message...");
     sendMessage(OpCode::Identify, message);
-
-    activeSession = true;
 }
 
 void GatewayClient::sendResume()
@@ -204,18 +205,15 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         break;
     }
     case OpCode::HeartbeatAck:
-        assert(activeSession);
         DEBUG_MSG("Gateway heartbeat answered.");
         --unansweredHeartbeats;
         break;
     case OpCode::Heartbeat:
-        assert(activeSession);
         DEBUG_MSG("Received heartbeat request.");
         sendMessage(OpCode::Heartbeat, nlohmann::json(lastSequenceNumber_));
         ++unansweredHeartbeats;
         break;
     case OpCode::Reconnect:
-        assert(activeSession);
         DEBUG_MSG("Gateway asked us to reconnect...");
         // It's not recoverConnection duplicate, here Invalid Session error during
         // resume is real error, not just 'start new session instead'.
@@ -231,7 +229,7 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         break;
     case OpCode::Hello:
     {
-        heartbeatIntervalMs = message.at("d").at("heartbeat_interval");
+        heartbeatIntervalMs.store(message.at("d").at("heartbeat_interval"));
         DEBUG_MSG(std::string("Gateway heartbeat interval: ") + std::to_string(heartbeatIntervalMs) + " ms.");
 
         stop_heartbeat = std::promise<void>();
@@ -308,6 +306,7 @@ void GatewayClient::heartbeat(std::future<void> &&stop)
     } while (running);
 
     DEBUG_MSG("Heartbeat stopped");
+    unansweredHeartbeats.store(0);
 }
 
 void GatewayClient::sendHeartbeat() {

@@ -248,8 +248,8 @@ private:
 
         // Heartbeat information, used by asyncHeartbeat and sendHeartbeat.
         //bool heartbeat = true;
-        unsigned heartbeatIntervalMs = 0;
-        unsigned unansweredHeartbeats = 0;
+        std::atomic<int> heartbeatIntervalMs = 0;
+        std::atomic<int> unansweredHeartbeats = 0;
 
         // Send heartbeat, if we don't have answer for two heartbeats - reconnect and return.
         void sendHeartbeat();
