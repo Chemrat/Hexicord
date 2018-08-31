@@ -214,29 +214,31 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         eventDispatcher.dispatchEvent(eventEnumFromString(t), d);
         break;
     }
-    case OpCode::HeartbeatAck:
-        DEBUG_MSG("Gateway heartbeat answered.");
-        --unansweredHeartbeats;
-        break;
     case OpCode::Heartbeat:
+    {
         DEBUG_MSG("Received heartbeat request.");
         sendMessage(OpCode::Heartbeat, nlohmann::json(_lastSequenceNumber));
         ++unansweredHeartbeats;
         break;
+    }
     case OpCode::Reconnect:
+    {
         DEBUG_MSG("Gateway asked us to reconnect...");
         // It's not recoverConnection duplicate, here Invalid Session error during
         // resume is real error, not just 'start new session instead'.
         disconnect();
         resume(_gatewayUrl, _sessionId, _lastSequenceNumber);
         break;
+    }
     case OpCode::InvalidSession:
+    {
         DEBUG_MSG("Invalid session error.");
         _sessionId = "";
         _lastSequenceNumber = 0;
         //throw GatewayError("Invalid session.");
         recoverConnection();
         break;
+    }
     case OpCode::Hello:
     {
         heartbeatIntervalMs.store(message.at("d").at("heartbeat_interval"));
@@ -254,13 +256,14 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         }
         break;
     }
-    case OpCode::Resume:
+    case OpCode::HeartbeatAck:
     {
-        DEBUG_MSG("Got resume");
+        DEBUG_MSG("Gateway heartbeat answered.");
+        --unansweredHeartbeats;
         break;
     }
     default:
-        DEBUG_MSG("Unexpected gateway message.");
+        DEBUG_MSG("Unexpected OpCode recieved");
         DEBUG_MSG(message);
     }
 }
