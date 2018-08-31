@@ -151,8 +151,19 @@ void GatewayClient::resume(const std::string& gatewayUrl,
 }
 
 void GatewayClient::disconnect(int code) noexcept {
-    _state.store(State::Disconnected);
-    stop_heartbeat.set_value();
+    if (_state.load() == State::Disconnected) {
+        DEBUG_MSG("Already disconnected");
+        return;
+    }
+
+    try {
+        DEBUG_MSG("Stopping heartbeat thread");
+        stop_heartbeat.set_value();
+    } catch (std::exception &e) {
+        // FIXME
+        DEBUG_MSG("Heartbeat thread already stopped: " + std::string(e.what()))
+    }
+
 
     DEBUG_MSG(std::string("Disconnecting from gateway... code=") + std::to_string(code));
 
@@ -161,6 +172,7 @@ void GatewayClient::disconnect(int code) noexcept {
     }
 
     client.close().wait();
+    _state.store(State::Disconnected);
 }
 
 void GatewayClient::updatePresence(const nlohmann::json& newPresence) {
@@ -293,7 +305,9 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
 }
 
 bool GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::json& payload, const std::string& t) {
-    if (_state.load() != State::Ready) {
+    if (_state.load() != State::Ready
+            && opCode != OpCode::Identify
+            && opCode != OpCode::Resume) {
         DEBUG_MSG("SendMessage called with non-ready State");
         return false;
     }
