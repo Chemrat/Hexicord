@@ -56,7 +56,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Allow some tweaks in build process without changing CMakeLists.
 option(HEXICORD_WERROR  "Build with -Werror flag."                 OFF)
-option(HEXICORD_WSTRICT "Build with really strict warning flags."  ON)
+option(HEXICORD_WSTRICT "Build with really strict warning flags."  OFF)
 
 # Check if used compiler supports warning flags we use.
 if(("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang") OR

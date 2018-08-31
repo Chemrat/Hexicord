@@ -68,6 +68,20 @@ namespace Hexicord {
         GatewayClient& operator=(const GatewayClient&) = delete;
         GatewayClient& operator=(GatewayClient&&) = default;
 
+        void init(const std::string& gatewayUrl,
+                  int shardId,
+                  int shardCount,
+                  const nlohmann::json& initialPresence);
+
+        enum class State {
+            OK,
+            Disconnected,
+            ResumeRecovery,
+            CompleteRecovery,
+        };
+
+        std::atomic<State> _state{State::Disconnected};
+
         /**
          * Connect and identify to gateway.
          *
@@ -195,19 +209,19 @@ namespace Hexicord {
         EventDispatcher eventDispatcher;
 
         inline const std::string& token() const {
-            return token_;
+            return _token;
         }
 
         inline const std::string& sessionId() const {
-            return sessionId_;
+            return _sessionId;
         }
 
         inline int lastSequenceNumber() const {
-            return lastSequenceNumber_;
+            return _lastSequenceNumber;
         }
 
         inline const std::string& lastGatewayUrl() const {
-            return lastGatewayUrl_;
+            return _gatewayUrl;
         }
 private:
         enum OpCode {
@@ -236,7 +250,7 @@ private:
         nlohmann::json lastMessage;
 
         void processMessage(const nlohmann::json& message);
-        void sendMessage(OpCode opCode, const nlohmann::json& payload = {}, const std::string& t = "");
+        bool sendMessage(OpCode opCode, const nlohmann::json& payload = {}, const std::string& t = "");
 
         void processReady(const nlohmann::json& message);
 
@@ -255,14 +269,13 @@ private:
         void sendHeartbeat();
 
         // Session information.
-        bool activeSession = false; // true if we connected and everything is working.
-        std::string sessionId_;
-        std::string lastGatewayUrl_;
-        std::string token_;
-        int shardId_ = NoSharding;
-        int shardCount_ = NoSharding;
-        int lastSequenceNumber_ = 0;
-        nlohmann::json lastPresence;
+        std::string _sessionId;
+        std::string _gatewayUrl;
+        std::string _token;
+        int _shardId = NoSharding;
+        int _shardCount = NoSharding;
+        int _lastSequenceNumber = 0;
+        nlohmann::json _presence;
 
         constexpr static char gatewayPathSuffix[] = "/?v=6&encoding=json";
 
