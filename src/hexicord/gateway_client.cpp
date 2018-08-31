@@ -86,7 +86,8 @@ GatewayClient::GatewayClient(const std::string& token)
         case web::websockets::client::websocket_message_type::close:
         {
             DEBUG_MSG("Websocket closed");
-            recoverConnection();
+            disconnect();
+            connect();
             break;
         }
         }
@@ -97,7 +98,7 @@ GatewayClient::~GatewayClient() {
     disconnect(2000);
 }
 
-void GatewayClient::connect(const std::string& gatewayUrl,
+void GatewayClient::init(const std::string& gatewayUrl,
                             int shardId,
                             int shardCount,
                             const nlohmann::json& initialPresence)
@@ -106,15 +107,29 @@ void GatewayClient::connect(const std::string& gatewayUrl,
     _shardId = shardId;
     _shardCount = shardCount;
     _presence = initialPresence;
+}
+
+void GatewayClient::invalidateSession()
+{
     _lastSequenceNumber = 0;
     _sessionId = "";
-    _shardId = shardId;
-    _shardCount = shardCount;
+}
 
-    try {
-        client.connect(_gatewayUrl).wait();
-    } catch (std::exception &e) {
-        DEBUG_MSG("Failed to connect: " + std::string(e.what()));
+void GatewayClient::connect()
+{
+    if (_gatewayUrl.empty()) {
+        DEBUG_MSG("Not initalized");
+        return;
+    }
+
+    while (_state.load() == State::Disconnected) {
+        try {
+            client.connect(_gatewayUrl).wait();
+            _state.store(State::Connected);
+        } catch (std::exception &e) {
+            DEBUG_MSG("Failed to connect: " + std::string(e.what()));
+            std::this_thread::sleep_for(std::chrono::minutes(1));
+        }
     }
 }
 
@@ -127,10 +142,16 @@ void GatewayClient::resume(const std::string& gatewayUrl,
 
     disconnect(2000);
 
-    client.connect(gatewayUrl).wait();
+    try {
+        client.connect(gatewayUrl).wait();
+        _state.store(State::Connected);
+    } catch (std::exception &e) {
+        DEBUG_MSG("Failed to connect: " + std::string(e.what()));
+    }
 }
 
 void GatewayClient::disconnect(int code) noexcept {
+    _state.store(State::Disconnected);
     stop_heartbeat.set_value();
 
     DEBUG_MSG(std::string("Disconnecting from gateway... code=") + std::to_string(code));
@@ -146,7 +167,7 @@ void GatewayClient::updatePresence(const nlohmann::json& newPresence) {
     sendMessage(OpCode::StatusUpdate, newPresence);
 }
 
-void GatewayClient::sendHello()
+void GatewayClient::sendIdentify()
 {
     nlohmann::json message = {
         { "token" , _token },
@@ -186,13 +207,7 @@ void GatewayClient::recoverConnection() {
     DEBUG_MSG("Lost gateway connection, recovering...");
     disconnect(NoCloseEvent);
 
-    if (!_sessionId.empty()) {
-        DEBUG_MSG("Recoveging session");
-        resume(_gatewayUrl, _sessionId, _lastSequenceNumber, _shardId, _shardCount);
-    } else {
-        DEBUG_MSG("Starting new session");
-        connect(_gatewayUrl, _shardId, _shardCount, _presence);
-    }
+    connect();
 }
 
 void GatewayClient::processMessage(const nlohmann::json& message) {
@@ -209,6 +224,8 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
 
         if (eventEnumFromString(t) == Event::Ready) {
             processReady(d);
+        } else if (eventEnumFromString(t) == Event::Resumed) {
+            processResume(d);
         }
 
         eventDispatcher.dispatchEvent(eventEnumFromString(t), d);
@@ -232,11 +249,18 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
     }
     case OpCode::InvalidSession:
     {
+        _state.store(State::Connected);
         DEBUG_MSG("Invalid session error.");
-        _sessionId = "";
-        _lastSequenceNumber = 0;
-        //throw GatewayError("Invalid session.");
-        recoverConnection();
+        const auto resumable = message.at("d").get<bool>();
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        if (resumable == false) {
+            _sessionId = "";
+            _lastSequenceNumber = 0;
+            sendIdentify();
+        } else {
+            sendResume();
+        }
+
         break;
     }
     case OpCode::Hello:
@@ -252,7 +276,7 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
         if (!_sessionId.empty()) {
             sendResume();
         } else {
-            sendHello();
+            sendIdentify();
         }
         break;
     }
@@ -269,6 +293,11 @@ void GatewayClient::processMessage(const nlohmann::json& message) {
 }
 
 bool GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::json& payload, const std::string& t) {
+    if (_state.load() != State::Ready) {
+        DEBUG_MSG("SendMessage called with non-ready State");
+        return false;
+    }
+
     nlohmann::json message = {
         { "op", opCode  },
         { "d",  payload },
@@ -296,8 +325,14 @@ bool GatewayClient::sendMessage(GatewayClient::OpCode opCode, const nlohmann::js
 void GatewayClient::processReady(const nlohmann::json &message)
 {
     DEBUG_MSG("Got Ready event. Starting heartbeat and polling...");
-
     _sessionId          = message.at("session_id");
+    _state.store(State::Ready);
+}
+
+void GatewayClient::processResume(const nlohmann::json &message)
+{
+    DEBUG_MSG("Got Resume event");
+    _state.store(State::Ready);
 }
 
 void GatewayClient::heartbeat(std::future<void> &&stop)
@@ -307,7 +342,7 @@ void GatewayClient::heartbeat(std::future<void> &&stop)
         auto result = stop.wait_for(std::chrono::milliseconds(heartbeatIntervalMs));
         if (result == std::future_status::timeout) {
             DEBUG_MSG("Sending heartbeat.");
-            sendHeartbeat();
+            running = sendHeartbeat();
         } else {
             running = false;
         }
@@ -317,16 +352,18 @@ void GatewayClient::heartbeat(std::future<void> &&stop)
     unansweredHeartbeats.store(0);
 }
 
-void GatewayClient::sendHeartbeat() {
+bool GatewayClient::sendHeartbeat() {
     if (unansweredHeartbeats >= 2) {
         DEBUG_MSG("Missing gateway heartbeat answer. Reconnecting...");
-        recoverConnection();
-        return;
+        disconnect();
+        connect();
+        return false;
     }
 
     DEBUG_MSG("Gateway heartbeat sent.");
     sendMessage(OpCode::Heartbeat, nlohmann::json(_lastSequenceNumber));
     ++unansweredHeartbeats;
+    return true;
 }
 
 } // namespace Hexicord

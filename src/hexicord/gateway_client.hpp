@@ -72,12 +72,12 @@ namespace Hexicord {
                   int shardId,
                   int shardCount,
                   const nlohmann::json& initialPresence);
+        void invalidateSession();
 
         enum class State {
-            OK,
+            Ready,
             Disconnected,
-            ResumeRecovery,
-            CompleteRecovery,
+            Connected,
         };
 
         std::atomic<State> _state{State::Disconnected};
@@ -115,12 +115,7 @@ namespace Hexicord {
          * gateway message, if it's ready event - start gateway polling, if it's
          * invalid session error - throw exception.
          */
-        void connect(const std::string& gatewayUrl,
-                     /* sharding info: */ int shardId = NoSharding, int shardCount = NoSharding,
-                     const nlohmann::json& initialPresence = {{ "game", nullptr },
-                                                              { "status", "online" },
-                                                              { "since", nullptr },
-                                                              { "afk", false }});
+        void connect();
 
         /**
          * Resume interrupted gateway session.
@@ -189,7 +184,7 @@ namespace Hexicord {
          */
         void updatePresence(const nlohmann::json& newPresence);
 
-        void sendHello();
+        void sendIdentify();
         void sendResume();
 
         /**
@@ -253,6 +248,7 @@ private:
         bool sendMessage(OpCode opCode, const nlohmann::json& payload = {}, const std::string& t = "");
 
         void processReady(const nlohmann::json& message);
+        void processResume(const nlohmann::json& message);
 
         // Set if sendMessage entered.
         bool activeSendMessage = false;
@@ -266,7 +262,7 @@ private:
         std::atomic<int> unansweredHeartbeats = 0;
 
         // Send heartbeat, if we don't have answer for two heartbeats - reconnect and return.
-        void sendHeartbeat();
+        bool sendHeartbeat();
 
         // Session information.
         std::string _sessionId;
